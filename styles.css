@@ -1,0 +1,86 @@
+*, *::before, *::after {
+    font-size: 21px;
+    font-family: Garamond, serif;
+}
+
+body {
+    padding: 0% 0 0 0;
+    white-space: pre-wrap;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000;
+    color: #fffffc;
+    overflow: hidden;
+    zoom: 100%;
+}
+
+.small-space {
+    letter-spacing: -0.1em;
+}
+
+.container {
+    width: 50%;
+    margin-right: 2%; /* relative distance between main text & inventory button */
+    background-color: rgb(0, 0, 0);
+    display:block;
+  }
+
+.btn-grid {
+    display: grid;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: rgb(0, 0, 0);
+    border: 0px;
+    padding: 0px 0px;
+    color: rgb(255, 255, 252);
+    outline: none;
+    text-align: left;
+}
+
+.btn:hover {
+    /* background-color: rgb(48, 48, 48); */
+    text-decoration: underline;
+}
+
+.invbtn {
+    background-color: rgb(0, 0, 0);
+    border: 0px;
+    color: rgb(255, 255, 255);
+    outline: none;
+    text-align: left;
+}
+
+.invbtn:hover {
+    text-decoration: underline;
+}
+
+.container2 {
+    width: 10%;
+    background-color: rgb(0, 0, 0);
+    margin-right: 0%;
+    color: rgb(174, 174, 174);
+}
+
+.container3 {
+    width: 10%;
+    background-color: rgb(0, 0, 0);
+    margin-left: 0%;
+    color: rgb(174, 174, 174);
+    right: 0;
+    top: 0;
+}
+
+.red-text {
+    color: rgb(203, 11, 11);
+}
+.green-text {
+    color: rgb(17, 102, 71);
+}
+
