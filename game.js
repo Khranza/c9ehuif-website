@@ -46,7 +46,6 @@
 
             i++;
 
-            console.log(speed);
             if (speed === 0) {
                 typeWriter(textNode, 0); // Call recursively without delay
             } else {
@@ -74,10 +73,14 @@
         if (isMonospace) {
             textElement.style.fontFamily = 'Courier New, monospace';
             textElement.style.fontSize = '18px';
+        } else if(textNode.id < 100) {
+            //not story related
+
         } else {
             textElement.style.fontFamily = ''; // Reset font-family for other texts
             textElement.style.fontSize = '21px';
             currentGameNode = textNodeIndex;
+            console.log(textNodeIndex);
         }
 
 
