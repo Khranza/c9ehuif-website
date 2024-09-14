@@ -1,86 +1,102 @@
-*, *::before, *::after {
-    font-size: 21px;
-    font-family: Garamond, serif;
-}
-
 body {
-    padding: 0% 0 0 0;
-    white-space: pre-wrap;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: left;
     width: 100vw;
     height: 100vh;
-    background-color: #000000;
+    background-color: #a95656;
     color: #fffffc;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+* {
+    margin: 0px;
+    padding: 0;
+}
+
+.mainContainer{
+    width: 100vw;
+    height: 100vh;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #ffffff;
+    flex: 1; /* Allow the container to take up remaining vertical space */
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    width: 100vw;
+    margin-top: 20px;
+    background-color: rgb(143, 143, 143);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 0px 0px; /* Adjust padding as needed */
+}
+
+.navbar{
+    width: 100;
+}
+
+.navbar ul{
+    list-style-type: none;
+    margin: 0;
     overflow: hidden;
-    zoom: 100%;
 }
 
-.small-space {
-    letter-spacing: -0.1em;
+.navbar a{
+    color: white;
+    background-color: rgb(255, 0, 85);
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+
 }
 
-.container {
-    width: 50%;
-    margin-right: 2%; /* relative distance between main text & inventory button */
-    background-color: rgb(0, 0, 0);
-    display:block;
-  }
+
+.navbar li{
+    float: left;
+    margin-left: 20px;
+}
+
+main {
+    flex-grow:1;
+    background-color: rgb(77, 255, 0);
+    margin: 20px;
+}
+
+.footer {
+    width: 100vw;
+    height: 150px;
+    background-color: rgb(55, 6, 170);
+}
+
+
+
 
 .btn-grid {
-    display: grid;
-    gap: 5px;
-    margin-top: 20px;
+    display: flex;
+    gap: 10px; /* Adjust the gap between buttons */
 }
 
 .btn {
-    background-color: rgb(0, 0, 0);
-    border: 0px;
-    padding: 0px 0px;
-    color: rgb(255, 255, 252);
+    background-color: rgb(61, 144, 36);
+    padding: 5px 10px;
+    border: none;
     outline: none;
-    text-align: left;
-}
-
-.btn:hover {
-    /* background-color: rgb(48, 48, 48); */
-    text-decoration: underline;
-}
-
-.invbtn {
-    background-color: rgb(0, 0, 0);
-    border: 0px;
+    font-family: Garamond, serif;
     color: rgb(255, 255, 255);
-    outline: none;
-    text-align: left;
+    text-align: center;
 }
 
-.invbtn:hover {
+.navbar a:hover {
     text-decoration: underline;
+    background-color: rgb(98, 98, 98);
 }
 
-.container2 {
-    width: 10%;
-    background-color: rgb(0, 0, 0);
-    margin-right: 0%;
-    color: rgb(174, 174, 174);
+.btn:focus {
+    outline: 3px solid purple;
 }
-
-.container3 {
-    width: 10%;
-    background-color: rgb(0, 0, 0);
-    margin-left: 0%;
-    color: rgb(174, 174, 174);
-    right: 0;
-    top: 0;
-}
-
-.red-text {
-    color: rgb(203, 11, 11);
-}
-.green-text {
-    color: rgb(17, 102, 71);
-}
-
