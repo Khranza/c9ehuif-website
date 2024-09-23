@@ -1,102 +1,64 @@
-body {
-    width: 100vw;
-    height: 100vh;
-    background-color: #a95656;
-    color: #fffffc;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-}
 
-* {
-    margin: 0px;
+body {
+    background-color: #29adff;
+    margin: 0;
+    /* background-image: url("Images/achtergrond.png"); */
+    background-size: 16px; /* Size to fit the pixel grid */
+    background-repeat: repeat;
+    image-rendering: pixelated; /* For modern browsers */
+    image-rendering: crisp-edges; /* Fallback for older browsers */
     padding: 0;
 }
 
-.mainContainer{
-    width: 100vw;
-    height: 100vh;
-    justify-content: flex-start;
-    align-items: center;
-    background-color: #ffffff;
-    flex: 1; /* Allow the container to take up remaining vertical space */
-    display: flex;
-    flex-direction: column;
+/* Disable anti-aliasing and filtering for pixel art */
+img {
+    width: 100%;
 }
 
-header {
-    width: 100vw;
-    margin-top: 20px;
-    background-color: rgb(143, 143, 143);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    padding: 0px 0px; /* Adjust padding as needed */
+mark{
+    background-color: rgb(188, 89, 89);
 }
 
-.navbar{
-    width: 100;
+/* Font and paragraph styling */
+p {
+    font-size: 20px;
 }
 
-.navbar ul{
-    list-style-type: none;
-    margin: 0;
-    overflow: hidden;
-}
-
-.navbar a{
-    color: white;
-    background-color: rgb(255, 0, 85);
-    text-decoration: none;
-    padding: 15px;
-    display: block;
+.introduction{
     text-align: center;
-
+    margin-bottom: 300px;
 }
 
-
-.navbar li{
-    float: left;
-    margin-left: 20px;
+.towerattempt {
+    font-size: 20px;
+    width: 600px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10;
+    background-color: rgb(78, 79, 92);
+    /* background-image: url("Images/tower.jpg"); */
 }
 
-main {
-    flex-grow:1;
-    background-color: rgb(77, 255, 0);
-    margin: 20px;
+    
+
+.content {
+    min-height: calc(100vh - 200px); /* Make sure content takes up space above the footer */
+    padding: 20px; /* Add padding for content */
 }
 
-.footer {
-    width: 100vw;
-    height: 150px;
-    background-color: rgb(55, 6, 170);
+.bottombg {
+    position: relative; /* Keeps the footer in the normal flow */
+    background-size: 1440px; /* Adjust the background size */
+    width: 100%; /* Makes it full width */
+    height: 360px; /* Your desired height */
+    background-image: url("Images/BGBottom.png");
+    background-position: center; /* Centers the background image */
+    z-index: -1; /* Ensures it stays on top of other content */
+    margin-top: -360px; /* Optional: Add margin if you want space above the footer */
 }
 
-
-
-
-.btn-grid {
-    display: flex;
-    gap: 10px; /* Adjust the gap between buttons */
-}
-
-.btn {
-    background-color: rgb(61, 144, 36);
-    padding: 5px 10px;
-    border: none;
-    outline: none;
-    font-family: Garamond, serif;
-    color: rgb(255, 255, 255);
-    text-align: center;
-}
-
-.navbar a:hover {
-    text-decoration: underline;
-    background-color: rgb(98, 98, 98);
-}
-
-.btn:focus {
-    outline: 3px solid purple;
+footer{
+    background-color: #008751;
+    height: 100px;
 }
