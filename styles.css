@@ -1,70 +1,118 @@
-
 body {
-    background-color: #29adff;
+    background-color: rgb(12, 12, 12);
+    color: white;
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin: 0;
-    /* background-image: url("Images/achtergrond.png"); */
-    background-size: 16px; /* Size to fit the pixel grid */
-    background-repeat: repeat;
-    image-rendering: pixelated; /* For modern browsers */
-    image-rendering: crisp-edges; /* Fallback for older browsers */
-    padding: 0;
 }
 
-/* Disable anti-aliasing and filtering for pixel art */
-img {
-    width: 90%;
-    border-style: solid;
-    border-width: 4px;
-    border-color: rgb(22, 22, 22);
-    box-sizing: border-box;
-    display: block;  /* Center the image */
-    margin: 0 auto;  /* Center the image */
-}
-
-mark{
-    background-color: rgb(188, 89, 89);
-}
-
-/* Font and paragraph styling */
-p {
+.intro-babbel {
+    background-color: rgb(3, 117, 79);
+    padding: 10px;
+    margin: 10px;
     font-size: 20px;
 }
 
-.introduction{
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 16px;
+}
+
+.flex-item {
+    background-image: url("Images/box_default.png");
+    background-size: cover;
+    width: 220px;
+    height: 260px;
+    margin: 16px;
+    padding: 12px 12px 24px 4px;
+    color: white;
+    font-weight: bold;
+    background-repeat: no-repeat;
     text-align: center;
-    margin-bottom: 300px;
+    text-shadow: 0px 0px 15px black;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
 }
 
-.towerattempt {
-    font-size: 20px;
-    width: 600px;
-    padding: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10;
-    background-color: rgb(78, 79, 92);
-    /* background-image: url("Images/tower.jpg"); */
+.item-text {
+    font-size: 22px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
 }
 
-    
-
-.content {
-    min-height: calc(100vh - 200px); /* Make sure content takes up space above the footer */
-    padding: 20px; /* Add padding for content */
+.bottom-aligner {
+    display: inline-block;
+    height: 100%;
+    vertical-align: bottom;
+    width: 8px;
+    background: rgba(255, 0, 0, 0);
+    user-select: none;
 }
 
-.bottombg {
-    position: relative; /* Keeps the footer in the normal flow */
-    background-size: 1440px; /* Adjust the background size */
-    width: 100%; /* Makes it full width */
-    height: 360px; /* Your desired height */
-    background-image: url("Images/BGBottom.png");
-    background-position: center; /* Centers the background image */
-    z-index: -1; /* Ensures it stays on top of other content */
-    margin-top: -360px; /* Optional: Add margin if you want space above the footer */
+.year-header {
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 24px;
 }
 
-footer{
-    background-color: #008751;
-    height: 100px;
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 24px;
+    z-index: 2;
+}
+
+.overlay a {
+    margin: 7px 0;
+}
+
+.flex-item:hover .overlay {
+    opacity: 1;
+}
+
+.overlay-link {
+    color:white;
+    font-weight: 1;
+}
+
+
+@font-face {
+    font-family: Main;
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://mikeysaur.github.io/bearsona/ReggaeOne-Regular.ttf') format('truetype');
+}
+
+#project-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#project-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 20px 0;
+}
+
+#project-content img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px 0;
 }
