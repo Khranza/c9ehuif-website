@@ -1,0 +1,52 @@
+{
+  "ThrustFactor": {
+    "title": "Thrust Factor",
+    "content": [
+      {
+        "type": "text",
+        "data": "Responsive UI, immersive SFX, screen shake, a quick on-kill slow-mo while boosting. If this project was going to be about one thing, it would be about game feel. "
+      },
+      {
+        "type": "image",
+        "data": "../Images/box_default.png"
+      },
+      {
+        "type": "text",
+        "data": "Slug Factor. The most prominent issue I found while playtesting is that the most viable strategy was simply not moving, just like in classic Asteroids."
+      },
+      {
+        "type": "image",
+        "data": "images/poster2.jpg"
+      },
+      {
+        "type": "text",
+        "data": "I found that with a game like this, it’s all about content recycling. With the limited resources available I had to make sure the player did not get bored seeing the same enemy threats over and over again. That’s why the game loop underwent several design changes throughout Thrust Factors development."
+      }
+    ]
+  },
+    "VirtualEncounters": {
+    "title": "Virtual Encounters",
+    "content": [
+      {
+        "type": "text",
+        "data": "Responsive UI, immersive SFX, screen shake, a quick on-kill slow-mo while boosting. If this project was going to be about one thing, it would be about game feel. "
+      },
+      {
+        "type": "image",
+        "data": "../Images/box_default.png"
+      },
+      {
+        "type": "text",
+        "data": "Slug Factor. The most prominent issue I found while playtesting is that the most viable strategy was simply not moving, just like in classic Asteroids."
+      },
+      {
+        "type": "image",
+        "data": "images/poster2.jpg"
+      },
+      {
+        "type": "text",
+        "data": "I found that with a game like this, it’s all about content recycling. With the limited resources available I had to make sure the player did not get bored seeing the same enemy threats over and over again. That’s why the game loop underwent several design changes throughout Thrust Factors development."
+      }
+    ]
+  }
+}

@@ -1,16 +1,57 @@
+html, body {
+    height: 100%;
+    margin: 0;  /* Remove default margin from body */
+}
+
 body {
-    background-color: rgb(12, 12, 12);
-    color: white;
+    background-color: #0a0a0a;
+    color: #ffffff;
     font-size: 30px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin: 0;
+    font-family: 'Helvetica Neue', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0 auto;
+}
+
+
+/* New wrapper for the background */
+.background-wrapper {
+    background-color: #121216;  /* Choose any color you want */
+    max-width: 900px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    min-height: 100vh;
+}
+
+header {
+    background-color: #4646c9;
+    justify-content: left;
+    display: flex;
+    padding: 7px;
+    margin-bottom: 0;
+}
+
+.navlink {
+    background-color: #121216;
+    padding: 10px;
+    margin: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#kleinlijntje{
+    background-color: #0a0a0a;
+    height: 15px;
 }
 
 .intro-babbel {
-    background-color: rgb(3, 117, 79);
-    padding: 10px;
-    margin: 10px;
-    font-size: 20px;
+    background-color: rgb(100, 100, 255);
+    color: black;
+    padding: 15px;
+    max-width: 100%;
+    font-size: 22px;
+    text-align: justify
 }
 
 .flex-container {
@@ -24,10 +65,9 @@ body {
     background-image: url("Images/box_default.png");
     background-size: cover;
     width: 220px;
-    height: 260px;
+    height: 263px;
     margin: 16px;
     padding: 12px 12px 24px 4px;
-    color: white;
     font-weight: bold;
     background-repeat: no-repeat;
     text-align: center;
@@ -54,9 +94,14 @@ body {
 }
 
 .year-header {
+    color: #FFFF64;
     margin-bottom: 0;
+    margin-top: 28px;
+    padding: 15px;
     text-align: center;
-    font-size: 24px;
+    font-size: 72px;
+    background-color: #49111c00;
+    max-width: 100%
 }
 
 .overlay {
@@ -90,29 +135,41 @@ body {
     font-weight: 1;
 }
 
+a {
+    color: #FFFF64;
+
+}
 
 @font-face {
-    font-family: Main;
+    font-family: 'Helvetica Neue';
+    src: url('Fonts/HelveticaNeue-Medium.ttf') format('truetype');
+    font-weight: 500;
     font-style: normal;
-    font-weight: 400;
-    src: url('https://mikeysaur.github.io/bearsona/ReggaeOne-Regular.ttf') format('truetype');
+    font-display: swap;
 }
 
-#project-content {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-}
+/* #project-content {
+     alles behalve de titel
+    
+} */
 
 #project-content p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin: 20px 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 20px 0;
 }
 
 #project-content img {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 20px 0;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+}
+
+.project-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(25, 26, 35, 0.704);
+    height: 100%
 }
