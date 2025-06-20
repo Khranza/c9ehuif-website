@@ -20,7 +20,8 @@ fetch("projects.json")
     project.content.forEach(block => {
       if (block.type === "text") {
         const paragraph = document.createElement("p");
-        paragraph.textContent = block.data;
+        // Use innerHTML instead of textContent to parse HTML tags like <br>
+        paragraph.innerHTML = block.data;
         contentContainer.appendChild(paragraph);
       } else if (block.type === "image") {
         const img = document.createElement("img");
