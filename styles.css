@@ -101,7 +101,7 @@ header {
     text-align: center;
     font-size: 72px;
     background-color: #49111c00;
-    max-width: 100%
+    max-width: 100%;
 }
 
 .overlay {
@@ -131,8 +131,8 @@ header {
 }
 
 .overlay-link {
-    color:white;
-    font-weight: 1;
+    color:#FFFF64;
+    font-weight: 300;
 }
 
 a {
@@ -148,13 +148,29 @@ a {
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('Fonts/HelveticaNeue-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* #project-content {
      alles behalve de titel
     
 } */
 
 #project-content p {
+    font-weight: 300;
     font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 20px 0;
+}
+
+#project-content h3 {
+    font-weight: 500;
+    font-size: 1rem;
     line-height: 1.6;
     margin: 20px 0;
 }
