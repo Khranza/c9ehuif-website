@@ -74,7 +74,35 @@
       },
       {
         "type": "text",
-        "data": "The concept of what people consider “good game design” has remained the same for around 50 years now. “Is the game loop defined and engaging?” “Is the player done with the game, at the same time the game is done with the player?” Up until now, I had interpreted these guidelines as solid rules. After all, that’s how you make <i>good games</i>, right? But during this project, it all felt too restricting. I wanted to be able to make games again like I did before I knew all these rules."
+        "data": "When I was on a vacation to Luxembourg, I felt the strong, always present urge to create something. On itch.io I found an interesting game jam, “60-minute jam”, where the goal is to create a game in one hour. According to the rules, art and planning were not part of the 60 minutes, so I took a day of passively thinking over various concepts while hiking through Luxembourg's lower city."
+      },
+      {
+        "type": "text",
+        "data": "I wanted to prove that I could give meaning to my game, even if it would be incredibly simple and the deadline was this close."
+      },
+      {
+        "type": "text",
+        "data": "I decided the concept had to comply with the following criteria:<br>- As many repeatable assets as possible to reduce development time<br>- A single interaction fuels the entire game<br>- Some deeper meaning, or reflecting/learning experience"
+      },
+      {
+        "type": "text",
+        "data": "Various concepts came to mind, and once I settled on a bubble-wrap popping game, I started refining it and writing down specifically what the game would entail. I had to be very specific, there was no time to rethink anything during the production hour."
+      },
+      {
+        "type": "text",
+        "data": "First, I created a list of “satisfyingly poppable” items, such as bubble wrap, balloons, chewing gum blister packs, medicine blister packs. The unstructured play (paidia) of popping objects gave me the idea of putting the player in the shoes of a child: a victim who is just playing with the “toys” they are given, which shows the player just how easy it is to “play” with dangerous items if parents are neglectful. That’s the value of this being a game, and not just any other medium."
+      },
+      {
+        "type": "text",
+        "data": "I decided for Godot as it is a very streamlined engine with minimal loading times. Its node-based nature also worked very well for the game."
+      },
+      {
+        "type": "text",
+        "data": " "
+      },
+      {
+        "type": "text",
+        "data": "<i>Complete as many poppable objects as possible.<br><br>Medicine strips are visible with their corresponding boxes<br><br>'story' of opening a box of medicine and frantically eating every single pill.<br>Big plastic bubble wrap (1x3) = 3<br>Bubble wrap 1 (3x4) = 12<br>Bubble wrap 2 (2x6) = 12 <br>Paracetamol strip (2x8) = 16 (as you open them, they disappear, empty packaging is left)<br>Zopiclone strip (2 x 3x5) = 30<br>Medicine 3 (3x5) = 15<br>(slow “unconscious” fade out). Text panel at the end."
       }
     ]
   }
