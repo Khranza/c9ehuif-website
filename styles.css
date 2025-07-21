@@ -163,7 +163,7 @@ a {
 
 #project-content p {
     font-weight: 300;
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.6;
     margin: 20px 0;
 }
@@ -183,7 +183,6 @@ a {
 }
 
 .project-container {
-    max-width: 800px;
     margin: 0 auto;
     padding: 20px;
     background-color: rgba(25, 26, 35, 0.704);
