@@ -41,19 +41,43 @@
     "content": [
       {
         "type": "text",
-        "data": "<b>Release date:</b><br>June 14, 2025"
+        "data": "<b>Release date:</b><br>- June 14, 2025"
       },
       {
         "type": "text",
-        "data": "<b>Development time:</b><br>3 months part-time (about 180 hrs)"
+        "data": "<b>Development time:</b><br>- 3 months part-time (about 180 hrs)"
       },
       {
         "type": "text",
-        "data": "<b>Project type:</b><br>Solo, study project (year 1 final)"
+        "data": "<b>Project type:</b><br>- Solo, study project (year 1 final)"
       },
       {
         "type": "text",
-        "data": "The concept of what people consider “good game design” has remained the same for around 50 years now. “Is the game loop defined and engaging?” “Is the player done with the game, at the same time the game is done with the player?” Up until now, I had interpreted these guidelines as solid rules. After all, that’s how you make <i>good games</i>, right? But during this project, it all felt too restricting. I wanted to be able to make games again like I did before I knew all these rules."
+        "data": "<div class=\"video-container\"><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/D1KfjoWb3Go?si=JcKkoRc18y810_vY\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe></div>"
+      },
+      {
+        "type": "text",
+        "data": "Virtual Encounters bridges the gap between entertainment and artistic games, and attempts to break the stigma surrounding the latter."
+      },
+      {
+        "type": "text",
+        "data": "<h2>Conception</h2> During the final year 1 project at HKU Games, I was free to make anything I wanted. However, this freedom somehow felt restricting; as if all of the game design rules I learned throughout the year were holding me back. My personal goal was to be able to make games again like I did <i>before</i> knowing all these rules: after all, back then I didn't have to worry about what was accepted and what wasn't, I just made unique and personal games."
+      },
+      {
+        "type": "text",
+        "data": "I wanted to return to a carefree and curious state of mind, similar to when I first touched the art form, and combine it with the knowledge and skills I had since gained. I won't get into the details of the experiments and research I performed, but the results mainly came down to forcing myself out of my comfort zone, and not pressuring myself to make 'one game to rule them all'. Instead, it would become a collection of multiple unique game ideas bundled together."
+      },
+      {
+        "type": "text",
+        "data": "Some new techniques I explored:<br><i>- Using Godot, which was completely new to me<br>- Working in 3D + first person perspective<br>- Working with voice actors <br>- Employing an art-heavy visual style</i>"
+      },
+      {
+        "type": "text",
+        "data": "Choosing Godot was definitely the most impactful, it forced me to find creative solutions for problems I otherwise wouldn't have encountered, such as choosing to build the entire game out of PNGs."
+      },
+      {
+        "type": "text",
+        "data": "<h2>Design process</h2> (talk about What makes a game a game? and list of game ideas + criteria for choosing them. Why was the collector added?"
       }
     ]
   },
