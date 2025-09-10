@@ -77,7 +77,11 @@
       },
       {
         "type": "text",
-        "data": "<h2>Design process</h2> (talk about What makes a game a game? and list of game ideas + criteria for choosing them. Why was the collector added?"
+        "data": "<h2>Design process</h2> This part will be written soon! (write about What makes a game a game? and list of game ideas + criteria for choosing them. Why was the collector added?"
+      },
+      {
+        "type": "text",
+        "data": "<h2>\"Jam the Keys\"</h2> Getting from a funny idea I coined to friends (a rhythm game without button prompts) to an actual game players would actively participate in was not as straightforward as I first expected."
       }
     ]
   },
