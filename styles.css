@@ -1,6 +1,7 @@
 html, body {
     height: 100%;
     margin: 0;  /* Remove default margin from body */
+    overscroll-behavior: none;
 }
 
 body {
@@ -208,3 +209,4 @@ h2 {
     color:#FFFF64;
     margin-bottom: 10px;
 }
+
