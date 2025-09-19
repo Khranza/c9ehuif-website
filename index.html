@@ -6,13 +6,13 @@
     <link href="styles.css" rel="stylesheet">
     <script defer src="scripts.js"></script>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <title>Jeditor</title>
+    <title>Nathan Stroomberg</title>
 </head>
 <body>
     <div class="background-wrapper">
         <!-- headers -->
         <header>
-            <a href="/" class="navlink">Vault</a>
+            <a href="/" class="navlink">Portfolio</a>
             <a href="pages/contact/index.html" class="navlink">Contact</a>
             <a href="pages/about/index.html" class="navlink">About me</a>
         </header> 
@@ -21,55 +21,94 @@
         
         <!-- intro babbel -->
         <div class="intro-babbel">
-            Welcome to my vault! <br>
-            This is where I store all my published projects. <br>
-            <br>
-            If you're just here to play my games, you can find the link to each of them by hovering over their banner.<br>
-            <br>
-            For those interested, instead of showing you just the end results, I'm excited to share the process behind making them. If you click "learn more" you'll find relevant sketches, prototypes and design documents as well as personal notes, which all contributed to the end result.
-            
+            <div class="profile_picture">
+                <img src="Images/Profile_Picture.png">
+            </div>
+
+            I am a game designer
             <br>
         </div>
         
         <!-- categorie -->
-        <h3 class="year-header">2025</h3>
+        <h3 class="year-header">Projects</h3>
 
         <!-- flexbox -->
         
-        <div class="flex-container">
-            <div class="flex-item" style="background-image: url('Images/Boxes/box_pop.png');">
-                <div class="bottom-aligner"></div>
-                <div class="item-text">Pop<br>(60 minute jam)</div>
-                <div class="overlay">
-                    <a href="pages/project/?id=Pop" class="overlay-link">Learn more</a>
-                    <a href="https://jeditor.itch.io/pop" target="_blank" class="overlay-link">Play on itch.io</a>
+        <div class="game_grid">
+            <!--  -->
+            <div class="game_item">
+                <div class="game_thumb">
+                    <img src="Images/Boxes/box_thrust_factor.png">
+                </div>
+                <div class="game_data">
+                    <a class="game_title" href="https://jeditor.itch.io/thrust-factor">Thrust Factor</a>
+                    <div class="game_text">
+                        A difficult arcade-style movement based SHMUP, built in Unity. Though the entire game was made by me, my main focus was on <u>balacing difficulty and progression</u>.
+                        <div class="game_skills">
+                            <b>Relevant skills:</b>
+                            <ul>
+                                <li>Prototyping enemy behaviour</li>
+                                <li>Designing a fluid combat system</li>
+                                <li>Balancing the game loop</li>
+                                <li>Polishing & game feel</li>
+                                <li>FMOD Integration, music, sound design</li>
+                                <li>Unity Development</li>
+                                <span class="transparent_gradient"></span>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="game_item">
+                <div class="game_thumb">
+                    <img src="Images/Boxes/box_virtual_encounters.png">
+                </div>
+                <div class="game_data">
+                    <a class="game_title" href="https://jeditor.itch.io/thrust-factor">Virtual Encounters</a>
+                    <div class="game_text">
+                        A narrative experience about three very different experimental games, each questioning a different aspect of play itself. Turning this into a coherrent whole was certainly a challenge.
+                        <div class="game_skills">
+                            <b>Relevant skills:</b>
+                            <ul>
+                                <li>Designing a coherrent narrative experience</li>
+                                <li>Concepting and prototyping</li>
+                                <li>Designing four environments/levels</li>
+                                <li>Usability testing and general playtesting</li>
+                                <li>Development and prototyping in Godot</li>
+                                <span class="transparent_gradient"></span>
+                            </ul>
+                        </div>
+                    </div>                
                 </div>
             </div>
 
-            <div class="flex-item" style="background-image: url('Images/Boxes/box_virtual_encounters.png');">
-                <div class="bottom-aligner"></div>
-                <div class="item-text">Virtual<br>Encounters</div>
-                <div class="overlay">
-                    <a href="pages/project/?id=VirtualEncounters" class="overlay-link">Learn more</a>
-                    <!-- focus on:<br>
-                    - Godot 4<br>
-                    - Unique visuals<br>
-                    - Something des?<br>
-                    play it on: -->
-                    <a href="https://jeditor.itch.io/virtual-encounters" target="_blank" class="overlay-link">Play on itch.io</a>
+            <!--  -->
+            <div class="game_item">
+                <div class="game_thumb">
+                    <img src="Images/Boxes/box_de_rechtlijn.png">
+                </div>
+                <div class="game_data">
+                    <a class="game_title" href="">De Rechtlijn</a>
+                    <div class="game_text">
+                        A satirical game played entirely on a phone dial interface. My goal was to design a socially conscious, <u>meaningful experience</u> about the rise of AI and the loss of interpersonnal contact.
+                        <div class="game_skills">
+                            <b>Relevant skills:</b>
+                            <ul>
+                                <li>Designing a maze-like narrative</li>
+                                <li>Translating the narrative to game mechanics</li>
+                                <li>Designing an interactive call menu</li>
+                                <li>Sound design</li>
+                                <li>Development in Unity for Android</li>
+                                <span class="transparent_gradient"></span>
+                            </ul>
+                        </div>
+                    </div>                
                 </div>
             </div>
-
-            <div class="flex-item" style="background-image: url('Images/Boxes/box_thrust_factor.png');">
-                <div class="bottom-aligner"></div>
-                <div class="item-text">Thrust Factor</div>
-                <div class="overlay">
-                    <a href="pages/project/?id=ThrustFactor" class="overlay-link">Learn more</a>
-                    <a href="https://jeditor.itch.io/thrust-factor" target="_blank" class="overlay-link">Play on itch.io</a>
-                </div>
-            </div>
+            <!--  -->
         </div>
-
+        
         <!-- <p>albert: yo</p> -->
     </div>
 </body>
