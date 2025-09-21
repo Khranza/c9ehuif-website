@@ -322,9 +322,10 @@ figcaption {
 }
 
 .project_block img, .project_block video {
-    border-radius: 10px;  /* Apply rounded corners to images and videos */
     width: 100%;           /* Optional: scale image/video to fill container */
     height: auto;          /* Optional: maintain aspect ratio */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .project_block_text {
