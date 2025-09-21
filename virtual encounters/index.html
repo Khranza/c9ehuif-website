@@ -1,47 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="../../styles.css" rel="stylesheet" />
-  <link rel="icon" href="../../favicon.ico" type="image/x-icon" />
-  <script defer src="../../scripts.js"></script>
-  <title>Jeditor</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../styles.css" rel="stylesheet">
+    <script defer src="scripts.js"></script>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <title>Nathan Stroomberg</title>
 </head>
 <body>
     <div class="background-wrapper">
-        
         <!-- headers -->
         <header>
-            <a href="/" class="navlink">Vault</a>
+            <a href="../index.html" class="navlink">Portfolio</a>
             <a href="pages/contact/index.html" class="navlink">Contact</a>
-            <a href="pages/about/index.html" class="navlink">About me</a>
+            <!-- <a href="pages/about/index.html" class="navlink">About me</a> -->
         </header> 
-        
+
         <div id="kleinlijntje"></div>
         
-        <!-- intro babbel -->
-        <div class="intro-babbel">
-            <!-- categorie -->
-            <h3>Game designer
-                Musician
-                Sound designer
-                Programmer
-                Artist
-            </h3>
-            Hoi, my name is Nathan! I've been designing and developing games from a young age, and now I'm persuing my passion as a Game Design student at HKU. 
-            <br>
-            <br>
-            Though my journey started off with trying to create experiences akin to my favourite games at the time, my interest has veered away from pure entertainment, in favor of more experimental and unconventional games.
-            <br>
-            <br>
-            For me, one of the most rewarding feelings is surprising players with how fun and refreshing experimental games can be. Such was the case with my 2025 end-year project "Virtual Encounters".
-            <br>
-            <br>
-            Though this is not a hard rule I've set for myself; I enjoy designing more conventional games too. See "Thrust Factor."
+        <h3 class="project_game_title">Virtual Encounters</h3>
+        <div class="project_container">
+
+            <video id="video1" autoplay loop muted preload="metadata" controls>
+                <source src="../Images/Trailer Virtual Encounters.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <div class="project_body">
+
+                <p>
+                    Virtual Encounters is a short narrative experience questioning what makes a game, a game. What if the player has agency but no influence? What if a rhythm game has no input prompts? And above all else, does it even matter whether something is a game or not? I let the player experience these topics through three short, experimental games, tied together by the enigmatic Collector.
+                </p>
+                <h2>Trolley Problem</h3>
+                <p>
+                    In Trolley Problem, I tackle the famous moral dilemma, but with the player in an unusual role: you are the trolley. I deliberately give the player <b><u>agency</u></b> (slow down, speed up, honk) but no influence on the end result; driving three people over. After all, you are just the trolley, you have no influence.
+                </p>
+
+                <div class="lr_container">
+                    <div class="left" id="slim_text_1">
+                        <p>
+                            The main player experience was helplessness. After playtesting I found out that the timing of these events is very important: the player will desperately try every button combination to take a turn, find out its futile, and while watching the railway junction go by, realise they have no influence. The longer I stretched this moment, the bigger the impact it had.
+                        </p>
+                        <figure>
+                            <video class="project_video project_video_small" autoplay loop muted preload="metadata" controls>
+                                <source src="trolley_problem.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <figcaption>The final result</figcaption>
+                        </figure>
+                    </div>
+                    <div class="right">
+                        <figure>
+                            <img src="sketch1.png">
+                            <figcaption>A rough sketch including a timeline and movement mechanics</figcaption>
+                        </figure>
+
+                    </div>
+                </div>
+                <h2>Jam the Keys</h3>
+                <p>
+                    In this part of the game, the player has to entertain an audience by jamming on their (physical) keyboard. Background music plays as an indication of what to play, but there is no judging, the player is completely free to play the way they want. If the player stops, the audience boos and the music quiets down, a <b><u>cue</u></b> for them to continue playing, to which the audience cheers.
+                </p>
+                <p>
+                    The music went through several overhauls. It had to be rhythmic, catchy, and just the right tempo. Above all, it had to leave room for the player to express themselves on their keyboard. It took two rejected tracks to end up with the final result. You can listen to some samples below: 
+                </p>
+                <div class="lr_container">
+                    <div class="left">
+                        <video class="project_video" autoplay loop muted preload="metadata" controls>
+                            <source src="../Images/JTK2.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+
+                    <div class="right">
+                        <figure>
+                            <audio controls>
+                                <source src="../Audio/JTK1.mp3" type="audio/mp3">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <figcaption>The original concept pitch audio. It's full of energy, but too fast, cluttered, and rhythmically overwhelming. While players had fun jamming along, they lacked sustained engagement.</figcaption>
+                        </figure>
+
+                        <figure>
+                            <audio controls>
+                                <source src="../Audio/JTK2.mp3" type="audio/mp3">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <figcaption>The second iteration slowed things down, allowing the player to get into a groove. It was still not final, however, because the track was too full and overwhelming, not leaving enough <b><u>headspace</u></b> for the player to perform in.</figcaption>
+                        </figure>
+
+                        <figure>
+                            <audio controls>
+                                <source src="../Audio/JTK3.mp3" type="audio/mp3">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <figcaption>For the final iteration, I decided to start fresh, incorporating the insights I gained from the previous versions. It features a much more interesting rhythm, is not overwhelming, and includes a key moment: a synth solo, where the player can jam at their own pace!</figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <h2>Catch</h3>
+                <p>
+                    In <u>Catch</u>, the player plays a game of catch with a little girl over a fence, with no real progress or reward. The original goal was for the player to consciously decide to stop playing after a while. However, after playtesting, it was found that forcibly removing the game (and the girl) from the player, leaving them with only the idyllic scene and music, was much more impactful, and even made players emotional.
+                </p>
+                <h2>The Collector</h3>
+                <p>
+                    Through playtesting I discovered that the three games <i>did</i> leave an impact, but overall the game felt <u>disjointed</u>. That's why I added "The Collector", a figure to guide the player through the experiences. This helped immensely, and gave me the opportunity to give the game a narrative spin.
+                    <br>
+                    The Collector appears after each game, and helps the player digest what unfolded.
+                </p>
+            </div>
+
         </div>
-        
 
     </div>
 </body>
+
 </html>

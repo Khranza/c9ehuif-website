@@ -8,7 +8,7 @@ body {
     font-size: 30px;
     font-family: 'Helvetica Neue', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin: 0 auto;
-    min-height: 2000px;
+    min-height: 100vh;
 
     /* background-image: url('Images/bggif.gif');
     background-size: contain;
@@ -38,10 +38,18 @@ header {
 
 .navlink {
     padding: 10px;
-    padding-top: 0px;
+    padding-top: 5px;
     background-color: rgba(25, 26, 35, 1);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    height: 100%;
+}
+
+.navlink_selected {
+    border: 4px rgb(100,100,255) solid;
+    border-top: 0px;
+    background-color: #4646c9;
+    padding-top: 30px;
 }
 
 #kleinlijntje{
@@ -186,37 +194,6 @@ header {
     max-width: 100%;
 }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    font-size: 24px;
-    z-index: 2;
-}
-
-.overlay a {
-    margin: 7px 0;
-}
-
-.flex-item:hover .overlay {
-    opacity: 1;
-}
-
-.overlay-link {
-    color:#FFFF64;
-    font-weight: 300;
-}
-
 a {
     color: #FFFF64;
 
@@ -229,6 +206,34 @@ ul {
 
 li {
     margin-bottom: 3px;
+}
+
+.project_container {
+    background-color: rgba(25, 26, 35, 1);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+.project_body {
+    padding: 15px;
+    color: #ddd9d9;
+}
+
+.project_game_title {
+    color: #FFFF64;
+    margin-bottom: 20px;
+    margin-top: 0px;
+    padding: 15px;
+    text-align: center;
+    font-size: 55px;
+    max-width: 100%;
+}
+
+p {
+    font-weight: 100;
+    font-size: 1.3rem;
 }
 
 @font-face {
@@ -247,56 +252,65 @@ li {
     font-display: swap;
 }
 
-/* #project-content {
-     alles behalve de titel
-    
-} */
-
-#project-content p {
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 1.6;
-    margin: 20px 0;
-}
-
-#project-content h3 {
-    font-weight: 500;
-    font-size: 1rem;
-    line-height: 1.6;
-    margin: 20px 0;
-}
-
-#project-content img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 20px 0;
-}
-
-.project-container {
-    margin: 0 auto;
-    padding: 20px;
-    background-color: rgba(25, 26, 35, 0.704);
-    height: 100%
-}
-
-.video-container {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    height: 0;
-    overflow: hidden;
-}
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
 h2 {
     color:#FFFF64;
     margin-bottom: 10px;
+    text-align: center;
 }
 
+figure {
+    margin: 7px;
+}
+
+figcaption {
+    font-weight: 100;
+    font-size: 0.5em;
+}
+
+.lr_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px; /* Adjust space between the image and audio section */
+}
+
+.project_image {
+    max-width: 500px;
+}
+
+.lr_container img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensures the image covers the div */
+  margin: 0px;
+  padding: 0px;
+}
+
+.right {
+  margin: 0px;
+    padding: 0px;
+
+    max-width: 50%;
+}
+.left {
+    padding: 0px;
+  margin: 0px;
+
+}
+
+
+.project_video {
+    max-width: 500px;
+}
+
+.project_video_small {
+    max-width: 400px;
+}
+
+.header_left{
+    text-align: center;
+}
+
+#slim_text_1 {
+    max-width: 400px;
+}
