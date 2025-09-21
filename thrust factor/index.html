@@ -24,10 +24,64 @@
 
             <img src="../Images/bggif.gif">
             <div class="project_body">
-                <h2>About</h3>
                 <p>
-                    Try to make it past all bosses, and save the galaxy!
+                    Thrust Factor is a tight, difficult, movement based space shooter, loosely based on the classic game Asteroids. The player avoids lasers, missiles and asteroids while battling bosses and gathering upgrade blips to improve their ship.
                 </p>
+
+                <div class ="lr_container">
+                    <div class="project_block project_block_text">
+                        <h3>Design Goal</h3>
+                        I wanted to modernize the retro game Asteroids. Apart from sound and graphics, I set out to improve four aspects:
+                        <ul>
+                            <li>Modernized controls</li>
+                            <li>Faster and more active gameplay</li>
+                            <li>Better enemy AI</li>
+                            <li>More long-term goals</li>
+                        </ul>
+                    </div>
+
+                    <div class="project_block project_block_figure">
+                        <figure>
+                            <img src="sketchtf.png">
+                            <figcaption>An early concept sketch, outling movement, enemy behaviour and health systems.</figcaption>
+                        </figure>
+                    </div>
+                    <div class="project_block project_block_figure">
+                        <figure>
+                            <img src="sketchtf.png">
+                            <figcaption>An early concept sketch, outling movement, enemy behaviour and health systems.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <div class ="lr_container">
+                    <div class="project_block project_block_figure">
+                        <figure>
+                            <video autoplay loop muted preload="metadata">
+                                <source src="movement.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <figcaption>First implementation of the turning system. Note the smoothing effect, which prevents instant 180 degree turns. Boosting significantly slows down turning, a balancing mechanic.</figcaption>
+                        </figure>
+                    </div>
+                    <div class="project_block project_block_text">
+                        <h3>Controls</h3>
+                        After multiple iterations, it turned out that in a top-down perspective, using the mouse to both aim and turn worked really well. It means you fire in the direction you're flying: the player will be pointed <b><u>towards</u></b> the danger.
+                    </div>
+                </div>
+                
+                <div class="project_text_block">
+                    <h3>Forcing Movement</h3>
+                    Like in classic Asteroids, players initially remain stationary, turning the game into a turret sim. Instead of adding arbitrary mechanics, I decided to work with the tools I had, and design enemies that force the player to move.
+                </div>
+
+                <p>
+                    Through playtesting I found that players got bored after a few runs: there was too little long-term progression. That's why I designed a meta loop: to sustain engagement, the player can buy permanent upgrades.
+                </p>
+
+                <div class="project_image">
+                    <img src="loop.png">
+                </div>
             </div>
 
         </div>

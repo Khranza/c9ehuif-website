@@ -213,23 +213,11 @@ li {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    justify-content: center;
 }
 
 
-.project_body {
-    padding: 15px;
-    color: #ddd9d9;
-}
 
-.project_game_title {
-    color: #FFFF64;
-    margin-bottom: 20px;
-    margin-top: 0px;
-    padding: 15px;
-    text-align: center;
-    font-size: 55px;
-    max-width: 100%;
-}
 
 p {
     font-weight: 100;
@@ -258,24 +246,54 @@ h2 {
     text-align: center;
 }
 
+h3 {
+    text-align: left;
+    color:#FFFF64;
+    margin-bottom: 10px;
+    margin-top: auto;
+}
+
+.project_body {
+    padding: 15px;
+    color: #ddd9d9;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.project_game_title {
+    color: #FFFF64;
+    margin-bottom: 20px;
+    margin-top: 0px;
+    padding: 15px;
+    text-align: center;
+    font-size: 55px;
+    max-width: 100%;
+}
+
+
 figure {
-    margin: 7px;
+    margin: 0px;
 }
 
 figcaption {
     font-weight: 100;
     font-size: 0.5em;
+    margin: 10px;
+    margin-top: 0px;
 }
 
 .lr_container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    gap: 20px; /* Adjust space between the image and audio section */
+    align-items: flex-start; /* Aligns both the video and the text block to the top */
+    gap: 20px; /* Adjust space between the image and text section */
 }
 
-.project_image {
-    max-width: 500px;
+.project_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .lr_container img{
@@ -286,31 +304,44 @@ figcaption {
   padding: 0px;
 }
 
-.right {
-  margin: 0px;
-    padding: 0px;
-
-    max-width: 50%;
-}
-.left {
-    padding: 0px;
-  margin: 0px;
-
-}
-
-
-.project_video {
-    max-width: 500px;
+.project_block video {
+    max-width: 100%;
+    margin: 0px;
 }
 
 .project_video_small {
     max-width: 400px;
 }
 
-.header_left{
-    text-align: center;
+.project_block {
+    border-radius: 10px;
+    font-size: 0.7em;
+    font-weight: 200;
+    background-color: #252736;
+    color: #ffffff;
 }
 
-#slim_text_1 {
-    max-width: 400px;
+.project_block img, .project_block video {
+    border-radius: 10px;  /* Apply rounded corners to images and videos */
+    width: 100%;           /* Optional: scale image/video to fill container */
+    height: auto;          /* Optional: maintain aspect ratio */
+}
+
+.project_block_text {
+    padding: 15px;
+    max-width: 300px;
+}
+
+.project_block_figure {
+    font-size: 1em;
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.project_block_figure:highlight {
+    transform: scale(1.5); /* Scales the element to 110% of its original size */
+}
+
+
+.project_block li{
+    padding-top: 10px;
 }
