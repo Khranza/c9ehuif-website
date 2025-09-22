@@ -346,3 +346,7 @@ figcaption {
 .project_block li{
     padding-top: 10px;
 }
+
+#project_showcase_video {
+    scale: 1.0;
+}
