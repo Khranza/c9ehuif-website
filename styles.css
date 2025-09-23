@@ -52,6 +52,10 @@ header {
     padding-top: 30px;
 }
 
+footer {
+    margin-top: 30px;
+}
+
 #kleinlijntje{
     height: 15px;
 }
@@ -214,10 +218,8 @@ li {
     flex-direction: column;
     min-height: 100vh;
     justify-content: center;
+    border-radius: 10px;
 }
-
-
-
 
 p {
     font-weight: 100;
@@ -259,7 +261,7 @@ h3 {
     color: #ddd9d9;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 50px;
 }
 
 .project_game_title {
@@ -288,7 +290,7 @@ figcaption {
     display: flex;
     justify-content: space-between;
     align-items: flex-start; /* Aligns both the video and the text block to the top */
-    gap: 20px; /* Adjust space between the image and text section */
+    gap: 10px; /* Adjust space between the image and text section */
 }
 
 
@@ -297,7 +299,7 @@ figcaption {
     display: flex;
     flex-direction: column;
     width: 50%;
-    gap: 20px;
+    gap: 10px;
 }
 
 .project_image img{

@@ -153,19 +153,28 @@
                             <figcaption>Asteroids have a high probability of spawning with a force <b><u>towards the player</u></b>.</figcaption>
                         </figure>
                     </div>
-                                        <div class="project_block project_block_figure">
+                    <div class="project_block project_block_figure">
                         <figure>
-                            <video autoplay loop muted preload="metadata">
-                                <source src="Health System.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                            <figcaption>Asteroids have a high probability of spawning with a force <b><u>towards the player</u></b>.</figcaption>
+                            <img src="hp.png">
+                            <figcaption>Integer based HP scoring of enemies. Excerpt from enemy data excel sheet.</figcaption>
                         </figure>
                     </div>
                     <div class="project_block project_block_text">
                         <h3>Less is more</h3>
-                        Instead of health being a continuous scale, and damage being some arbitrary value, I opted for a tighter system with lower numbers: you have 3 health points, and the player deals 1 damage every time. 
+                        Instead of health being a continuous scale, and damage being some arbitrary value, I opted for a tighter system with <u><b>lower numbers</b></u>: you have 3 health points, and the player deals 1 damage every time. 
                         <br><br>This system rewards precision, punishes carelessness, and is much easier to communicate!
+                    </div>
+                </div>
+                <div class ="lr_container">
+                    <div class="project_block project_block_text">
+                        <h3>No World Borders</h3>
+                        Instead of adding artificial boundries to the map, I used the loop-around mechanic of classic Asteroids, only with a much larger loop distance. If an object is too far out of view, it loops back to the other side. Not a single playtester ever noticed! 
+                    </div>
+                    <div class="project_block project_block_figure">
+                        <figure>
+                            <img src="world.png">
+                            <figcaption>An in-engine view of the viewable area.</figcaption>
+                        </figure>
                     </div>
                 </div>
                 <div class ="lr_container">
@@ -177,13 +186,13 @@
                     </div>
                     <div class="project_block project_block_text">
                         <h3>Loops and Progression</h3>
-                        There are three important gameplay loops at play. The addition of a meta loop, in this case buying permanent unlocks, was necesarry to give players concise and measureable goals to work towards in between stages. 
+                        There are three important gameplay loops at play. The addition of a meta loop, in this case buying permanent unlocks, was necesarry to give players concise and measureable goals to work towards in between runs. 
                     </div>
                 </div>
                 <div class ="lr_container">
                     <div class="project_block project_block_text">
                         <h3>Difficulty vs Progression</h3>
-                        One of my design pillars was that Thrust Factor should be a difficult, skill-based game. The addition of permanent upgrades would clash with that idea. That's why unlocks do not make the player stronger: <br><br>Instead, they unlock new abilities, such as flares (defense against missiles), and their upgrade tree. It adds a layer of complexity and choice to the game.
+                        One of my design pillars was that Thrust Factor should be difficult and skill-based. The addition of permanent upgrades would clash with that idea. That's why unlocks do not make the player stronger: <br><br>Instead, they unlock new abilities, such as flares (defense against missiles), and their upgrade tree. It adds a layer of complexity and choice to the game.
                     </div>
                     <div class="project_block project_block_figure">
                         <figure>
@@ -202,6 +211,11 @@
                 </div>
             </div>
         </div>
+
+        <footer>
+            by Nathan Stroomberg
+        </footer>
+
     </div>
 </body>
 
