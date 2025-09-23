@@ -43,7 +43,7 @@
                             <li>More long-term goals</li>
                         </ul>
                     </div>
-
+                    
                     <div class="project_block project_block_figure">
                         <figure>
                             <img src="sketchtf.png">
@@ -51,7 +51,7 @@
                         </figure>
                     </div>
                 </div>
-
+                
                 <div class ="lr_container">
                     <div class="project_block project_block_figure">
                         <figure>
@@ -65,43 +65,6 @@
                     <div class="project_block project_block_text">
                         <h3>Controls</h3>
                         After multiple iterations, it turned out that using the mouse to both aim and rotate worked really well. It means you fire in the direction you're flying: the player will be pointed <b><u>towards</u></b> the danger. <br><br> This control scheme has a steep learning curve, but allows for very precise movement, lending to a <b><u>high skill ceiling</u></b>.
-                    </div>
-                </div>
-                <div class ="lr_container">
-                    <div class="project_block project_block_text">
-                        <h3>Game loop</h3>
-                        Enemies and asteroids drop upgrade blips when destroyed. This invites players to actively move around in the level. When enough blips are gathered, the player can, when it suits them, enter the upgrade screen.
-                    </div>
-                    <div class ="lr_container">
-                    <div class="project_block project_block_figure">
-                        <figure>
-                            <video autoplay loop muted preload="metadata">
-                                <source src="TFUpgrade.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                            <figcaption>Asteroids have a high probability of spawning with a force <b><u>towards the player</u></b>.</figcaption>
-                        </figure>
-                    </div>
-                    <div class="project_block project_block_figure">
-                        <figure>
-                            <img src="Loop3.png">
-                            <figcaption>In this image, show the game loop at this stage: get high score, upgrade ship.</figcaption>
-                        </figure>
-                    </div>
-                    </div>
-                </div>
-                <div class ="lr_container">
-                    
-                    <div class="project_block project_block_figure">
-                        <figure>
-                            <img src="">
-                            <figcaption>An early concept sketch, outling movement, enemy behaviour and health systems.</figcaption>
-                        </figure>
-                    </div>
-                    <div class="project_block project_block_text">
-                        <h3>Less is more</h3>
-                        Instead of health being a continuous scale, and damage being some arbitrary value, I opted for a tighter system with lower numbers: you have 3 health points, and the player deals 1 damage every time. 
-                        <br><br>This system rewards precision, punishes carelessness, and is much easier to communicate!
                     </div>
                 </div>
                 <div class ="lr_container">
@@ -156,6 +119,55 @@
                         </div>
                     </div>
                 </div>
+                <!-- <div class ="lr_container">
+                    <div class="project_block project_block_text" id="narrow_project_block_text">
+                        <h3>Game loop</h3>
+                        Enemies and asteroids drop upgrade blips when destroyed. This invites players to actively move around in the level. When enough blips are gathered, the player can, when it suits them, enter the upgrade screen.
+                    </div>
+                    <div class ="lr_container">
+                        <div class="project_block project_block_figure">
+                            <figure>
+                                <video autoplay loop muted preload="metadata">
+                                    <source src="TFUpgrade.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <figcaption>Here you can see the player "farming" asteroids, to gain upgrade blips. Upgrade progress is visualized with a percentage in the bottom right.</figcaption>
+                            </figure>
+                        </div>
+                        <div class="project_block project_block_figure" id="core_loop_image">
+                            <figure>
+                                <img src="Loop3.png">
+                                <figcaption>The game core and moment-to-moment loops at this stage.</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div> -->
+                <div class ="lr_container">
+                    
+                    <div class="project_block project_block_figure">
+                        <figure>
+                            <video autoplay loop muted preload="metadata">
+                                <source src="Health System.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <figcaption>Asteroids have a high probability of spawning with a force <b><u>towards the player</u></b>.</figcaption>
+                        </figure>
+                    </div>
+                                        <div class="project_block project_block_figure">
+                        <figure>
+                            <video autoplay loop muted preload="metadata">
+                                <source src="Health System.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <figcaption>Asteroids have a high probability of spawning with a force <b><u>towards the player</u></b>.</figcaption>
+                        </figure>
+                    </div>
+                    <div class="project_block project_block_text">
+                        <h3>Less is more</h3>
+                        Instead of health being a continuous scale, and damage being some arbitrary value, I opted for a tighter system with lower numbers: you have 3 health points, and the player deals 1 damage every time. 
+                        <br><br>This system rewards precision, punishes carelessness, and is much easier to communicate!
+                    </div>
+                </div>
                 <div class ="lr_container">
                     <div class="project_block project_block_figure">
                         <figure>
@@ -164,21 +176,19 @@
                         </figure>
                     </div>
                     <div class="project_block project_block_text">
-                        <h3>Meta Progression</h3>
-                        Through playtesting I found that players got bored after a few runs: there was too little long-term progression. That's why I designed a meta loop. 
-                        <br><br> 
-                        The player earns tokens by surviving, killing enemies and defeating bosses. These tokens can be used to buy permanent upgrades in between rounds. This helps sustain engagement, as it gives players constant visible, measurable progression.
+                        <h3>Loops and Progression</h3>
+                        There are three important gameplay loops at play. The addition of a meta loop, in this case buying permanent unlocks, was necesarry to give players concise and measureable goals to work towards in between stages. 
                     </div>
                 </div>
                 <div class ="lr_container">
                     <div class="project_block project_block_text">
                         <h3>Difficulty vs Progression</h3>
-                        One of my design pillars was that Thrust Factor should be a difficult, skill-based game. The addition of permanent upgrades would clash with that idea. That's why permanent unlocks do not make the player stronger. <br><br>Instead, they unlock new abilities, such as flares (defense against missiles), and their upgrade tree. It adds a layer of complexity and choice to the game.
+                        One of my design pillars was that Thrust Factor should be a difficult, skill-based game. The addition of permanent upgrades would clash with that idea. That's why unlocks do not make the player stronger: <br><br>Instead, they unlock new abilities, such as flares (defense against missiles), and their upgrade tree. It adds a layer of complexity and choice to the game.
                     </div>
                     <div class="project_block project_block_figure">
                         <figure>
                             <img src="diagram.png">
-                            <figcaption>Base unlocks are not very powerful: they have to be improved with in-run upgrades. Each unlock has an upgrade tree.</figcaption>
+                            <figcaption>Base unlocks are not very powerful on their own, they have to be improved during gameplay with upgrades that reset after death. Each round the player can choose which unlocks and upgrades to prioritize.</figcaption>
                         </figure>
                     </div>
                 </div>

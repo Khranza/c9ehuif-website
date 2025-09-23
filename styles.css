@@ -291,6 +291,8 @@ figcaption {
     gap: 20px; /* Adjust space between the image and text section */
 }
 
+
+
 .ud_container {
     display: flex;
     flex-direction: column;
@@ -336,6 +338,7 @@ figcaption {
     font-weight: 200;
     background-color: #252736;
     color: #ffffff;
+    max-width: 100%;
 }
 
 .project_block img, .project_block video {
@@ -343,6 +346,10 @@ figcaption {
     height: auto;          /* Optional: maintain aspect ratio */
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+}
+
+#core_loop_image {
+    width:180%;
 }
 
 .project_block_text {
@@ -353,14 +360,18 @@ figcaption {
     max-width: 300px;
 }
 
+.lr_container #narrow_project_block_text {
+    max-width: 250px;
+}
+
 .project_block_figure {
     font-size: 1em;
     transition: transform 0.3s ease; /* Smooth transition for scaling */
 }
-
-.project_block_figure:highlight {
-    transform: scale(1.5); /* Scales the element to 110% of its original size */
-}
+/* 
+.project_block_figure:hover {
+    transform: scale(1.1);
+} */
 
 
 .project_block li{
@@ -369,4 +380,16 @@ figcaption {
 
 #project_showcase_video {
     scale: 1.0;
+}
+
+@media (max-width: 768px) {
+  .lr_container {
+    flex-direction: column;
+  }
+.lr_container .lr_container{
+    flex-direction: row;
+  }
+  .lr_container .project_block_text, .lr_container #narrow_project_block_text {
+    max-width: 100%;    
+}
 }
