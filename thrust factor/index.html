@@ -29,7 +29,7 @@
 
             <div class="project_body">
                 <p>
-                    Thrust Factor is a tight, difficult, movement based space shooter roguelite, loosely based on the classic game Asteroids. The player avoids lasers, missiles and space rocks while battling bosses and gathering upgrade modules to improve their ship.
+                    Thrust Factor is a tight, difficult, movement based space shooter roguelite, loosely based on the classic arcade game Asteroids. The player avoids lasers, missiles and space rocks while battling bosses and gathering upgrade modules to improve their ship.
                 </p>
 
                 <div class ="lr_container">
@@ -72,18 +72,22 @@
                         <h3>Game loop</h3>
                         Enemies and asteroids drop upgrade blips when destroyed. This invites players to actively move around in the level. When enough blips are gathered, the player can, when it suits them, enter the upgrade screen.
                     </div>
-                    
+                    <div class ="lr_container">
                     <div class="project_block project_block_figure">
                         <figure>
-                            <img src="">
-                            <figcaption>In this video, show asteroids being destroyed, upgrade tokens being gathered and show the upgrade screen.</figcaption>
+                            <video autoplay loop muted preload="metadata">
+                                <source src="TFUpgrade.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <figcaption>Asteroids have a high probability of spawning with a force <b><u>towards the player</u></b>.</figcaption>
                         </figure>
                     </div>
                     <div class="project_block project_block_figure">
                         <figure>
-                            <img src="">
+                            <img src="Loop3.png">
                             <figcaption>In this image, show the game loop at this stage: get high score, upgrade ship.</figcaption>
                         </figure>
+                    </div>
                     </div>
                 </div>
                 <div class ="lr_container">
@@ -155,19 +159,36 @@
                 <div class ="lr_container">
                     <div class="project_block project_block_figure">
                         <figure>
-                            <img src="loop.png">
+                            <img src="diagram.png">
                             <figcaption>A flowchart showing the final game loops, and how they relate to each other. Note the addition of the meta-loop (yellow).</figcaption>
                         </figure>
                     </div>
                     <div class="project_block project_block_text">
                         <h3>Meta Progression</h3>
-                        Through playtesting I found that players got bored after a few runs: there was too little long-term progression. That's why I designed a meta loop: to sustain engagement, the player can buy permanent upgrades.
+                        Through playtesting I found that players got bored after a few runs: there was too little long-term progression. That's why I designed a meta loop. 
+                        <br><br> 
+                        The player earns tokens by surviving, killing enemies and defeating bosses. These tokens can be used to buy permanent upgrades in between rounds. This helps sustain engagement, as it gives players constant visible, measurable progression.
+                    </div>
+                </div>
+                <div class ="lr_container">
+                    <div class="project_block project_block_text">
+                        <h3>Difficulty vs Progression</h3>
+                        One of my design pillars was that Thrust Factor should be a difficult, skill-based game. The addition of permanent upgrades would clash with that idea. That's why permanent unlocks do not make the player stronger. <br><br>Instead, they unlock new abilities, such as flares (defense against missiles), and their upgrade tree. It adds a layer of complexity and choice to the game.
+                    </div>
+                    <div class="project_block project_block_figure">
+                        <figure>
+                            <img src="diagram.png">
+                            <figcaption>Base unlocks are not very powerful: they have to be improved with in-run upgrades. Each unlock has an upgrade tree.</figcaption>
+                        </figure>
                     </div>
                 </div>
 
                 <div class="project_block project_block_text">
                     <h3>Post Mortem</h3>
-                    End it here
+                    Looking back at the design process, I feel I
+                    <br>
+                    <br>
+                    Some players still preferred to play more passively, which is fine. I realized that the game supporting multiple viable playstyles is a good thing, and trying to force every player into a specific playstyle is counterproductive.
                 </div>
             </div>
         </div>
