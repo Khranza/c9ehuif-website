@@ -70,8 +70,23 @@
                 <div class ="lr_container">
                     <div class="project_block project_block_text">
                         <h3>Game loop</h3>
-                        Show game loop sketch
+                        Enemies and asteroids drop upgrade blips when destroyed. This invites players to actively move around in the level. When enough blips are gathered, the player can, when it suits them, enter the upgrade screen.
                     </div>
+                    
+                    <div class="project_block project_block_figure">
+                        <figure>
+                            <img src="">
+                            <figcaption>In this video, show asteroids being destroyed, upgrade tokens being gathered and show the upgrade screen.</figcaption>
+                        </figure>
+                    </div>
+                    <div class="project_block project_block_figure">
+                        <figure>
+                            <img src="">
+                            <figcaption>In this image, show the game loop at this stage: get high score, upgrade ship.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class ="lr_container">
                     
                     <div class="project_block project_block_figure">
                         <figure>
@@ -79,52 +94,83 @@
                             <figcaption>An early concept sketch, outling movement, enemy behaviour and health systems.</figcaption>
                         </figure>
                     </div>
-                </div>
-                <div class ="lr_container">
                     <div class="project_block project_block_text">
                         <h3>Less is more</h3>
                         Instead of health being a continuous scale, and damage being some arbitrary value, I opted for a tighter system with lower numbers: you have 3 health points, and the player deals 1 damage every time. 
                         <br><br>This system rewards precision, punishes carelessness, and is much easier to communicate!
                     </div>
-                    
-                    <div class="project_block project_block_figure">
-                        <figure>
-                            <img src="">
-                            <figcaption>An early concept sketch, outling movement, enemy behaviour and health systems.</figcaption>
-                        </figure>
+                </div>
+                <div class ="lr_container">
+                    <div class="project_block project_block_text">
+                        <h3>Forcing Movement</h3>
+                        There was a problem: just like in classic Asteroids, players initially remained stationary, turning the game into a turret sim. 
+                        <br><br>
+                        Instead of bloating the game with new, unneccessary mechanics, I decided to work with the tools I had, and <b><u>design enemy AI</u></b> that forces the player to employ a more active playstyle.
+                        <br><br>
+                        Each one of the three basic enemies, as well as the asteroids themselves, play a specific role in getting the player moving.
+                    </div>
+                    <div class ="lr_container">
+                        <div class="ud_container">
+                            <div class="project_block project_block_figure">
+                                <figure>
+                                    <video autoplay loop muted preload="metadata">
+                                        <source src="TFMoveAsteroids.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    <figcaption>Asteroids have a high probability of spawning with a force <b><u>towards the player</u></b>.</figcaption>
+                                </figure>
+                            </div>
+                            <div class="project_block project_block_figure">
+                                <figure>
+                                    <video autoplay loop muted preload="metadata">
+                                        <source src="TFMoveMissile.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    <figcaption>The Lancier locks onto the player, and if the lock isn't broken, fires a tracking missile. Simply flying away from one is not an option. Note the "Lock Warning" UI and off-screen missile marker.</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="ud_container">
+                            <div class="project_block project_block_figure">
+                                <figure>
+                                    <video autoplay loop muted preload="metadata">
+                                        <source src="TFMoveLaser.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    <figcaption>The Firefly, the most basic enemy, fires lasers that can't be shot down. They have to be <b><u>dodged</u></b>.</figcaption>
+                                </figure>
+                            </div>
+                            <div class="project_block project_block_figure">
+                                <figure>
+                                    <video autoplay loop muted preload="metadata">
+                                        <source src="TFMoveDrone.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    <figcaption>Drones fire laserbeams across the screen from <b><u>outside</u></b> the player's FOV. The player can make a <b><u>choice</u></b> to either dodge, or fly towards the drone to destroy it.</figcaption>
+                                </figure>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class ="lr_container">
                     <div class="project_block project_block_figure">
                         <figure>
-                            <video autoplay loop muted preload="metadata">
-                                <source src="movement.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                            <figcaption>First implementation of the mouse rotation system. Note the smoothing effect, which prevents instant 180 degree turns. Boosting significantly slows down turning, a balancing mechanic.</figcaption>
+                            <img src="loop.png">
+                            <figcaption>A flowchart showing the final game loops, and how they relate to each other. Note the addition of the meta-loop (yellow).</figcaption>
                         </figure>
                     </div>
                     <div class="project_block project_block_text">
-                        <h3>Forcing Movement</h3>
-                        There was a problem: just like in classic Asteroids, players initially remained stationary, turning the game into a turret sim. Instead of bloating the game with new, unneccessary mechanics, I decided to work with the tools I had, and <b><u>design enemy AI</u></b> that force the player employ a more active playstyle.
+                        <h3>Meta Progression</h3>
+                        Through playtesting I found that players got bored after a few runs: there was too little long-term progression. That's why I designed a meta loop: to sustain engagement, the player can buy permanent upgrades.
                     </div>
                 </div>
-                
-                
-                <div class="project_text_block">
-                </div>
 
-                <p>
-                    Through playtesting I found that players got bored after a few runs: there was too little long-term progression. That's why I designed a meta loop: to sustain engagement, the player can buy permanent upgrades.
-                </p>
-
-                <div class="project_image">
-                    <img src="loop.png">
+                <div class="project_block project_block_text">
+                    <h3>Post Mortem</h3>
+                    End it here
                 </div>
             </div>
-
         </div>
-
     </div>
 </body>
 
