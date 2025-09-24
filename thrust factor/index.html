@@ -150,7 +150,7 @@
                                 <source src="Health System.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
-                            <figcaption>Asteroids have a high probability of spawning with a force <b><u>towards the player</u></b>.</figcaption>
+                            <figcaption>The player gets hit continuously. Bottom left: Shield, bottom right: Health.</figcaption>
                         </figure>
                     </div>
                     <div class="project_block project_block_figure">
@@ -168,7 +168,7 @@
                 <div class ="lr_container">
                     <div class="project_block project_block_text">
                         <h3>No World Borders</h3>
-                        Instead of adding artificial boundries to the map, I used the loop-around mechanic of classic Asteroids, only with a much larger loop distance. If an object is too far out of view, it loops back to the other side. Not a single playtester ever noticed! 
+                        Instead of adding artificial boundries to the map, I used the loop-around mechanic of classic Asteroids, only with a much larger loop distance. This system is inspired by the Blue Sphere levels of Sonic Mania. If an object is too far out of view, it loops back to the other side. Not a single playtester ever noticed! 
                     </div>
                     <div class="project_block project_block_figure">
                         <figure>
@@ -192,22 +192,28 @@
                 <div class ="lr_container">
                     <div class="project_block project_block_text">
                         <h3>Difficulty vs Progression</h3>
-                        One of my design pillars was that Thrust Factor should be difficult and skill-based. The addition of permanent upgrades would clash with that idea. That's why unlocks do not make the player stronger: <br><br>Instead, they unlock new abilities, such as flares (defense against missiles), and their upgrade tree. It adds a layer of complexity and choice to the game.
+                        One of my design pillars was that Thrust Factor should be difficult and skill-based. The addition of permanent upgrades would clash with that idea. That's why unlocks do not simply make the player stronger: <br><br>Instead, they unlock new abilities, such as flares (defense against missiles), and their upgrade tree. It adds a layer of complexity and choice to the game.
                     </div>
                     <div class="project_block project_block_figure">
                         <figure>
-                            <img src="diagram.png">
-                            <figcaption>Base unlocks are not very powerful on their own, they have to be improved during gameplay with upgrades that reset after death. Each round the player can choose which unlocks and upgrades to prioritize.</figcaption>
+                            <video autoplay loop muted preload="metadata">
+                                <source src="Countermeasures.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <figcaption>1: The player buys the "Countermeasures" unlock in the menu. 2: The player chooses to upgrade it with "Auto Deploy". 3: The upgraded unlock in action.</figcaption>
                         </figure>
                     </div>
                 </div>
 
                 <div class="project_block project_block_text">
                     <h3>Post Mortem</h3>
-                    Looking back at the design process, I feel I
+                    Turning Asteroids into Thrust Factor was incredibly fun and rewarding. The project taught me a lot about system design in general, but especially about the interaction between different game loops. 
                     <br>
                     <br>
-                    Some players still preferred to play more passively, which is fine. I realized that the game supporting multiple viable playstyles is a good thing, and trying to force every player into a specific playstyle is counterproductive.
+                    I didn't expect that the biggest challenge would be to get players to move around more. Some players still preferred to play more passively, which frustrated me at first. But I realized that the game supporting multiple viable playstyles is actually a good thing, and trying to force every player into a specific playstyle is counterproductive.
+                    <br>
+                    <br>
+                    I haven't touched upon sound design and music, which in my opinion are definitely part of game design as well, and I could dedicate another entire page to. You can listen to the soundtrack <a href="https://soundcloud.com/jeditor/sets/thrust-factor-original-soundtrack">here</a>. 
                 </div>
             </div>
         </div>
