@@ -426,3 +426,13 @@ figcaption {
   max-height: 100%;
   cursor: zoom-out;
 }
+
+#project_info {
+    display: flex;
+    flex-direction: row;
+}
+
+#project_info > div {
+  flex: 1;
+  min-width: 0;
+}
