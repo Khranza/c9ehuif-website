@@ -52,9 +52,6 @@ header {
     padding-top: 30px;
 }
 
-footer {
-    margin-top: 30px;
-}
 
 #kleinlijntje{
     height: 15px;
@@ -113,7 +110,7 @@ footer {
     transform: scale(1);
     position: relative;
     overflow: hidden;
-    max-height: 390px; /* Set an initial max-height */
+    max-height: 420px; /* Set an initial max-height */
     text-decoration: none;
 }
 
@@ -163,7 +160,7 @@ footer {
   margin-top: 0.75em;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 4px;
 }
 
 .game_title {
@@ -171,10 +168,17 @@ footer {
     text-decoration: none;
 }
 
+.game_icons {
+    display: inline-flex;
+    align-items: center;
+    gap:7px;
+    margin:0px;
+}
+
 .game_text {
     font-size: .95em;
     color: #dadada;
-    font-weight: 100;
+    font-weight: 300;
     letter-spacing: 0.3px;
 }
 
@@ -222,7 +226,7 @@ li {
 }
 
 p {
-    font-weight: 100;
+    font-weight: 300;
     font-size: 1.3rem;
     margin-top: 0px;
 }
@@ -280,7 +284,7 @@ figure {
 }
 
 figcaption {
-    font-weight: 100;
+    font-weight: 200;
     font-size: 0.5em;
     margin: 10px;
     margin-top: 0px;
@@ -337,7 +341,7 @@ figcaption {
 .project_block {
     border-radius: 10px;
     font-size: 0.7em;
-    font-weight: 200;
+    font-weight: 300;
     background-color: #252736;
     color: #ffffff;
     max-width: 100%;
@@ -435,4 +439,62 @@ figcaption {
 #project_info > div {
   flex: 1;
   min-width: 0;
+}
+
+
+
+
+/* FOOTER */
+
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+    align-items: center;
+    gap: 15px;
+}
+
+#footer_links{
+    display:flex;
+    gap:20px;
+}
+
+#footer_links a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+    font-size: 0.8em;
+    font-weight: 300;
+    color: #dadada;
+    text-decoration: none;
+    border-radius: 10px;
+    border-width: 2px;
+    border-color:#ffffff;
+    border-style:solid;
+    gap:5px;
+}
+
+.kadence-svg-iconset {
+	display: inline-flex;
+	align-self: center;
+}
+
+.kadence-svg-iconset svg {
+	height: 1em;
+	width: 1em;
+}
+
+
+#footer_links a:hover {
+    border-color: rgb(100,100,255) ;
+    z-index: 2;
+    transition: all 0.08s ease-in;
+    max-height: 100vh; /* Increase max-height on hover */
+}
+
+footer p{
+    font-size: 0.6em;
 }
