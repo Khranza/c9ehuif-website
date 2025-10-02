@@ -92,14 +92,20 @@ header {
   justify-content: center;
   gap: 20px;
   align-items: start;
+  margin-bottom: 110px;
 }
 
 .game_grid_small {
     font-size: 16px;
+    background-color: #0e0e10;
     display: grid;
-    gap: 10px;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+    gap: 20px;
+}
 
+.game_item_small {
+  max-width: 200px;
 }
 
 .game_item {
@@ -118,10 +124,6 @@ header {
 }
 
 
-
-.game_item_small {
-    height: auto;
-}
 
 
 .game_item:hover {
