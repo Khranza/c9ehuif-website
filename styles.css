@@ -16,11 +16,38 @@ body {
 }
 
 
+
+.intro_babbel {
+    margin-top:50px;
+    margin-bottom:500px;
+}
+
+#home_video {
+  position: absolute;
+  width: 100%;           /* Full width of parent */
+  height: 300px;         /* Or any desired height */
+  overflow: hidden;      /* Hide overflow to crop */
+  z-index: -1; /* Puts it behind content */
+}
+
+#home_video video {
+  position:fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: auto;
+
+  /* Optional: ensure it covers even if aspect ratio doesn't match */
+  min-height: 100%;
+  object-fit: cover;     /* Crops and fills */
+}
+
+
 /* Mid column */
 .background-wrapper {
     max-width: 960px;
     width: 100%;
-    position: absolute;
+    position: relative;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -62,6 +89,7 @@ header {
     display: inline-block;
     background-color: rgba(25, 26, 35, 1);
     margin: 10px;
+    padding-right:10px;
     border-radius: 100px;
     display: flex;
     align-items: center; /* vertically align image and text */
@@ -394,6 +422,12 @@ figcaption {
     scale: 1.0;
 }
 
+/* Home */
+#about_box {
+    max-width: 500px;
+    background-color: rgba(25, 26, 35, 0.9);
+}
+
 
 /* contact */
 #contact_box {
@@ -401,6 +435,10 @@ figcaption {
     background-color: rgba(25, 26, 35, 1);
 }
 
+#contact_box a{
+    color: white;
+    text-decoration: none;
+}
 
 
 
@@ -408,7 +446,7 @@ figcaption {
     position: relative; /* or absolute, depending on your needs */
     /* rotate: 180deg;
     transform: scaleX(-1); */
-    top: -68px;
+    top: -8px;
     left: 50%; /* Position the left edge in the middle of the page */
     width: 120%; /* Adjust this value if you want a specific width */
     object-fit: cover; /* Ensure the image covers the area without distortion */
@@ -487,11 +525,13 @@ figcaption {
 
 
 footer {
+    background-color: rgba(25, 26, 35, 1);
     display: flex;
     flex-direction: column;
     margin-top: 150px;
     align-items: center;
     gap: 15px;
+    padding-top: 15px;
 }
 
 #footer_links{
@@ -512,7 +552,7 @@ footer {
     text-decoration: none;
     border-radius: 10px;
     border-width: 2px;
-    border-color:#ffffff;
+    border-color:#dadada;
     border-style:solid;
     gap:5px;
 }
@@ -529,6 +569,7 @@ footer {
 
 
 #footer_links a:hover {
+    color: rgb(100,100,255) ;
     border-color: rgb(100,100,255) ;
     z-index: 2;
     transition: all 0.08s ease-in;
@@ -537,4 +578,21 @@ footer {
 
 footer p{
     font-size: 0.6em;
+}
+
+#defunct_rechtlijn_temp {
+    background-color: #1a1a1f;
+    position: relative; /* This is important for the overlay to position correctly */
+}
+
+
+
+#defunct_rechtlijn_temp::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Adjust the last value (0.5) for transparency */
 }
