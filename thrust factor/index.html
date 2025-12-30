@@ -40,7 +40,7 @@
                     </div>
                     <div>
                         <h3>Description</h3>
-                        Thrust Factor is a tight, difficult, movement based space shooter roguelite, loosely based on the classic arcade game Asteroids. The player avoids lasers, missiles and space rocks while battling bosses and gathering upgrade modules to improve their ship.
+                        Thrust Factor is a tight, punishing, movement based space shooter roguelite, loosely based on the classic arcade game Asteroids. The player avoids lasers, missiles and space rocks while battling bosses and gathering upgrade modules to improve their ship.
                     </div>
                 </div>
 
@@ -54,8 +54,10 @@
                             <li>Modernized controls</li>
                             <li>Faster-paced and more active gameplay</li>
                             <li>Better enemy AI</li>
-                            <li>More long-term goals</li>
+                            <li>More progression and better replayability</li>
                         </ul>
+                        <br>
+                        I described the <u><b>core player experience</b></u> as high-risk, high-reward "glass cannon", demanding precision and rewarding mastery.
                     </div>
                     
                     <div class="project_block project_block_figure">
@@ -73,18 +75,21 @@
                                 <source src="movement.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
-                            <figcaption>First implementation of the mouse rotation system. Note the smoothing effect, which prevents instant 180 degree turns. Boosting significantly slows down turning, a balancing mechanic.</figcaption>
+                            <figcaption>Early implementation of the mouse rotation system. Note the smoothing effect, which prevents instant 180 degree turns. Boosting significantly slows down turning, a balancing mechanic.</figcaption>
                         </figure>
                     </div>
                     <div class="project_block project_block_text">
-                        <h3>Controls</h3>
-                        After multiple iterations, it turned out that using the mouse to both aim and rotate worked really well. It means you fire in the direction you're flying: the player will be pointed <b><u>towards</u></b> the danger. <br><br> This control scheme has a steep learning curve, but allows for very precise movement, lending to a <b><u>high skill ceiling</u></b>.
+                        <h3>Player Controller</h3>
+                        The first order of business was to establish the Three C's (Character, Camera, Controller) which each had to support the core player experience. <br><br>
+                        One important decision was to make the player only able to shoot in the direction they are flying, forcing them to always face the danger, using the mouse cursor to rotate. <br><br>
+                        <!-- To accommodate fast but controllable movement, the camera jumps in front of the player while boosting for a better forward view. <br><br> -->
+                        While I noticed that this control scheme feels unusual at first, it enables very precise movement and, according to playtesters, a satisfyingly <u><b>high skill ceiling</b></u>.
                     </div>
                 </div>
                 <div class ="lr_container">
                     <div class="project_block project_block_text">
                         <h3>Forcing Movement</h3>
-                        There was a problem: just like in classic Asteroids, players initially remained stationary, turning the game into a turret sim. 
+                        After adding asteroids I noticed a problem: just like in classic Asteroids, players remained stationary, practically turning the game into a turret sim. 
                         <br><br>
                         Instead of bloating the game with new, unneccessary mechanics, I decided to work with the tools I had, and <b><u>design enemy AI</u></b> that forces the player to employ a more active playstyle.
                         <br><br>
