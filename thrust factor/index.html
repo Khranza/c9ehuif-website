@@ -83,17 +83,17 @@
                         The first order of business was to establish the Three C's (Character, Camera, Controller) which each had to support the core player experience. <br><br>
                         One important decision was to make the player only able to shoot in the direction they are flying, forcing them to always face the danger, using the mouse cursor to rotate. <br><br>
                         <!-- To accommodate fast but controllable movement, the camera jumps in front of the player while boosting for a better forward view. <br><br> -->
-                        While I noticed that this control scheme feels unusual at first, it enables very precise movement and, according to playtesters, a satisfyingly <u><b>high skill ceiling</b></u>.
+                        This control scheme feels unusual at first, but it enables very precise movement and, according to playtesters, has a satisfyingly <u><b>high skill ceiling</b></u>.
                     </div>
                 </div>
                 <div class ="lr_container">
                     <div class="project_block project_block_text">
-                        <h3>Forcing Movement</h3>
-                        After adding asteroids I noticed a problem: just like in classic Asteroids, players remained stationary, practically turning the game into a turret sim. 
+                        <h3>Active Play</h3>
+                        After adding asteroid enemies, I noticed a problem: just like in classic Asteroids, players remained stationary, practically turning the game into a turret sim. 
                         <br><br>
-                        Instead of bloating the game with new, unneccessary mechanics, I decided to work with the tools I had, and <b><u>design enemy AI</u></b> that forces the player to employ a more active playstyle.
+                        Instead of bloating the game with new, unneccessary mechanics, I decided to work with the tools I had, and <b><u>designed enemy AI</u></b> that forces the player to use a more active playstyle.
                         <br><br>
-                        Each one of the three basic enemies, as well as the asteroids themselves, play a specific role in getting the player moving.
+                        Each of the three basic enemies, as well as the asteroids, play a specific role in getting the player moving.
                     </div>
                     <div class ="lr_container">
                         <div class="ud_container">
@@ -112,7 +112,7 @@
                                         <source src="TFMoveMissile.mp4" type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video>
-                                    <figcaption>The Lancier locks onto the player, and if the lock isn't broken, fires a tracking missile. Simply flying away from one is not an option. Note the "Lock Warning" UI and off-screen missile marker.</figcaption>
+                                    <figcaption>The Lancier locks onto the player, and if the lock isn't broken, fires a tracking missile which takes effort and skill to dodge.</figcaption>
                                 </figure>
                             </div>
                         </div>
@@ -132,7 +132,7 @@
                                         <source src="TFMoveDrone.mp4" type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video>
-                                    <figcaption>Drones fire laserbeams across the screen from <b><u>outside</u></b> the player's FOV. The player can make a <b><u>choice</u></b> to either dodge, or fly towards the drone to destroy it.</figcaption>
+                                    <figcaption>Drones fire laserbeams across the screen from outside the player's viewport. The player makes the <b><u>choice</u></b> to either evade, or fly towards the drone and destroy it.</figcaption>
                                 </figure>
                             </div>
                         </div>
@@ -187,12 +187,12 @@
                 <div class ="lr_container">
                     <div class="project_block project_block_text">
                         <h3>No World Borders</h3>
-                        My goal was to create a map without obtrusive boundries. Inspired by the "Blue Sphere" levels of Sonic Mania, I implemented a loop-around mechanic. If an object is too far out of view, it loops back to the other side. <br><br>This system is so seamless, not a single playtester ever noticed!
+                        My goal was to create a map without obtrusive boundries. Inspired by the "Blue Sphere" levels of Sonic Mania, I implemented a loop-around system. If an object is too far out of view, it loops back to the other side. <br><br>This system is so seamless, not a single playtester ever noticed!
                     </div>
                     <div class="project_block project_block_figure">
                         <figure>
                             <img src="world.png">
-                            <figcaption>An in-engine view of the viewable area.</figcaption>
+                            <figcaption>An in-engine view of the game's viewport.</figcaption>
                         </figure>
                     </div>
                 </div>
@@ -200,12 +200,15 @@
                     <div class="project_block project_block_figure">
                         <figure>
                             <img src="diagram.png">
-                            <figcaption>A flowchart showing the final game loops, and how they relate to each other. Note the addition of the meta-loop (yellow).</figcaption>
+                            <figcaption>A flowchart showing the game broken down into separate loops, and how they relate to each other. Note the addition of the meta-loop (yellow).</figcaption>
                         </figure>
                     </div>
                     <div class="project_block project_block_text">
                         <h3>Loops and Progression</h3>
                         There are three important gameplay loops at play. The addition of a meta loop, in this case buying permanent unlocks, was necesarry to give players concise and measureable goals to work towards in between runs. 
+                        <br>
+                        <br>
+                        I often break down gameplay systems like this, to make sure there are no holes in the design and to keep it consistent.
                     </div>
                 </div>
                 <div class ="lr_container">
@@ -232,7 +235,7 @@
                     I didn't expect that the biggest challenge would be to get players to move around more. Some players still preferred to play more passively, which frustrated me at first. But I realized that the game supporting multiple viable playstyles is actually a good thing, and trying to force every player into a specific playstyle is counterproductive.
                     <br>
                     <br>
-                    I haven't touched upon sound design and music, which in my opinion are definitely part of game design as well, and I could dedicate another entire page to. You can listen to the soundtrack <a href="https://soundcloud.com/jeditor/sets/thrust-factor-original-soundtrack">here</a>. 
+                    I haven't touched upon sound design and music, which I've put as least an equal amount of effort into designing and fine tuning as the rest, and I could dedicate another entire page to. You can listen to the soundtrack <a href="https://soundcloud.com/jeditor/sets/thrust-factor-original-soundtrack">here</a>. 
                 </div>
             </div>
         </div>
