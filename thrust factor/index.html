@@ -214,7 +214,7 @@
                 <div class ="lr_container">
                     <div class="project_block project_block_text">
                         <h3>Difficulty vs Progression</h3>
-                        The design pillars I established early on dictate Thrust Factor should be difficult and skill-based. The addition of permanent upgrades would clash with that idea. That's why unlocks do not simply make the player stronger: <br><br>Instead, they unlock new abilities, such as flares (defense against missiles), and their upgrade tree. It adds a layer of complexity and choice to the game.
+                        The design pillars I established early on dictate Thrust Factor should be difficult and skill-based. The addition of permanent upgrades would clash with that idea. That's why unlocks do not simply make the player stronger: <br><br>Instead, they unlock new abilities, such as flares (defense against missiles), and their respective upgrade tree. It adds a layer of complexity and choice to the game.
                     </div>
                     <div class="project_block project_block_figure">
                         <figure>
@@ -270,6 +270,65 @@
         </footer>
 
     </div>
+
+
+
+
+    <div id="music-player">
+        <div class="mp-glow"></div>
+        <!-- Song info -->
+        <div class="mp-info">
+            <div class="mp-disc">
+                <div class="mp-disc-inner"></div>
+                <img src="../Images/Boxes/box_thrust_factor.png">
+            </div>
+            <div class="mp-text">
+                <div class="mp-song-name"></div>
+                <div class="mp-artist"></div>
+                <!-- Controls -->
+                <div class="mp-controls">
+                    <button class="mp-btn mp-prev" title="Previous">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="19 20 9 12 19 4 19 20"/><line x1="5" y1="19" x2="5" y2="5"/>
+                        </svg>
+                    </button>
+                    <button class="mp-btn mp-play-pause" title="Play / Pause">
+                        <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="5 3 19 12 5 21 5 3"/>
+                        </svg>
+                        <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor" style="display:none">
+                            <rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/>
+                        </svg>
+                    </button>
+                    <button class="mp-btn mp-next" title="Next">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="5 4 15 12 5 20 5 4"/><line x1="19" y1="5" x2="19" y2="19"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Timeline -->
+        <div class="mp-timeline-wrap">
+            <div class="mp-bar-track">
+                <div class="mp-bar-fill"></div>
+                <input class="mp-seek" type="range" min="0" max="100" value="0" step="0.1">
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+    var playlist = [
+        { title: "Combat Addiction", artist: "Nathan Stroomberg", src: "Music Tracks/Combat Addiction.flac" },
+        { title: "Hauler (Boss)", artist: "Nathan Stroomberg", src: "Music Tracks/Hauler.flac" },
+        { title: "Main Menu", artist: "Nathan Stroomberg", src: "Music Tracks/Main Menu.flac" },
+        { title: "Crimson Star (Boss)", artist: "Nathan Stroomberg", src: "Music Tracks/Crimson Star.flac" },
+        { title: "Debrief", artist: "Nathan Stroomberg", src: "Music Tracks/Debrief.flac" },
+    ];
+    </script>
+    <script src="../Scripts/music-player.js"></script>
 </body>
 
 </html>
