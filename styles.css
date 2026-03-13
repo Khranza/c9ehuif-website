@@ -45,7 +45,7 @@ body {
 
 /* Mid column */
 .background-wrapper {
-    max-width: 960px;
+    max-width: 1120px;
     width: 100%;
     position: relative;
     top: 0;
@@ -55,6 +55,7 @@ body {
 }
 
 header {
+
     justify-content: left;
     display: flex;
     padding: 7px;
@@ -85,10 +86,11 @@ header {
 }
 
 .intro_box {
+    max-width: 960px;
     scale: 110%;
     display: inline-block;
     background-color: #191a23;
-    margin: 10px;
+    margin: 10px auto;
     padding-right:10px;
     border-radius: 100px;
     display: flex;
@@ -124,6 +126,8 @@ header {
 }
 
 .game_grid_small {
+    max-width: 960px;
+    margin: 0 auto;
     font-size: 16px;
     background-color: #0e0e10;
     display: grid;
@@ -189,25 +193,51 @@ header {
   height: auto;
 }
 
-.game_tags{
-    color:#0e0e10;
+.game_tags {
+    color: #0e0e10;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 6px;
 }
 
-.game_tags .tag{
-    border-radius: 10px;
-    padding: 1px;
-    padding-left: 5px;
-    padding-right: 5px;
-    background-color: #ec7d7d;
+.game_tags .tag {
+    border-radius: 6px;
+    padding: 1px 5px;
+    background-color: var(--tag-color, #ec7d7d);
+    color: rgb(35, 35, 39);
+    font-size: .85em;
+    white-space: nowrap;
 }
+
+.tag[data-tag="3c's"]        { --tag-color: #a78bca; } 
+.tag[data-tag="playtesting"] { --tag-color: #6baed6; } 
+.tag[data-tag="leadership"]  { --tag-color: #74c476; } 
+.tag[data-tag="narrative"]   { --tag-color: #e07bb5; } 
+.tag[data-tag="progression"] { --tag-color: #f0a868; } 
+.tag[data-tag="combat"]      { --tag-color: #d45f5f; }
+.tag[data-tag="systems"]     { --tag-color: #7abf6e; } 
+.tag[data-tag="level"]       { --tag-color: #5bbfb5; } 
+.tag[data-tag="audio"]       { --tag-color: #e0845a; }
+.tag[data-tag="gamefeel"]    { --tag-color: #73d6c9; } 
+.tag[data-tag="techdesign"]  { --tag-color: #5ba3c9; } 
+.tag[data-tag="artistic"]    { --tag-color: #c9b75b; } 
+.tag[data-tag="boardgame"]   { --tag-color: #c95b75; } 
 
 .game_data {
   margin-top: 0.75em;
   display: flex;
   flex-direction: column;
   gap: 4px;
+}
+
+.game_title_row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 5px;
 }
 
 .game_title {
@@ -219,7 +249,6 @@ header {
     display: inline-flex;
     align-items: center;
     gap:7px;
-    margin:0px;
 }
 
 .game_text {
@@ -255,7 +284,8 @@ a {
 }
 
 ul {
-    margin: 5px;
+    margin: 0px;
+    margin-bottom: 15px;
     padding-left: 25px;
 }
 
@@ -297,8 +327,19 @@ p {
 h2 {
     color:#FFFF64;
     margin-bottom: 10px;
-    margin-top: 0px;
+    margin-top: 30px;
     text-align: center;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    height: 4px;
+    background: #252736;
+    margin-top: 15px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h3 {
@@ -344,8 +385,6 @@ figcaption {
     align-items: flex-start; /* Aligns both the video and the text block to the top */
     gap: 10px; /* Adjust space between the image and text section */
 }
-
-
 
 .ud_container {
     display: flex;
@@ -410,10 +449,6 @@ figcaption {
     padding: 15px;
 }
 
-.lr_container .project_block_text {
-    max-width: 300px;
-}
-
 .lr_container #narrow_project_block_text {
     max-width: 250px;
 }
@@ -457,14 +492,24 @@ figcaption {
 
 
 #finger_pointing_image {
-    position: relative; /* or absolute, depending on your needs */
-    /* rotate: 180deg;
-    transform: scaleX(-1); */
+    position: relative;
     top: -8px;
-    left: 50%; /* Position the left edge in the middle of the page */
-    width: 120%; /* Adjust this value if you want a specific width */
-    object-fit: cover; /* Ensure the image covers the area without distortion */
+    left: 50%;
+    width: 120%;
+    object-fit: cover;
 }
+
+.game_flexbox_grid {
+    font-size: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    align-items: start;
+    margin-bottom: 110px;
+}
+
+
 
 
 @media (max-width: 768px) {
@@ -535,8 +580,6 @@ figcaption {
 
 
 /* FOOTER */
-
-
 
 footer {
     background-color: #0e0e10;
@@ -754,7 +797,7 @@ footer p{
 }
 
 .mp-btn:hover {
-  color: rgb(100,100,255);
+  color: #6464ff;
   transform: scale(1.1);
 }
 

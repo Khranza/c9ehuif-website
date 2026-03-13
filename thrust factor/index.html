@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../styles.css" rel="stylesheet">
-    <script defer src="scripts.js"></script>
+    <script defer src="../scripts.js"></script>
     <link rel="icon" href="../favicon.ico" type="image/x-icon">
     <title>Nathan Stroomberg</title>
 </head>
@@ -31,11 +31,11 @@
             <div class="project_body">
                 <div class="project_block project_block_text" id="project_info">
                     <div>
-                        <b>Release date:</b><br>June 6, 2025
+                        <b>Release date:</b><br>Dec 7 2024 (alpha), June 6 2025 <a href="#" onClick="window.open('http://jeditor.itch.io/thrust-factor', '_blank')">itch.io release</a>
                         <br><br>
-                        <b>Development time:</b><br>Solo, 6 months part-time
+                        <b>Development time:</b><br>6 months part-time
                         <br><br>
-                        <b>Project type:</b><br>Solo, personal-turned-study project (Game Design class)
+                        <b>Project type:</b><br>Solo, study-turned-personal project
 
                     </div>
                     <div>
@@ -49,51 +49,139 @@
                 <div class ="lr_container">
                     <div class="project_block project_block_text">
                         <h3>Design Goal</h3>
-                        I wanted to modernize the retro game Asteroids. Apart from sound and graphics, I set out to improve four aspects:
+                        I wanted to modernize the retro game Asteroids. Apart from sound and graphics, I set out to improve on four main aspects:
                         <ul>
-                            <li>Modernized controls</li>
+                            <li>Modernized Player Character and game feel</li>
                             <li>Faster-paced and more active gameplay</li>
-                            <li>Better enemy AI</li>
-                            <li>More progression and better replayability</li>
+                            <li>More engaging enemy AI</li>
+                            <li>Deeper progression and better replayability</li>
                         </ul>
                         <br>
-                        I described the <u><b>core player experience</b></u> as high-risk, high-reward "glass cannon", demanding precision and rewarding mastery.
+                        I described the <b>core player experience</b> as high-risk, high-reward "glass cannon", demanding precision and rewarding mastery.
                     </div>
                     
                     <div class="project_block project_block_figure">
                         <figure>
                             <img src="sketchtf.png">
-                            <figcaption>An early concept sketch, outling movement, enemy behaviour and health systems.</figcaption>
+                            <figcaption>An early concept sketch, outlining movement, enemy behaviour and health systems.</figcaption>
                         </figure>
                     </div>
                 </div>
                 
+                <h2>3C's (Player Character)</h2>
+                <div class="project_block project_block_text">
+                    <div>
+                        
+                        <h3>Initial Design</h3>
+                        One of the first things I did was establish the Player Character, the first step in anchoring the core player experience.
+                        <br><br>
+                        I wanted players to feel like they are piloting a fighter jet, with more deliberate strafing runs as opposed to obvious twin stick shooter movement. I also wanted to reward positioning (e.g. trying to get on an enemies tail, tactically retreating) and to have the player feel like a glass cannon: powerful but vulnerable.
+                    </div>
+                </div>
                 <div class ="lr_container">
-                    <div class="project_block project_block_figure">
+                    <div class="project_block project_block_figure" style="flex: none; width: 600px;">
                         <figure>
                             <video autoplay loop muted preload="metadata">
                                 <source src="movement.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
-                            <figcaption>Early implementation of the mouse rotation system. Note the smoothing effect, which prevents instant 180 degree turns. Boosting significantly slows down turning, a balancing mechanic.</figcaption>
+                            <figcaption>First iteration of the Player Character. Note the smoothing effect, which prevents instant 180 degree turns. Boosting significantly slows down turning.</figcaption>
                         </figure>
-                    </div>
+                    </div>  
                     <div class="project_block project_block_text">
-                        <h3>Player Controller</h3>
-                        The first order of business was to establish the Three C's (Character, Camera, Controller) which each had to support the core player experience. <br><br>
-                        One important decision was to make the player only able to shoot in the direction they are flying, forcing them to always face the danger, using the mouse cursor to rotate. <br><br>
-                        <!-- To accommodate fast but controllable movement, the camera jumps in front of the player while boosting for a better forward view. <br><br> -->
-                        This control scheme feels unusual at first, but it enables very precise movement and, according to playtesters, has a satisfyingly <u><b>high skill ceiling</b></u>.
+                        <h3>Base Setup</h3>
+                        <ul>
+                            <li>The player looks and shoots in the direction of flight and is pointed towards the danger, similar to a fighter jet. This means players have to actually commit to an attack.</li>
+                            <li>The mouse controls rotation, allowing for precise and responsive aiming. A turn speed cap prevents instant 180s.</li>
+                            <li>Boosting allows the player to reposition quickly, but also lowers turn speed, leaving them more vulnerable. Risk/reward.</li>
+                        </ul>
+                        I performed a general playtest using this setup with a basic enemy and some asteroids.
                     </div>
                 </div>
+                
                 <div class ="lr_container">
-                    <div class="project_block project_block_text">
-                        <h3>Active Play</h3>
-                        After adding asteroid enemies, I noticed a problem: just like in classic Asteroids, players remained stationary, practically turning the game into a turret sim. 
-                        <br><br>
-                        Instead of bloating the game with new, unneccessary mechanics, I decided to work with the tools I had, and <b><u>designed enemy AI</u></b> that forces the player to use a more active playstyle.
-                        <br><br>
-                        Each of the three basic enemies, as well as the asteroids, play a specific role in getting the player moving.
+                    <div class="project_block project_block_text" style="flex: none; width: 500px;"> 
+                        <h3>Iteration 1</h3>
+                        ⇒ Players thought the movement was disorienting.
+                        <br>  
+                        <br>  
+                        <b>Why?</b> No bearing, movement with cam follow is relative, so players had no idea how fast they were going.
+                        <br>  
+                        <br>
+                        <b>Solution:</b> Adding a parallax background. This gave players a sense of speed and direction, and immediately made a huge difference in terms of character feel.
+                    </div>
+                    <div class="project_block project_block_figure" style="overflow: hidden;">
+                        <figure>
+                            <img src="spacebg.gif" style="width: 100%; transform: scale(1.006); transform-origin: bottom">
+                            <figcaption>The parallax background consists of two layers: dust particles in the background (slow, 0.25x–1x speed) and clouds in the foreground (fast, 1.25x speed).</figcaption>
+                        </figure>
+                    </div>
+                </div>                
+                <div class ="lr_container">
+                    <div class="project_block project_block_figure" style="overflow: hidden;"> 
+                        <figure>
+                            <img src="spacedist.gif" style="width: 100%; transform: scale(1.006); transform-origin: bottom">
+                            <figcaption>When boosting with the camera lookahead system active, the camera shifts forward in the direction of movement quite dramatically.</figcaption>
+                        </figure>
+                    </div>
+                    <div class="project_block project_block_text" style="flex: none; width: 500px;">
+                        <h3>Iteration 2</h3>
+                        ⇒ Players didn’t boost, resulting in sluggish gameplay.
+                        <br>
+                        <br>
+                        <b>Why?</b> Playtesters couldn’t really answer this, so I had to ask followup questions to dig deeper. It turns out that boosting got punished, because players could not see what was ahead, and as such were scared to boost.
+                        <br>
+                        <br> 
+                        <b>Solution:</b> Implementing a camera lookahead system, giving players more control over what they can see. This turned boosting into a well-integrated and enjoyable part of the Player Character.
+                    </div>
+                </div>
+                
+                <div class ="lr_container">
+                    <div class="project_block project_block_text" style="flex: none; width: 500px;"> 
+                        <h3>Character Feel</h3>
+                        A number of feedback systems work together to reinforce the feeling of speed and vulnerability:
+                        <ul>
+                            <li>Boosting triggers screen shake, speed lines, extended thruster particles, and a sustained rocket sound effect, really selling the velocity.</li>
+                            <li>Getting hit triggers screen shake and outline flash.</li>
+                            <li>Screen shake is reinforced through controller vibration, making feedback tactile.</li>
+                        </ul>
+                        Other improvements I made were the high contrast cursor sprite,
+                    </div>
+                    <div class="project_block project_block_figure" style="overflow: hidden;">
+                        <figure>
+                            <img src="movement.gif" style="width: 100%; transform: scale(1.006); transform-origin: bottom">
+                            <figcaption>Final result, including all game feel systems. Obviously a video doesn't do the Player Character justice, try it out yourself on <a href="#" onClick="window.open('http://jeditor.itch.io/thrust-factor', '_blank')">the itch.io page</a>!</figcaption>
+                        </figure>
+                    </div>
+                </div>  
+                <div class="project_block project_block_text">
+                    I'm glad I deliberately chose not to use a twin stick shooter setup, which would have been the more obvious choice.
+                    Though the current control scheme feels unusual at first, it sets the game apart from other titles and, according to playtesters, has a satisfyingly high skill ceiling, which is exactly what I was aiming for. 
+                    <br>
+                    <br>
+                    Playtesting really helped me iron out the Player Characters rough edges, turning it from an 'OK' proof of concept into a unique and satisfying base for the rest of the game.
+                </div>
+                
+                
+                
+                
+                <h2>Combat Design</h2>
+                <div class ="lr_container">
+                    <div class="ud_container">
+                        <div class="project_block project_block_text" style="flex: none; width: 500px;"> 
+                            <h3>Active Play</h3>
+                            After adding basic asteroid enemies, I noticed a problem: just like in classic Asteroids, instead of moving, players would rather remain stationary, practically turning the game into a turret sim. 
+                            <br><br>
+                            Instead of bloating the game with new, unnecessary mechanics, I decided to work with the tools I had and created enemy AI that encourages a more active playstyle.
+                            <br><br>
+                            Each enemy, as well as the asteroids, plays a specific role in getting the player moving.
+                        </div>
+                        <div class="project_block project_block_figure">
+                            <figure>
+                                <img src="enemyvarietymatrix.png">
+                                <figcaption>The enemy variety matrix I used to quickly concept new content.</figcaption>
+                            </figure>
+                        </div>
                     </div>
                     <div class ="lr_container">
                         <div class="ud_container">
@@ -103,7 +191,7 @@
                                         <source src="TFMoveAsteroids.mp4" type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video>
-                                    <figcaption>Asteroids have a high probability of spawning with a force <b><u>towards the player</u></b>.</figcaption>
+                                    <figcaption>Asteroids have a high probability of spawning with a force towards the player.</figcaption>
                                 </figure>
                             </div>
                             <div class="project_block project_block_figure">
@@ -123,7 +211,7 @@
                                         <source src="TFMoveLaser.mp4" type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video>
-                                    <figcaption>The Firefly, the most basic enemy, fires lasers that can't be shot down. They have to be <b><u>dodged</u></b>.</figcaption>
+                                    <figcaption>The Firefly, the most basic enemy, fires lasers that can't be shot down. They have to be dodged.</figcaption>
                                 </figure>
                             </div>
                             <div class="project_block project_block_figure">
@@ -132,7 +220,7 @@
                                         <source src="TFMoveDrone.mp4" type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video>
-                                    <figcaption>Drones fire laserbeams across the screen from outside the player's viewport. The player makes the <b><u>choice</u></b> to either evade, or fly towards the drone and destroy it.</figcaption>
+                                    <figcaption>Drones fire laserbeams across the player's vision, who has to choose to either evade, or fly towards the drone to destroy it.</figcaption>
                                 </figure>
                             </div>
                         </div>
@@ -162,7 +250,22 @@
                     </div>
                 </div> -->
                 <div class ="lr_container">
-                    
+                    <div class="project_block project_block_text" style="flex: none; width: 500px;"> 
+<h3>Dynamic Difficulty</h3>
+Enemies and asteroids drop upgrade blips when killed, which fill a meter that can be exchanged for ship upgrades. These are the primary way to prepare for the boss, which arrives on a 3-minute timer.
+<br>
+<br>
+Killing enemies faster fills the upgrade meter quicker, but also raises the max enemy count through a hidden combat score system. This system is self-balancing: A skilled player upgrades faster but faces more enemies at a time. A weaker player faces less pressure but arrives at the boss less prepared.
+                    </div>
+                    <div class="project_block project_block_figure" style="overflow: hidden;">
+                        <figure>
+                            <img src="maxenemies.webp">
+                            <figcaption>Example scenario with the hidden combat scores of two players. At point A the skilled player already faces 4 enemies to the beginner's 3. By point B the skilled player has hit the cap of 7, while the beginner faces 5 enemies.</figcaption>
+                        </figure>
+                    </div>
+                </div>  
+
+                <div class ="lr_container">                    
                     <div class="project_block project_block_figure">
                         <figure>
                             <video autoplay loop muted preload="metadata">
@@ -172,15 +275,9 @@
                             <figcaption>The player gets hit continuously. Bottom left: Shield, bottom right: Health.</figcaption>
                         </figure>
                     </div>
-                    <div class="project_block project_block_figure">
-                        <figure>
-                            <img src="hp.png">
-                            <figcaption>Integer based HP scoring of enemies. Excerpt from enemy data excel sheet.</figcaption>
-                        </figure>
-                    </div>
-                    <div class="project_block project_block_text">
-                        <h3>Less is more</h3>
-                        Instead of health being a continuous scale, and damage being some arbitrary value, I opted for a tighter system with <u><b>lower numbers</b></u>: you have 3 health points, and the player deals 1 damage every time. 
+                    <div class="project_block project_block_text" style="flex: none; width: 700px;">
+                        <h3>Less is More</h3>
+                        Instead of health being a continuous scale, and damage being some arbitrary value, I opted for a tighter system with <b>lower numbers</b>: the player has 3 health points, and all hits deal 1 damage. 
                         <br><br>This system rewards precision, punishes carelessness, and is much easier to communicate!
                     </div>
                 </div>
@@ -196,6 +293,7 @@
                         </figure>
                     </div>
                 </div>
+                <h2>Progression</h2>
                 <div class ="lr_container">
                     <div class="project_block project_block_figure">
                         <figure>
@@ -205,7 +303,7 @@
                     </div>
                     <div class="project_block project_block_text">
                         <h3>Loops and Progression</h3>
-                        There are three important gameplay loops at play. The addition of a meta loop, in this case buying permanent unlocks, was necesarry to give players concise and measureable goals to work towards in between runs. 
+                        There are three important gameplay loops at play. The addition of a meta loop, acquiring permanent unlocks, was necessary to give players concrete and measurable goals to work towards in between runs. 
                         <br>
                         <br>
                         I often break down gameplay systems like this, to make sure there are no holes in the design and to keep it consistent.
@@ -226,16 +324,16 @@
                         </figure>
                     </div>
                 </div>
-
+                
+                <h2>Post Mortem</h2>
                 <div class="project_block project_block_text">
-                    <h3>Post Mortem</h3>
                     Turning Asteroids into Thrust Factor was incredibly fun and rewarding. The project taught me a lot about systems design, in particular the interaction between different game loops. 
-                    <br>
+                    <br>  
                     <br>
                     I didn't expect that the biggest challenge would be to get players to move around more. Some players still preferred to play more passively, which frustrated me at first. But I realized that the game supporting multiple viable playstyles is actually a good thing, and trying to force every player into a specific playstyle is counterproductive.
                     <br>
                     <br>
-                    I haven't touched upon sound design and music, which I've put as least an equal amount of effort into designing and fine tuning as the rest, and I could dedicate another entire page to. You can listen to the soundtrack <a href="https://soundcloud.com/jeditor/sets/thrust-factor-original-soundtrack">here</a>. 
+                    I haven't touched upon sound design and music, which I've put as least an equal amount of effort into designing and fine tuning as the rest, and I could dedicate another entire page to. You can listen to the soundtrack through the music player on this page, or <a href="https://soundcloud.com/jeditor/sets/thrust-factor-original-soundtrack">on Soundcloud</a>. 
                 </div>
             </div>
         </div>
@@ -321,11 +419,11 @@
 
     <script>
     var playlist = [
-        { title: "Combat Addiction", artist: "Nathan Stroomberg", src: "Music Tracks/Combat Addiction.flac" },
-        { title: "Hauler (Boss)", artist: "Nathan Stroomberg", src: "Music Tracks/Hauler.flac" },
-        { title: "Main Menu", artist: "Nathan Stroomberg", src: "Music Tracks/Main Menu.flac" },
-        { title: "Crimson Star (Boss)", artist: "Nathan Stroomberg", src: "Music Tracks/Crimson Star.flac" },
-        { title: "Debrief", artist: "Nathan Stroomberg", src: "Music Tracks/Debrief.flac" },
+        { title: "Combat Addiction", artist: "Nathan Stroomberg", src: "Music Tracks/Combat Addiction.mp3" },
+        { title: "Hauler (Boss)", artist: "Nathan Stroomberg", src: "Music Tracks/Hauler.mp3" },
+        { title: "Main Menu", artist: "Nathan Stroomberg", src: "Music Tracks/Main Menu.mp3" },
+        { title: "Crimson Star (Boss)", artist: "Nathan Stroomberg", src: "Music Tracks/Crimson Star.mp3" },
+        { title: "Debrief", artist: "Nathan Stroomberg", src: "Music Tracks/Debrief.mp3" },
     ];
     </script>
     <script src="../Scripts/music-player.js"></script>
