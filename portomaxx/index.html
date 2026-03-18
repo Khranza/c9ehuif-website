@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../styles.css" rel="stylesheet">
+    <script defer src="../scripts.js"></script>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <title>Nathan Stroomberg</title>
+</head>
+<body>
+    <div class="background-wrapper">
+        <!-- headers -->
+        <header>
+            <a href="../" class="navlink">Home</a>
+            <a href="../portfolio/" class="navlink">Portfolio</a>
+            <a href="../contact/" class="navlink">Contact</a>
+            <!-- <a href="pages/about/" class="navlink">About me</a> -->
+        </header> 
+
+        <div id="kleinlijntje"></div>
+        
+        <h3 class="project_game_title">Team Portomaxx</h3>
+        <div class="project_container">
+            <video id="project_showcase_video" autoplay loop muted preload="metadata" controls>
+                <source src="Stealth Recon Xtreme.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            
+            <div class="project_body">
+                <div class="project_block project_block_text" id="project_info">
+                    <div>
+                        <b>Completion date:</b><br>January 30, 2025
+                        <br><br>
+                        <b>Development time:</b><br>3 months full time as Lead Designer
+                        <br><br>
+                        <b>Project type:</b><br>Self initiated study project, team (19 students)
+                    </div>
+                    <div>
+                        <h3>Description</h3>
+                        We offered what is essentially a form of alternative education to a total of 19 students (more than 1/5 of our year’s total students!) to work on a magical girl themed FPS called Sparkleblast, practicing industry standard tools and workflows.
+                        Our primary goal was to simulate a professional work environment and develop industry-standard skills, shipping a complete product was secondary.
+                    </div>
+                </div>
+                <div class="lr_container">
+                    <div class="project_block project_block_text" style="flex: none; width: 700px;">
+                        <h3>Why Portomaxx?</h3>
+                        I wanted to measurably improve my game design process, not just make games, but be able to show the thinking behind them. Portfolio reviews made it clear that positive feedback and high grades weren't enough, I needed to improve and document my design workflows and team experience.
+                        <br><br>
+                        I jokingly called this "portfoliomaxxing", a term that resonated with many fellow students. Together with a core team of dedicated leads, we facilitated the perfect portfoliomaxxing environment, which we called team Portomaxx.
+                        <br><br>
+                        <b>As a student-led initiative, the project received little to no institutional support. We had to figure out the team structure and workflows practically on our own, making it one of the most stressful and at the same time educational experiences of my study.</b> 
+                    </div>
+                    <div class="project_block project_block_figure">
+                        <figure>
+                            <img src="portfoliomaxxing.png">
+                            <figcaption>The definition of 'portfoliomaxxing'.</figcaption>
+                        </figure>
+                    </div> 
+                </div>
+                    
+                <h2>Concept & Core Player Experience</h2>
+                <div class ="lr_container">
+                    <div class="project_block project_block_text">
+                        <h3>Reaching Consensus</h3>
+                        Group ownership of the game concept was essential for this project. Not one of the concepts brought up by individual team members resonated with the majority of the team, making members reconsider working on the project. To prevent delays, I developed a method to quickly explore game concepts as a team, sharing ownership and making sure not a single person's concept would be on the line.
+                        <br><br>
+                        "Concept Squads" can be performed in a single evening. Each team member writes down elements they would like to see in the game. A few will be randomly selected and combined to create sentences describing imaginary games, until one sounds interesting enough to flesh out. Our winning sentence was "In a desolate world, find hope by using cute animal sidekicks that transform into guns and feeling badass, with magical girls". 
+                        <br><br>
+                        In just two hours we had complete consensus over a game concept to develop: magical girl themed first person shooter Sparkleblast.
+                    </div>
+                    <div class="project_block project_block_figure" style="flex: none; width: 300px;"> 
+                        <figure>
+                            <img src="concept_squads.jpg">
+                            <figcaption>Concept Squads, step by step.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class ="lr_container">
+                    <div class ="lr_container">
+                        <div class="project_block project_block_figure" style="flex: none; width: 300px;"> 
+                            <figure>
+                                <img src="mda_process.jpg">
+                                <figcaption>In-progress with the design team</figcaption>
+                            </figure>
+                        </div>
+                        <div class="project_block project_block_figure" style="flex: none; width: 260px;"> 
+                            <figure>
+                                <img src="mda.jpg">
+                                <figcaption>Our version of the MDA framework (Systems, Player Actions, Player Experience)</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="project_block project_block_text">
+                        <h3>MDA Model</h3>
+                        As the lead designer, instead of diving straight into the engine, I chose to first work with the designers to fill out a customized version of the (somewhat archaic) MDA model. By starting with the Player Experience, I could more deliberately design Player Actions and Systems that contribute to the desired player experience, later updated by thorough target audience research.
+                    </div>
+                </div>
+                    
+
+                <h2>Player Character (3C's)</h2>
+                <div class="project_block project_block_text">
+                    <div>
+                        <h3>Game Plan</h3>
+                        Together with the producer I decided we would create and test three diverse Player Character prototypes, culminating in one ideal merger based on results of playtesting. Delays on this front would halt other areas of the project, so as one of the more proficient UE users, I ended up creating two out of three prototypes myself.
+                        <br>
+                        <br>
+                        Playtesting would be performed in test levels that showed each prototype's strengths, and a gym level would be made for the final merger to aid the level design process.
+                    </div>
+                </div>                
+                <div class="lr_container">
+                    <div class="project_block project_block_text" style="flex: none; width: 600px;"> 
+                        <h3>Prototype 1</h3>
+                        A safe, generic FPS player character with a magical double jump, primarily using camera bobbing and sway to improve game feel. 
+                        <span style="color: rgb(158, 158, 158);">(I thought if all else failed, we would have a safe and tested option we can fall back to.)</span>
+                        <br><br>
+                        Its most unique feature is the prolonged "magical" double jump, inspired by Overwatch, a game often mentioned in our target audience research. This mechanic allows the player to scale heights quickly, which fits the magical girl experience well. 
+                    </div>
+                    <div class="project_block project_block_figure" style="overflow: hidden;">
+                        <figure>
+                            <video autoplay loop muted preload="metadata">
+                                <source src="prototype_1.webm" type="video/webm">
+                                Your browser does not support the video tag.
+                            </video>
+                            <figcaption>The player moves through the entire test level used in the playtest.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="lr_container">
+                    <div class="project_block project_block_figure" style="overflow: hidden;">
+                        <figure>
+                            <video autoplay loop muted preload="metadata">
+                                <source src="prototype_2.webm" type="video/webm">
+                                Your browser does not support the video tag.
+                            </video>
+                            <figcaption>The player moves through the entire test level used in the playtest.</figcaption>
+                        </figure>
+                    </div>
+                    <div class="project_block project_block_text" style="flex: none; width: 600px;"> 
+                        <h3>Prototype 2</h3>
+                        An experimental, elegant ice/roller skating player character with momentum and sliding movement.
+                        <span style="color: rgb(158, 158, 158);">(A magical girl should move elegantly and fluidly. After brainstorming with the design team, I felt that ice skating movement could achieve just that.)</span>
+                        <br><br>Early versions were motion sickness inducing, relying too much on heavy camera sway to convey skating motion. The trick was to tie movement speed to camera bobbing, something very unconventional but very effective. I was able to tone down camera sway until it was acceptable, and the player character still strongly conveyed skating movement to the player.
+                    </div>
+                </div>
+                <div class="lr_container">
+                    <div class="project_block project_block_text" style="flex: none; width: 600px;"> 
+                        <h3>Playtest</h3>
+                        I devised a testing plan, outlining the subject, hypothesis, setup, and most importantly the test questions. This helped me properly prepare the test beforehand, and helped the team understand exactly what went on.
+                        <br>
+                        <br>
+                        6 players tested each prototype in a screen share Discord call, answering the prepared questions. Most importantly I paid attention to their playstyle and enjoyment trying the prototypes. 
+                        <br>
+                        <br>
+                        Testers enjoyed the skating movement the most, it was elegant and, with some improvements, could be part of a magical girl themed game they would enjoy. Wallrunning from the third prototype was also a favourite. I decided to mix these two elements.
+                        <br>
+                        <br>
+                        The testing plan and results can be read on <a href="https://games-omnibus.notion.site/3C-s-Prototypes-Playtest-Prep-and-Results-2c0b5a4c02a180f3b454cac19e05a93d" target="blank">this page (in Dutch)</a>.
+                    </div>
+                    <div class="project_block project_block_figure" style="overflow: hidden;">
+                        <figure>
+                            <img src="LevelC.png">
+                            <figcaption>A level used to test one of the prototypes, quickly built with the UE 5 Cubegrid modeling tool</figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="lr_container">
+                    <div class="project_block project_block_figure" style="flex: none; width: 400px;">
+                        <figure>
+                            <img src="../Images/Boxes/box_placeholder.png">
+                            <figcaption>A video showcasing the final merger here........</figcaption>
+                        </figure>
+                    </div>
+                    <div class="project_block project_block_text"> 
+                        <h3>Final Merger</h3>
+                        I incorporated the playtest feedback into the ultimate player character for Sparkleblast: Skating movement, wallrunning, easier braking and control, more air time, less head movement at jumps.
+                        <br><br>
+                        In the end, wallrunning took too many development resources better spent elsewhere. Together with the development lead, I had to make the tough decision to cut it entirely, disappointing the team. With a fixed deadline and limited resources, it was the right call. 
+                        <br>
+                        <br>
+                        This essentially turned the final 3C's into a polished version of my experimental skating player character, which playtesting had shown to be the clear favourite.
+                    </div>
+                </div>
+                
+                
+                <h2>Design Documentation</h2>
+                <div class ="lr_container">
+                    <div class="project_block project_block_text" style="flex: none; width: 800px;"> 
+                        <h3>Design Decision Template</h3>
+                        Sometimes miscommunications arose about certain decisions, leading to disagreements long after the decision had been made. 
+                        <br>
+                        <br>
+                        To prevent this, I created the "Difficult Design Decision template", where a full decision making process can be followed and documented for future readers, including topics like personal biases, research, team input, and consequences.
+                        <br>
+                        <br>
+                        An example of a filled out template, outlining the game's ending, can be read <a href="https://fantasy-earth-d68.notion.site/What-does-the-ending-look-like-gameplay-wise-2c7b5a4c02a1805dbf0adbd55915ea0e?pvs=73" target="blank">here</a>.
+                    </div>
+                    <div class="project_block project_block_figure" style="overflow: hidden;">
+                        <figure>
+                            <img src="template_filled.jpg">
+                            <figcaption>Part of a filled out template, explaining the thought process behind the game's ending.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class = "lr_container">
+                    <div class="project_block project_block_figure" style="flex: none; width: 350px;">
+                        <figure>
+                            <img src="design_doc.png">
+                            <figcaption>A section of the design document, easily accessible to the team.</figcaption>
+                        </figure>
+                    </div>
+                    <div class="project_block project_block_text"> 
+                        <h3>Design Document</h3>
+                        As the lead designer, I was the main author of the design document. This was the first time I wrote a design document that had to be thorough enough to contain all content planned for the game, and it was a great exercise in making the entire design as concrete as possible. 
+
+
+                    </div>
+                </div>                
+                <div class ="lr_container">
+                  <div class="project_block project_block_text" style="flex: none; width: 700px;"> 
+                        <h3>Feature Specs</h3>
+                        To effectively communicate complex features and design intent with developers, we opted for feature specs as our medium for communication, outlining user interaction, design intent, and technical implementation. 
+                        <br>
+                        <br>
+                        Any feature that wasn't simply a prototype and had to be properly incorporated into the game's systems got a feature spec.
+                        <br>
+                        <br>
+                        I wrote many feature specs throughout the project, iterating on each one based on developer feedback.
+                    </div>
+                    <div class="project_block project_block_figure" style="overflow: hidden;">
+                        <figure>
+                            <img src="Save System User Flowchart.png">
+                            <figcaption>One of the more complicated feature specs, outlining save data management. The top flowchart shows the user interaction, the bottom shows the technical implementation.</figcaption>
+                        </figure>
+                    </div>
+                </div>  
+ 
+
+                <h2>Project Management</h2>
+                <div class ="lr_container">
+                    <div class="project_block project_block_figure" style="overflow: hidden;">
+                        <figure>
+                            <img src="scrumboard.png">
+                            <figcaption>Our third sprint in progress. Because we adapted Scrum to our own needs, we trimmed the S in jest, calling it Crum instead.</figcaption>
+                        </figure>
+                    </div>
+                    <div class="project_block project_block_text" style="flex: none; width: 500px;"> 
+                        <h3>Scrum</h3>
+                        We worked in sprints of two weeks, starting with a sprint planning and ending in a sprint review. We decided not to use velocities and other more in-depth analysis methods, as it would add too much overhead we had no time for. 
+                        <br><br>
+                        The Scrum board was the beating heart of the project. It took a lot of organizational pressure off my shoulders, allowing the team to self-organize. I led daily stand ups where everyone discussed their progress, and the team got a clear idea of how each individual team member was progressing in their tasks. 
+                        <br>
+                        <br>
+                        The downside of using Scrum was the pressure on sprint plannings, where I, together with 3 other team leads, had to plan more than 1200 hours worth of work before the start of each sprint, leading to sleepless nights. We later moved the sprint ends from monday into the weekends, giving us two full days to plan instead of a single evening.
+                    </div>
+                </div>
+                <div class ="lr_container">
+                  <div class="project_block project_block_text"> 
+                        <h3>Notion</h3>
+                        Notion Databases proved valuable for organizing our work, allowing us to keep knowledge and data accessible to the entire team.
+                    </div>
+                    <div class="project_block project_block_figure" style="flex: none; width: 400px;">
+                        <figure>
+                            <img src="playtesters_database.png">
+                            <figcaption>Database filled with contact info of playtesters, this was especially valuable.</figcaption>
+                        </figure>
+                    </div>
+                    <div class="project_block project_block_figure" style="flex: none; width: 227px;">
+                        <figure>
+                            <img src="featurespec_list.png">
+                            <figcaption>Feature spec database, sorted by priority</figcaption>
+                        </figure>
+                    </div>
+                </div>      
+                
+        
+                <h2>Post Mortem</h2>
+                <div class="project_block project_block_text">
+                    By now I have worked with all these techniques so much that it feels like I've always known them. That is what made this team project so incredibly valuable to me, as a leader I had to be able to justify everything I do, and therefore also master all these processes properly. I now apply them instinctively to new projects, which has given me a much stronger foothold during my creative process, which was exactly what I set out to achieve with Portomaxx.
+                    <br>
+                    <br>
+                    The game did not reach a shippable state by the end of the project. Managing consistent output across 19 students in a 2.5 month timeframe proved an enormous challenge, one I underestimated going in, and one that taught me as much about production management as anything else on the project. Together with a small portion of the team, I'm planning to polish and release a demo on itch.io, as a showcase of what we have achieved.
+                    <br>
+                    <br>
+                    Ironically, all this 'overhead' of production and leadership tasks meant I was able to portfoliomaxx less than I had originally hoped. But this was without a doubt the most educational project I have ever been part of, making it more than worth it. Saying I learned a lot would be an understatement. I feel I have undergone an enormous period of personal growth, both in terms of game production and on a social level. Perhaps it's not so surprising that I transformed so much, given that our game is about magical girls!
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div id="footer_links">
+                <a href="https://www.linkedin.com/in/nathan-stroomberg/"target="_blank">
+                    <span class="kadence-svg-iconset">
+                        <svg class="kadence-svg-icon kadence-linkedin-svg" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28">
+                            <title>Linkedin</title>
+                            <path d="M3.703 22.094h3.609v-10.844h-3.609v10.844zM7.547 7.906c-0.016-1.062-0.781-1.875-2.016-1.875s-2.047 0.812-2.047 1.875c0 1.031 0.781 1.875 2 1.875h0.016c1.266 0 2.047-0.844 2.047-1.875zM16.688 22.094h3.609v-6.219c0-3.328-1.781-4.875-4.156-4.875-1.937 0-2.797 1.078-3.266 1.828h0.031v-1.578h-3.609s0.047 1.016 0 10.844v0h3.609v-6.062c0-0.313 0.016-0.641 0.109-0.875 0.266-0.641 0.859-1.313 1.859-1.313 1.297 0 1.813 0.984 1.813 2.453v5.797zM24 6.5v15c0 2.484-2.016 4.5-4.5 4.5h-15c-2.484 0-4.5-2.016-4.5-4.5v-15c0-2.484 2.016-4.5 4.5-4.5h15c2.484 0 4.5 2.016 4.5 4.5z"></path>
+                        </svg>
+                    </span>
+                    LINKEDIN
+                </a>
+                <a href="mailto:nstroomberg@gmail.com"target="_blank">
+                    <svg class="kadence-svg-icon kadence-email-svg" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                        <title>Email</title>
+                        <path d="M15 2h-14c-0.55 0-1 0.45-1 1v10c0 0.55 0.45 1 1 1h14c0.55 0 1-0.45 1-1v-10c0-0.55-0.45-1-1-1zM5.831 9.773l-3 2.182c-0.1 0.073-0.216 0.108-0.33 0.108-0.174 0-0.345-0.080-0.455-0.232-0.183-0.251-0.127-0.603 0.124-0.786l3-2.182c0.251-0.183 0.603-0.127 0.786 0.124s0.127 0.603-0.124 0.786zM13.955 11.831c-0.11 0.151-0.282 0.232-0.455 0.232-0.115 0-0.23-0.035-0.33-0.108l-3-2.182c-0.251-0.183-0.307-0.534-0.124-0.786s0.535-0.307 0.786-0.124l3 2.182c0.251 0.183 0.307 0.535 0.124 0.786zM13.831 4.955l-5.5 4c-0.099 0.072-0.215 0.108-0.331 0.108s-0.232-0.036-0.331-0.108l-5.5-4c-0.251-0.183-0.307-0.534-0.124-0.786s0.535-0.307 0.786-0.124l5.169 3.759 5.169-3.759c0.251-0.183 0.603-0.127 0.786 0.124s0.127 0.603-0.124 0.786z"></path>
+				    </svg>
+                    EMAIL
+                </a>
+                <a href="https://jeditor.itch.io"target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="22px" height="22px" viewBox="0 0 32 32">
+                    <path d="M4.172 1.787c-1.396 0.828-4.145 3.984-4.172 4.812v1.375c0 1.735 1.625 3.267 3.099 3.267 1.771 0 3.251-1.469 3.251-3.213 0 1.744 1.421 3.213 3.197 3.213 1.771 0 3.151-1.469 3.151-3.213 0 1.744 1.516 3.213 3.287 3.213h0.032c1.776 0 3.291-1.469 3.291-3.213 0 1.744 1.381 3.213 3.152 3.213s3.197-1.469 3.197-3.213c0 1.744 1.475 3.213 3.245 3.213 1.479 0 3.104-1.532 3.104-3.267v-1.375c-0.032-0.828-2.776-3.984-4.177-4.812-4.339-0.156-7.344-0.183-11.823-0.183-4.484 0.005-10.593 0.073-11.828 0.183zM12.677 10.421c-0.183 0.308-0.385 0.568-0.625 0.797v0.005c-0.672 0.651-1.588 1.057-2.599 1.057-1.016 0-1.932-0.407-2.599-1.063-0.245-0.235-0.428-0.489-0.6-0.787-0.167 0.297-0.4 0.552-0.645 0.787-0.672 0.656-1.588 1.063-2.599 1.063 0 0 0 0-0.005 0-0.12 0-0.245-0.036-0.349-0.073-0.14 1.485-0.203 2.901-0.224 3.937v0.005c-0.005 0.527-0.005 0.953-0.011 1.552 0.032 3.115-0.307 10.089 1.376 11.803 2.604 0.604 7.396 0.88 12.197 0.885h0.005c4.807-0.005 9.593-0.281 12.197-0.885 1.683-1.713 1.344-8.688 1.376-11.803-0.005-0.599-0.005-1.025-0.011-1.552v-0.005c-0.021-1.036-0.079-2.452-0.224-3.937-0.099 0.037-0.229 0.073-0.349 0.073 0 0-0.005 0-0.005 0-1.011 0-1.927-0.407-2.599-1.063h0.005c-0.245-0.235-0.479-0.489-0.645-0.787h-0.005c-0.167 0.297-0.355 0.552-0.595 0.787-0.667 0.656-1.583 1.063-2.599 1.063-1.011 0-1.927-0.407-2.599-1.063-0.24-0.229-0.443-0.495-0.615-0.787l-0.011-0.016c-0.172 0.308-0.38 0.573-0.615 0.803-0.672 0.656-1.588 1.063-2.599 1.063 0 0-0.005 0-0.005 0-0.031 0-0.068 0-0.104-0.005-0.036 0.005-0.073 0.005-0.109 0.005 0 0 0 0-0.005 0-1.011 0-1.927-0.407-2.593-1.063-0.24-0.229-0.443-0.495-0.609-0.787l-0.011-0.016zM10.005 13.875c1.057 0.005 1.995 0 3.161 1.271 0.916-0.093 1.875-0.14 2.833-0.14s1.917 0.047 2.833 0.14c1.167-1.271 2.104-1.271 3.161-1.271h0.005c0.5 0 2.5 0 3.891 3.912l1.495 5.369c1.109 3.995-0.355 4.095-2.177 4.095-2.708-0.1-4.208-2.068-4.208-4.037-1.5 0.251-3.251 0.371-5 0.371s-3.5-0.12-4.995-0.371c0 1.969-1.5 3.937-4.208 4.037-1.828-0.005-3.292-0.1-2.183-4.095l1.495-5.369c1.396-3.912 3.396-3.912 3.896-3.912zM16 16.953c-0.005 0-2.849 2.62-3.364 3.547l1.864-0.073v1.625c0 0.079 0.751 0.047 1.5 0.011 0.749 0.036 1.495 0.068 1.495-0.011v-1.625l1.869 0.073c-0.515-0.927-3.364-3.547-3.364-3.547z"/>
+                    </svg>
+                    ITCH.IO
+                </a>
+            </div>
+            <p>© 2026 Nathan Stroomberg</p>
+        </footer>
+    </div>
+</body>
+
+</html>

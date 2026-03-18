@@ -211,9 +211,9 @@ header {
     white-space: nowrap;
 }
 
-.tag[data-tag="3c's"]        { --tag-color: #a78bca; } 
+.tag[data-tag="3c's"]        { --tag-color: #7be685; } 
 .tag[data-tag="playtesting"] { --tag-color: #6baed6; } 
-.tag[data-tag="leadership"]  { --tag-color: #74c476; } 
+.tag[data-tag="leadership"]  { --tag-color: #a78bca; } 
 .tag[data-tag="narrative"]   { --tag-color: #e07bb5; } 
 .tag[data-tag="progression"] { --tag-color: #f0a868; } 
 .tag[data-tag="combat"]      { --tag-color: #d45f5f; }
@@ -224,6 +224,7 @@ header {
 .tag[data-tag="techdesign"]  { --tag-color: #5ba3c9; } 
 .tag[data-tag="artistic"]    { --tag-color: #c9b75b; } 
 .tag[data-tag="boardgame"]   { --tag-color: #c95b75; } 
+.tag[data-tag="audience"]    { --tag-color: #e7d164; } 
 
 .game_data {
   margin-top: 0.75em;
