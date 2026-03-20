@@ -99,6 +99,17 @@ header {
     
 }
 
+
+p {
+    font-weight: 200;
+    font-size: 1.2rem;
+}
+
+
+
+
+
+
 .profile_picture img {
     margin: 10px;
     width: 90px; /* adjust as needed */
@@ -302,11 +313,6 @@ li {
     border-radius: 10px;
 }
 
-p {
-    font-weight: 300;
-    font-size: 1.3rem;
-    margin-top: 0px;
-}
 
 @font-face {
     font-family: 'Helvetica Neue';
