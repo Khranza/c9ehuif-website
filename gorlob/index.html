@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../styles.css" rel="stylesheet">
+    <script defer src="../scripts.js"></script>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <title>Nathan Stroomberg</title>
+</head>
+<body>
+    <div class="background-wrapper">
+        <!-- headers -->
+        <header>
+            <a href="../" class="navlink">Portfolio</a>
+            <a href="../about/" class="navlink">About me</a>
+            <a href="../contact/" class="navlink">Contact</a>
+        </header> 
+
+        <div id="kleinlijntje"></div>
+        
+        <h3 class="project_game_title">De Rechtlijn</h3>
+        <div class="project_container">
+            <video id="project_showcase_video" autoplay loop muted preload="metadata" controls>
+                <source src="Stealth Recon Xtreme.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <div class="project_body">
+                <div class="project_block project_block_text" id="project_info">
+                    <div>
+                        <b>Completion date:</b><br>January 27, 2025
+                        <br><br>
+                        <b>Development time:</b><br>Solo, 3 months part-time
+                        <br><br>
+                        <b>Project type:</b><br>Study project, mobile game
+                    </div>
+                    <div>
+                        <h3>Description</h3>
+                        De Rechtlijn is a (Dutch) satirical game, played entirely on a smartphone dial screen. The player is accused of murder, and has to prove their innocence in the digital justice system through hilarious and impossible to navigate call menus. The game tackles pressing societal issues in a humouristic way, focusing on the lack of interpersonal contact in an increasingly digital world, and the social consequences of such an environment.
+                    </div>
+                </div>
+                <div class="project_block project_block_text">
+                    <h3>Fascination</h3>
+                    The game is based on my frustrating experiences with (quote unquote) <i>smart</i> appliances and call menus, as well as on how online platforms are able to influence spending habits and election results. <br> I turned this facination into a single sentence to base the game on:
+                    <br><br>
+                    ⇒ <i>"The dangers of a future in which machines are in control, and human interaction is lost."</i>
+                </div>
+                <div class="lr_container">
+                    <div class="ud_container">
+                        <div class="project_block project_block_floating_text" style="margin-left:70px; margin-top:120px; text-align:end"> 
+                            <h3 style="text-align:end">Audio Game</h3>
+                            De Rechtlijn is entirely audio-based, there are no visuals except for the smartphone dial screen. The player navigates the game by listening and responding. 
+                        </div>
+                    </div>
+                    <div class="lr_container">
+                        <div class="project_block project_block_figure" style="flex: none; width: 300px;"> 
+                            <figure>
+                                <img src="phone.jpg">
+                                <figcaption>The interface through which the player interacts with the game.</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="ud_container">
+                        <div class="project_block project_block_floating_text" style="margin-right:70px; margin-top:250px"> 
+                            <h3>Perfect Medium</h3>
+                            Player choice is limited to whatever options the call menu provides. Many players will have had infuriating experiences with these menus, making it the perfect medium for a game with this topic.
+                        </div>
+                    </div>
+                </div>
+
+
+                <h2>Design</h2>
+                <div class ="lr_container">
+                    <div class="project_block project_block_text">
+                        <h3>Design Brief</h3>
+                        <b>Design goals:</b>
+                        <ul>
+                            <li> 
+                                Raising awareness about the dangers of the combination of digitalisation and bureaucracy
+                            </li>
+                            <li>
+                                Evoking frustration and helplessness through interaction with an unempathic digital system
+                            </li>
+                        </ul>
+                        <br>
+                        <b>Target audience:</b>
+                        <ul>
+                            <li> 
+                                People that don't think about the digital transition: Young adults just about to step into society
+                            </li>
+                            <li>
+                                Current and future policymakers
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="project_block project_block_figure" style="flex: none; width: 300px;"> 
+                        <figure>
+                            <img src="chessboard.jpg">
+                            <figcaption>I prototyped the gameplay using a chessboard as gameplay grid, pieces of paper as walls, and some checkers pieces. I often carry these items in case I want to test out gameplay ideas.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class ="lr_container">
+                    <div class="project_block project_block_figure" style="overflow: hidden;">
+                        <figure>
+                            <img src="soldiers.jpg">
+                            <figcaption>The 3D printed game pieces.<figcaption>
+                        </figure>
+                    </div>
+                    <div class="project_block project_block_text" style="flex: none; width: 800px;"> 
+                        <b>Repertoire research:</b>
+                        I looked at 'Kentucky Route Zero' and 'Coldline' which both use call menu to explore a virtual environment, though tackling very different topics.
+                    </div>
+                </div>  
+                <div class ="lr_container">
+                    <div class="project_block project_block_figure"> 
+                        <figure>
+                            <img src="narrative.png">
+                            <figcaption>The explorable "environment", each section has a distinct tone of voice.</figcaption>
+                        </figure>
+                    </div>
+                    <div class="project_block project_block_text" style="flex: none; width: 700px;"> 
+                        <h3>Narrative Design</h3>
+                        <i>
+                            "Press 1 to request a pro bono lawyer. Press 2 to request a trained lawyer. ... You do not have enough money to request a trained lawyer. Try again later."
+                        </i>
+                        <br>
+                        <span style="color: rgb(158, 158, 158);">I wanted the player to get lost in a maze of bureaucracy, constantly getting referred to other phone numbers and parties.</span>
+                        <br>
+                        <br>
+                        Each phone number has a very distinct voice, which helps the player map out the call menu in their head, almost as if traversing a conventional video game map.
+                        <br>
+                        <br>
+                        <i>"You are on hold. ... This hold music is brought to you by our sponsor." (ad starts)</i>
+                        <br>
+                        <span style="color: rgb(158, 158, 158);">
+                            An advertisement, which at first sounds like filler, contains a phone number the player has to call in order to progress. A clue disguised as a joke.
+                        </span>
+                    </div>
+                </div>  
+
+
+
+
+
+
+                <h2>Playtesting & Iterations</h2>
+                <div class="project_block project_block_text">
+                    <div>
+                        <h3>Success criteria</h3>
+                        <ul>
+                            <li>
+                                Players should experience a bug-free and smooth game
+                            </li>
+                            <li>
+                                Players should voluntarily want to explore the call menu
+                            </li>
+                            <li>
+                                Players should feel a sense of urgency
+                            </li>
+                            <li>
+                                The game should encourage players to think about the subject matter
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class ="lr_container">
+                    <div class="project_block project_block_figure"> 
+                        <figure>
+                            <img src="board.jpg">
+                            <figcaption>One of the two mirrored game boards that I printed after thoroughly playtesting the map layout.</figcaption>
+                        </figure>
+                    </div>
+                    <div class="project_block project_block_text">
+                        <h3>Iteration 1</h3>
+                        ⇒ The game is not exciting
+                        <br>
+                        <br>
+                        <b>Why?</b> The game is only reactive, meaning the player has to go out of their way to initiate every action.
+                        <br>
+                        <br> 
+                        <b>Solution:</b> Implementing moments where the player gets called by the game, surprising them with sudden urgency.
+                    </div>
+                </div>
+                <div class ="lr_container">
+                    <div class="project_block project_block_text"> 
+                        <h3>Iteration 2</h3>
+                        ⇒ The game is not fun to play at all
+                        <br>  
+                        <br>  
+                        <b>Why?</b> This one hurt a bit, but yes, it was not fun. It was confronting and dry.
+                        <br>  
+                        <br>
+                        <b>Solution:</b> I completely changed my approach to writing. Instead of going the obvious political talk route, I made it as absurdly bizarre as possible, surprising the player at every turn, and taking the piss out of all topics I covered along the way.
+                        <br><br>
+                        <i>"We at Get Rich Quick value your privacy. To sell us all your personal data in one go, press 1."</i>
+                    </div>
+                    <div class="project_block project_block_figure">
+                        <figure>
+                            <img src="playtest.jpg">
+                            <figcaption>The after-study <i>borrels</i> on thursdays were the perfect opportunity to test the game with lots of players.</figcaption>
+                        </figure>
+                    </div>
+                </div>  
+                <div class ="lr_container">
+                    <div class="project_block project_block_figure">
+                        <figure>
+                            <img src="soldiers.jpg">
+                            <figcaption>The 3D printed game pieces.<figcaption>
+                        </figure>
+                    </div>
+                    <div class="project_block project_block_text"> 
+                        <h3>Iteration 3</h3>
+                        ⇒ Players forgot important phone numbers
+                        <br>  
+                        <br>  
+                        <b>Why?</b> Phone numbers were mentioned once, players had to listen to that section again to remember it. This was annoying.
+                        <br>  
+                        <br>
+                        <b>Solution:</b> Adding a "call history" tab to the game, listing both incoming and outgoing calls
+                    </div>
+                </div>                
+
+                <h2>Post Mortem</h2>
+                <div class="project_block project_block_text">
+                    post mortm
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div id="footer_links">
+                <a href="https://www.linkedin.com/in/nathan-stroomberg/"target="_blank">
+                    <span class="kadence-svg-iconset">
+                        <svg class="kadence-svg-icon kadence-linkedin-svg" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28">
+                            <title>Linkedin</title>
+                            <path d="M3.703 22.094h3.609v-10.844h-3.609v10.844zM7.547 7.906c-0.016-1.062-0.781-1.875-2.016-1.875s-2.047 0.812-2.047 1.875c0 1.031 0.781 1.875 2 1.875h0.016c1.266 0 2.047-0.844 2.047-1.875zM16.688 22.094h3.609v-6.219c0-3.328-1.781-4.875-4.156-4.875-1.937 0-2.797 1.078-3.266 1.828h0.031v-1.578h-3.609s0.047 1.016 0 10.844v0h3.609v-6.062c0-0.313 0.016-0.641 0.109-0.875 0.266-0.641 0.859-1.313 1.859-1.313 1.297 0 1.813 0.984 1.813 2.453v5.797zM24 6.5v15c0 2.484-2.016 4.5-4.5 4.5h-15c-2.484 0-4.5-2.016-4.5-4.5v-15c0-2.484 2.016-4.5 4.5-4.5h15c2.484 0 4.5 2.016 4.5 4.5z"></path>
+                        </svg>
+                    </span>
+                    LINKEDIN
+                </a>
+                <a href="mailto:nstroomberg@gmail.com"target="_blank">
+                    <svg class="kadence-svg-icon kadence-email-svg" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                        <title>Email</title>
+                        <path d="M15 2h-14c-0.55 0-1 0.45-1 1v10c0 0.55 0.45 1 1 1h14c0.55 0 1-0.45 1-1v-10c0-0.55-0.45-1-1-1zM5.831 9.773l-3 2.182c-0.1 0.073-0.216 0.108-0.33 0.108-0.174 0-0.345-0.080-0.455-0.232-0.183-0.251-0.127-0.603 0.124-0.786l3-2.182c0.251-0.183 0.603-0.127 0.786 0.124s0.127 0.603-0.124 0.786zM13.955 11.831c-0.11 0.151-0.282 0.232-0.455 0.232-0.115 0-0.23-0.035-0.33-0.108l-3-2.182c-0.251-0.183-0.307-0.534-0.124-0.786s0.535-0.307 0.786-0.124l3 2.182c0.251 0.183 0.307 0.535 0.124 0.786zM13.831 4.955l-5.5 4c-0.099 0.072-0.215 0.108-0.331 0.108s-0.232-0.036-0.331-0.108l-5.5-4c-0.251-0.183-0.307-0.534-0.124-0.786s0.535-0.307 0.786-0.124l5.169 3.759 5.169-3.759c0.251-0.183 0.603-0.127 0.786 0.124s0.127 0.603-0.124 0.786z"></path>
+				    </svg>
+                    EMAIL
+                </a>
+                <a href="https://jeditor.itch.io"target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="22px" height="22px" viewBox="0 0 32 32">
+                    <path d="M4.172 1.787c-1.396 0.828-4.145 3.984-4.172 4.812v1.375c0 1.735 1.625 3.267 3.099 3.267 1.771 0 3.251-1.469 3.251-3.213 0 1.744 1.421 3.213 3.197 3.213 1.771 0 3.151-1.469 3.151-3.213 0 1.744 1.516 3.213 3.287 3.213h0.032c1.776 0 3.291-1.469 3.291-3.213 0 1.744 1.381 3.213 3.152 3.213s3.197-1.469 3.197-3.213c0 1.744 1.475 3.213 3.245 3.213 1.479 0 3.104-1.532 3.104-3.267v-1.375c-0.032-0.828-2.776-3.984-4.177-4.812-4.339-0.156-7.344-0.183-11.823-0.183-4.484 0.005-10.593 0.073-11.828 0.183zM12.677 10.421c-0.183 0.308-0.385 0.568-0.625 0.797v0.005c-0.672 0.651-1.588 1.057-2.599 1.057-1.016 0-1.932-0.407-2.599-1.063-0.245-0.235-0.428-0.489-0.6-0.787-0.167 0.297-0.4 0.552-0.645 0.787-0.672 0.656-1.588 1.063-2.599 1.063 0 0 0 0-0.005 0-0.12 0-0.245-0.036-0.349-0.073-0.14 1.485-0.203 2.901-0.224 3.937v0.005c-0.005 0.527-0.005 0.953-0.011 1.552 0.032 3.115-0.307 10.089 1.376 11.803 2.604 0.604 7.396 0.88 12.197 0.885h0.005c4.807-0.005 9.593-0.281 12.197-0.885 1.683-1.713 1.344-8.688 1.376-11.803-0.005-0.599-0.005-1.025-0.011-1.552v-0.005c-0.021-1.036-0.079-2.452-0.224-3.937-0.099 0.037-0.229 0.073-0.349 0.073 0 0-0.005 0-0.005 0-1.011 0-1.927-0.407-2.599-1.063h0.005c-0.245-0.235-0.479-0.489-0.645-0.787h-0.005c-0.167 0.297-0.355 0.552-0.595 0.787-0.667 0.656-1.583 1.063-2.599 1.063-1.011 0-1.927-0.407-2.599-1.063-0.24-0.229-0.443-0.495-0.615-0.787l-0.011-0.016c-0.172 0.308-0.38 0.573-0.615 0.803-0.672 0.656-1.588 1.063-2.599 1.063 0 0-0.005 0-0.005 0-0.031 0-0.068 0-0.104-0.005-0.036 0.005-0.073 0.005-0.109 0.005 0 0 0 0-0.005 0-1.011 0-1.927-0.407-2.593-1.063-0.24-0.229-0.443-0.495-0.609-0.787l-0.011-0.016zM10.005 13.875c1.057 0.005 1.995 0 3.161 1.271 0.916-0.093 1.875-0.14 2.833-0.14s1.917 0.047 2.833 0.14c1.167-1.271 2.104-1.271 3.161-1.271h0.005c0.5 0 2.5 0 3.891 3.912l1.495 5.369c1.109 3.995-0.355 4.095-2.177 4.095-2.708-0.1-4.208-2.068-4.208-4.037-1.5 0.251-3.251 0.371-5 0.371s-3.5-0.12-4.995-0.371c0 1.969-1.5 3.937-4.208 4.037-1.828-0.005-3.292-0.1-2.183-4.095l1.495-5.369c1.396-3.912 3.396-3.912 3.896-3.912zM16 16.953c-0.005 0-2.849 2.62-3.364 3.547l1.864-0.073v1.625c0 0.079 0.751 0.047 1.5 0.011 0.749 0.036 1.495 0.068 1.495-0.011v-1.625l1.869 0.073c-0.515-0.927-3.364-3.547-3.364-3.547z"/>
+                    </svg>
+                    ITCH.IO
+                </a>
+            </div>
+            <p>© 2026 Nathan Stroomberg</p>
+        </footer>
+    </div>
+</body>
+
+</html>

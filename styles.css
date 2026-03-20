@@ -55,7 +55,6 @@ body {
 }
 
 header {
-
     justify-content: left;
     display: flex;
     padding: 7px;
@@ -448,6 +447,11 @@ figcaption {
 
 .project_block_text {
     padding: 15px;
+}
+
+.project_block_floating_text {
+    margin: 15px;
+    background-color: transparent;
 }
 
 .lr_container #narrow_project_block_text {
