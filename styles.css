@@ -55,6 +55,7 @@ body {
 }
 
 header {
+    font-size: 25px;
     justify-content: left;
     display: flex;
     padding: 7px;
@@ -77,6 +78,7 @@ header {
     border-top: 0px;
     background-color: #4646c9;
     padding-top: 30px;
+    text-decoration: none;
 }
 
 
@@ -103,9 +105,13 @@ header {
 p {
     font-weight: 200;
     font-size: 1.2rem;
+    margin-top: 0px;
+    margin-bottom: 10px;
 }
 
-
+b {
+    color: rgb(255, 255, 255)
+}
 
 
 
@@ -357,7 +363,7 @@ h3 {
 
 .project_body {
     padding: 15px;
-    color: #ddd9d9;
+    color: #c1bdbd;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -513,11 +519,19 @@ figcaption {
 .game_flexbox_grid {
     font-size: 16px;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    align-items: start;
+    align-items: flex-start;
     margin-bottom: 110px;
+    margin-left: 60px;
+}
+
+.game_column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    font-size: 16px
 }
 
 
