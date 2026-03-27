@@ -223,7 +223,7 @@ b {
     padding: 1px 5px;
     background-color: var(--tag-color, #ec7d7d);
     color: rgb(35, 35, 39);
-    font-size: .85em;
+    font-size: 0.9em;
     white-space: nowrap;
 }
 
@@ -234,7 +234,7 @@ b {
 .tag[data-tag="progression"] { --tag-color: #f0a868; } 
 .tag[data-tag="combat"]      { --tag-color: #d45f5f; }
 .tag[data-tag="systems"]     { --tag-color: #7abf6e; } 
-.tag[data-tag="level"]       { --tag-color: #5bbfb5; } 
+.tag[data-tag="level"]       { --tag-color: #cd8e8e; } 
 .tag[data-tag="audio"]       { --tag-color: #e0845a; }
 .tag[data-tag="gamefeel"]    { --tag-color: #73d6c9; } 
 .tag[data-tag="techdesign"]  { --tag-color: #5ba3c9; } 
@@ -371,11 +371,20 @@ h3 {
 
 .project_game_title {
     color: #FFFF64;
+    margin-top: 0px;
+    padding-top: 15px;
+    text-align: center;
+    font-size: 55px;
+    max-width: 100%;
+}
+
+.project_game_title_function {
+    color: rgba(25, 26, 35, 1);
     margin-bottom: 20px;
     margin-top: 0px;
     padding: 15px;
     text-align: center;
-    font-size: 55px;
+    font-size: 40px;
     max-width: 100%;
 }
 
@@ -852,3 +861,76 @@ footer p{
 }
 
 
+
+
+/* toc.css — floating table of contents, styled for Nathan's portfolio */
+
+#toc {
+    position: fixed;
+    top: 300px;
+    right: 22px;
+    z-index: 900;
+    width: 200px;
+    background: rgba(16, 16, 22, 0.82);
+    border-radius: 10px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.55),
+                0 0 0 0.5px rgba(255, 255, 255, 0.06);
+    padding: 10px 0 12px;
+    transition: box-shadow 0.15s;
+}
+
+#toc:hover {
+    box-shadow: 0 12px 50px rgba(0, 0, 0, 0.7),
+                0 0 0 1px rgba(201, 240, 168, 0.12);
+}
+
+#toc-label {
+    font-size: 0.7em;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: rgba(255, 255, 100);
+    padding: 0 14px 8px;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.07);
+    margin-bottom: 6px;
+}
+
+#toc ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#toc ul li {
+    margin: 0;
+    padding: 0;
+}
+
+#toc ul li a {
+    display: block;
+    padding: 5px 14px;
+    font-size: 0.7em;
+    font-weight: 300;
+    color: rgba(240, 237, 232, 0.5);
+    text-decoration: none;
+    border-left: 2px solid transparent;
+    transition: color 0.15s, border-color 0.15s, background 0.15s;
+    line-height: 1.4;
+}
+
+#toc ul li a:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+#toc ul li a.toc-active {
+    color: #FFFF64;
+    border-left-color: #FFFF64;
+    background: rgba(255, 255, 100, 0.06);
+}
+
+/* Hide on small screens where there's no room */
+@media (max-width: 1200px) {
+    #toc {
+        display: none;
+    }
+}
