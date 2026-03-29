@@ -496,6 +496,8 @@ figcaption {
 
 #project_showcase_video {
     scale: 1.0;
+    background-color: black;
+    filter: brightness(30%);
 }
 
 /* Home */
