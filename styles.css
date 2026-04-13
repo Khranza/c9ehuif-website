@@ -240,7 +240,9 @@ b {
 .tag[data-tag="techdesign"]  { --tag-color: #5ba3c9; } 
 .tag[data-tag="artistic"]    { --tag-color: #c9b75b; } 
 .tag[data-tag="boardgame"]   { --tag-color: #c95b75; } 
+.tag[data-tag="applied"]     { --tag-color: #f5deb3; } 
 .tag[data-tag="audience"]    { --tag-color: #e7d164; } 
+.tag[data-tag="puzzle"]      { --tag-color: #f0c8ff; } 
 
 .game_data {
   margin-top: 0.75em;
@@ -266,6 +268,19 @@ b {
     display: inline-flex;
     align-items: center;
     gap:7px;
+}
+
+.game_icons_team_size {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(51, 54, 76, 0.466);
+    gap: 4px;
+    border-radius: 10px;
+    padding:3px;
+    padding-left:5px;
+    padding-right:5px;
+    color: #dadada;
 }
 
 .game_text {
@@ -297,7 +312,6 @@ b {
 
 a {
     color: #FFFF64;
-
 }
 
 ul {
