@@ -16,6 +16,7 @@
             <a href="../" class="navlink">Portfolio</a>
             <a href="../about/" class="navlink">About me</a>
             <a href="../contact/" class="navlink">Contact</a>
+            <a href="../resume/" class="navlink">Résumé</a>
         </header> 
         
         <div id="kleinlijntje"></div>
@@ -34,11 +35,13 @@
                         <br><br>
                         <b>Development time:</b><br>3 months part-time, and counting
                         <br><br>
-                        <b>Project type:</b><br>Passion project, team of 3
+                        <b>Project type:</b><br>Passion project, team of 2
                     </div>
                     <div>
                         <h3>Description</h3>
-                        A combat action game with Souls-inspired gameplay, originating from an exercise to create an animation-based boss battle. 
+                        An action/combat game with Souls-inspired gameplay, originating from a shared exercise with an animation artist to create an impactful animation-based boss battle. 
+                        <br>
+                        So far, I created a tool to speed up animation iteration, a third person player character, a prototype boss fight, a complete level greybox (L2).
                     </div>
                 </div>
                 <!-- <div class="project_block project_block_text">
@@ -48,9 +51,89 @@
                     ⇒ <i>"The dangers of a future in which machines are in control, and human interaction is lost."</i>
                 </div> -->
                 
-                <h2>Pre-production</h2>
-
                 <h2>Player Character (3C's)</h2>
+                <div class="lr_container">
+                    <div class="project_block project_block_text">
+                        <h3>Capturing the fight</h3>
+                        I added a wide hysterisis to the camera when locked onto an enemy, allowing it to capture the fight almost from the side, giving the player a much better view of the fight than with a straight-on camera.
+                    </div>
+                    <div class="project_block project_block_figure" style="width: 1100px;">
+                        <figure>
+                            <img src="camera_angle.gif">
+                            <figcaption>Camera system prototype<figcaption>
+                        </figure>
+                    </div>
+                </div>
+                
+                <h2>Boss Behaviour</h2>
+                <div class="lr_container">
+                    <div class="project_block project_block_figure">
+                        <figure>
+                            <img src="boss_sheet.png">
+                            <figcaption>Draft of intended boss behaviour and moveset in Miro, outlining move intent and accurate terminology.<figcaption>
+                        </figure>
+                    </div>
+                    <div class="ud_container>">
+                        <div class="project_block project_block_floating_text" style="width: 400px;">
+                            <h3>Boss Profile/Strategy</h3>
+                            First, I decided <b><u>what the player should do</u></b> to beat the boss. 
+                            Since it's the game's only boss, the player has to achieve <br> > "absolute mastery of all combat mechanics".
+                            <br><br>I designed a coherrent strategy the boss uses to beat the player, which leads to interesting gameplay:
+                            <ul>
+                                <li>The boss tries to keep the player at a distance favourable for his long weapon</li>
+                                <li>The boss occasionally closes in with a very difficult attack, leaving room for punish attacks if succesfully parried</li>
+                                <li>The player has to get close to damage the boss, managing his attacks properly</li>
+                                <li>The fight's spacing alternates between point-blank and extended-reach engagement, adding variety</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="lr_container">
+                    <div class="project_block project_block_text" style="width: 800px;">
+                        <h3>Greybox Boss Prototype</h3>
+                        asdasid adaosd pasod ksapd kpsakd psad ksapkpkapkdpaks dspakd sak d
+                    </div>
+                    <div class="project_block project_block_figure" style="overflow: hidden;">
+                        <figure>
+                            <video controls autoplay loop muted preload="metadata">
+                                <source src"ab.aa" type="video/webm">
+                                Your browser does not support the video tag.
+                            </video>
+                            <figcaption>Editing animation timings with the "Batch Transposer" Godot tool I created to assist in animation iteration.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+                
+                <h2>Animation Pipeline Tool</h2>
+                <div class="lr_container">
+                    <div class="ud_container" style="width: 3000px;">
+                        <div class="project_block project_block_figure" style="overflow: hidden;">
+                            <figure>
+                                <video controls autoplay loop muted preload="metadata">
+                                    <source src="batch_transposer.webm" type="video/webm">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <figcaption>Editing animation timings with the "Batch Transposer" Godot tool I created to assist in animation iteration.</figcaption>
+                            </figure>
+                        </div>
+                        <div class="project_block project_block_figure">
+                            <figure>
+                                <img src="animation_xcel.png">
+                                <figcaption>Animation spreadsheet.<figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="project_block project_block_text">
+                        <h3>Editor Tool</h3>
+                        To allow a designer (me) to quickly iterate upon blockout/keyframe animations inside Godot, I created the "Batch Transposer" tool:
+                        <br><br>
+                        Divide your animation into named sections, assign a length to each section, and bake this data. Then, edit section lengths to scale/transpose the defined animation sections. 
+                        <br><br>
+                        So far it's proven especially useful for tweaking the windup length of an attack based on player feedback.
+                        <br><br>
+                        This information is bundled into a before/after Excel sheet, and passed back to the animator.
+                    </div>
+                </div> 
 
                 <h2>Level Design</h2>
                 <div class="lr_container">
@@ -62,34 +145,34 @@
                     <div class="ud_container>">
                         <div class="project_block project_block_floating_text" style="width: 400px;">
                             <h3>Top-down Map</h3>
-                            As the first stop of the level design process, I created a top-down map, together with a level synopsis and <b><u>criteria of success:</u></b>
+                            As the first step in my level design process, I created a top-down map, together with a level synopsis and <b><u>criteria of success:</u></b>
                             <ul>
                                 <li>The player feels like they have an understanding of the main mechanics</li>
+                                <li>The player feels a sense of progression in the level segments as they traverse the level</li>
                                 <li>The player feels rewarded for exploring the level</li>
-                                <li>The player feels like they are slowly but steadily making progress</li>
                                 <li>The player feels relief once the shortcut is opened</li>
                             </ul>
-                        </div>
-                        <div class="project_block project_block_figure" style="flex: none; width: 200px;"> 
-                            <figure>
-                                <img src="level_synopsis.png">
-                                <figcaption>The full level synopsis.</figcaption>
-                            </figure>
+                            This helped me design encounters and level segments based on clear intent.
                         </div>
                     </div>
                 </div>
-
-
-                <h2>Pipelines</h2>
-                <div class="project_block project_block_figure">
-                    <figure>
-                        <img src="animation_xcel.png">
-                        <figcaption>Animation spreadsheet.<figcaption>
-                    </figure>
+                <div class="lr_container">
+                    <div class="project_block project_block_text" style="width: 800px;">
+                        <h3>Greybox Walkthrough</h3>
+                        asdasid adaosd pasod ksapd kpsakd psad ksapkpkapkdpaks dspakd sak d
+                    </div>
+                    <div class="project_block project_block_figure" style="overflow: hidden;">
+                        <figure>
+                            <video controls autoplay loop muted preload="metadata">
+                                <source src"ab.aa" type="video/webm">
+                                Your browser does not support the video tag.
+                            </video>
+                            <figcaption>Editing animation timings with the "Batch Transposer" Godot tool I created to assist in animation iteration.</figcaption>
+                        </figure>
+                    </div>
                 </div>
-
-
-
+                
+                
                 <h2>Post Mortem</h2>
                 <div class="project_block project_block_text">
                     post mortm

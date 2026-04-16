@@ -19,7 +19,7 @@ body {
 
 .intro_babbel {
     margin-top:50px;
-    margin-bottom:500px;
+    /* margin-bottom:500px; */
 }
 
 #home_video {
@@ -511,6 +511,10 @@ figcaption {
 #project_showcase_video {
     scale: 1.0;
     background-color: black;
+    /* filter: brightness(30%); */
+}
+
+#project_showcase_video about_vid {
     filter: brightness(30%);
 }
 
