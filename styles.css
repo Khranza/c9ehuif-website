@@ -234,15 +234,15 @@ b {
 .tag[data-tag="progression"] { --tag-color: #f0a868; } 
 .tag[data-tag="combat"]      { --tag-color: #d45f5f; }
 .tag[data-tag="systems"]     { --tag-color: #7abf6e; } 
-.tag[data-tag="level"]       { --tag-color: #cd8e8e; } 
+.tag[data-tag="level"]       { --tag-color: #6f87ff; } 
 .tag[data-tag="audio"]       { --tag-color: #e0845a; }
 .tag[data-tag="gamefeel"]    { --tag-color: #73d6c9; } 
 .tag[data-tag="techdesign"]  { --tag-color: #5ba3c9; } 
 .tag[data-tag="artistic"]    { --tag-color: #c9b75b; } 
 .tag[data-tag="boardgame"]   { --tag-color: #c95b75; } 
-.tag[data-tag="applied"]     { --tag-color: #f5deb3; } 
+.tag[data-tag="applied"]     { --tag-color: #9384f5; } 
 .tag[data-tag="audience"]    { --tag-color: #e7d164; } 
-.tag[data-tag="puzzle"]      { --tag-color: #f0c8ff; } 
+.tag[data-tag="puzzles"]      { --tag-color: #8bbb51; } 
 
 .game_data {
   margin-top: 0.75em;
