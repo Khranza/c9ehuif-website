@@ -22,9 +22,10 @@
         <div id="kleinlijntje"></div>
         
         <h3 class="project_game_title">Swordcaster (ongoing)</h3>
+        <h3 class="project_game_title_function">Gameplay Designer & Programmer</h3>
         <div class="project_container">
-            <video id="project_showcase_video" autoplay loop muted preload="metadata" controls>
-                <source src="Stealth Recon Xtreme.mp4" type="video/mp4">
+            <video id="project_showcase_video" autoplay loop muted preload="metadata">
+                <source src="Swordcaster Boss Prototype Trim.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
             
@@ -41,7 +42,7 @@
                         <h3>Description</h3>
                         An action/combat game with Souls-inspired gameplay, originating from a shared exercise with an animation artist to create an impactful animation-based boss battle. 
                         <br>
-                        So far, I created a tool to speed up animation iteration, a third person player character, a prototype boss fight, a complete level greybox (L2).
+                        So far, I created a tool to speed up animation iteration, a third person player character, a boss moveset and prototype fight, a complete level greybox (L2) and a scalable codebase designed to grow with the game.
                     </div>
                 </div>
                 <!-- <div class="project_block project_block_text">
@@ -53,15 +54,49 @@
                 
                 <h2>Player Character (3C's)</h2>
                 <div class="lr_container">
+                    <div class="project_block project_block_figure" style="width: 300px;">
+                        <figure>
+                            <img src="3csresearch.png">
+                            <figcaption>Excerpt of the 3C's research document.<figcaption>
+                        </figure>
+                    </div>
+                    <div class="project_block project_block_text">
+                        <h3>Research & Analysis</h3>
+                        I sometimes catch myself wanting to jump straight into the engine. This time I held back and decided to thoroughly analyse Souls-like player characters first: acceleration, turn radius, character feel, camera angles... so much juice!
+                        <br><br>
+                        Using this research document, I was able to quickly build a solid player character base and expand it based on the game's needs.
+                    </div>
+                </div>
+                <div class="lr_container">
                     <div class="project_block project_block_text">
                         <h3>Capturing the fight</h3>
-                        I added a wide hysterisis to the camera when locked onto an enemy, allowing it to capture the fight almost from the side, giving the player a much better view of the fight than with a straight-on camera.
+                        I added a wide hysterisis to the camera when locks onto an enemy, allowing it to capture the fight almost from the side, giving the player a much more interesting view of the fight than with a straight-on camera.
                     </div>
                     <div class="project_block project_block_figure" style="width: 1100px;">
                         <figure>
                             <img src="camera_angle.gif">
                             <figcaption>Camera system prototype<figcaption>
                         </figure>
+                    </div>
+                </div>
+                <div class="lr_container">
+                    <div class="project_block project_block_figure" style="overflow: hidden;">
+                        <figure>
+                            <div style="overflow: hidden; height: 250px;">
+                                <video controls autoplay loop muted preload="metadata"
+                                    style="width: 100%; height: 140%; object-fit: cover; margin-top: -10%;">
+                                    <source src="Swordcaster 3Cs.mp4" type="video/webm">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <figcaption>The preliminary player character.</figcaption>
+                        </figure>
+                    </div>
+                    <div class="project_block project_block_text" style="width: 600px;">
+                        <h3>Locking down the 3C's</h3>
+                        Knowing how fast the player character moves, how long her attacks take, how quickly she can dodge (among many other metrics) is crucial when designing a boss moveset.
+                        <br><br>
+                        Also note the addition of a flip-dodge, showcasing player character Kris' athletic background. The movement design has to reflect the game's narrative. 
                     </div>
                 </div>
                 
@@ -90,13 +125,17 @@
                 </div>
                 <div class="lr_container">
                     <div class="project_block project_block_text" style="width: 800px;">
-                        <h3>Greybox Boss Prototype</h3>
-                        asdasid adaosd pasod ksapd kpsakd psad ksapkpkapkdpaks dspakd sak d
+                        <h3>Boss Prototype</h3>
+                        To test whether this design works, I put together a prototype boss with conditional attacks, created basic attack animations, and tested it with playtesters.
+                        <br><br>
+                        A critical point of feedback was that I focused too much on punishing attack timings, which turned the game into more of a rhythm parrying game than an engaging fight.
+                        <br><br>
+                        Using my batch transposer tool (more below) I was able to easily iterate these timings, resulting in the much more dynamic fight, showcased on the right.
                     </div>
                     <div class="project_block project_block_figure" style="overflow: hidden;">
                         <figure>
                             <video controls autoplay loop muted preload="metadata">
-                                <source src"ab.aa" type="video/webm">
+                                <source src="Swordcaster Boss Prototype Trim.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                             <figcaption>Editing animation timings with the "Batch Transposer" Godot tool I created to assist in animation iteration.</figcaption>
@@ -145,7 +184,7 @@
                     <div class="ud_container>">
                         <div class="project_block project_block_floating_text" style="width: 400px;">
                             <h3>Top-down Map</h3>
-                            As the first step in my level design process, I wrote a <a href="https://fantasy-earth-d68.notion.site/L0-RSNL-District-Level-1-313b5a4c02a180f1a4b8c4141c958a35?pvs=73" target="blank">level synopsis</a> and created a top-down map, together with a level synopsis and <b><u>criteria of success:</u></b>
+                            As the first step in my level design process, I created a top-down map, together with a <a href="https://fantasy-earth-d68.notion.site/L0-RSNL-District-Level-1-313b5a4c02a180f1a4b8c4141c958a35?pvs=73" target="blank">level synopsis</a>  and <b><u>criteria of success:</u></b>
                             <ul>
                                 <li>The player feels like they have an understanding of the main mechanics</li>
                                 <li>The player feels a sense of progression in the level segments as they traverse the level</li>
@@ -161,7 +200,7 @@
                         <h3>Technical Placeholders</h3>
                         To make the greybox fully playable, I created placeholders for enemies, items, doors and ladders.
                         <br><br>
-                        The enemy placeholder, though simple, conveys:
+                        Enemy placeholder, though simple, convey:
                         <ul style="column-count: 2;">
                             <li>Detection range</li>
                             <li>Size/hitbox</li>
@@ -186,12 +225,55 @@
                         </figure>
                     </div>
                     <div class="project_block project_block_text"> 
-                        <h3>Greybox</h3>
+                        <h3>Level Greybox</h3>
                         Using the top-down map and level synopsis, I blocked out the level. 
                         <br><br>
-                        Some sections had to be redesigned to account for verticality and sightlines, which made me realize a top-down map should primarily focus on conveying intent and should not be a precise map layout.
+                        Some sections had to be redesigned to account for verticality and sightlines, which taught me that a top-down map should primarily convey intent and should not serve as a precise layout.
                         <br><br>
-                        The initial greybox was far from perfect. Through in-person playtesting I was able to identify and resolve many issues, especially related to spatial readability and encounter pacing.
+                        From there, in-person playtesting surfaced a range of issues around to spatial readability and encounter pacing. Iterating on those gave me the level you can see on the left! 
+                    </div>
+                </div>
+
+
+                <h2>Scalable Code</h2>
+                <div class="lr_container">
+                    <div class="project_block project_block_text"> 
+                        <h3>Layered Finite State Machine</h3>
+                        I wanted to understand AI programming properly, so I looked into how to build the system as scalable as possible. Hitting the limits of a FSM, I designed a hybrid layered state machine and behaviour tree system, similar to Unreal's behaviour tree.
+                        <br><br>
+                        The system I created turned out very flexible, so I ended up using it for the player character as well!
+                    </div>
+                    <div class="project_block project_block_figure" style="width: 1300px;">
+                        <figure>
+                            <img src="state_machine.png">
+                            <figcaption>A state machine, containing state layers, containing states, containing behaviour tree leaves...<figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="lr_container">
+                    <div class="project_block project_block_figure" style="width: 1300px;">
+                        <figure>
+                            <img src="composition_1.png">
+                            <figcaption>The enemy and player compositions, which share 90% of their code, using custom nodes.<figcaption>
+                        </figure>
+                    </div>
+                    <div class="project_block project_block_text"> 
+                        <h3>Composition</h3>
+                        As the sole programmer of Swordcaster, I built the game with scalability in mind. I wrote completely <b><u>decoupled custom nodes</u></b> to build scenes, like the player and the boss, which share 90% of their code.
+                        <br><br>
+                        Coming from Unity, I'm used to working with the composition pattern using UnityEvents. Godot doesn't offer the same out of the box, so I had to find my own solution:
+                    </div>
+                </div>
+                <div class="lr_container">
+                    <div class="project_block project_block_text"> 
+                        <h3>Headers Tool</h3>
+                        I created a tool that mimics UnityEvents in Godot! Custom nodes that visually represents signals inside the hierarchy, with names that update automatically based on what they're connected to. No more hard wiring the Health and Death components, enter Headers!
+                    </div>
+                    <div class="project_block project_block_figure" style="width: 1300px;">
+                        <figure>
+                            <img src="headers.png">
+                            <figcaption>The yellow parent nodes are HeaderEvents, which call each of their respective Headers when invoked.<figcaption>
+                        </figure>
                     </div>
                 </div>
             </div>
