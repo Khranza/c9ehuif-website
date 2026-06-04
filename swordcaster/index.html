@@ -23,8 +23,8 @@
         <h3 class="project_game_title">Swordcaster (ongoing)</h3>
         <h3 class="project_game_title_function">Gameplay Designer & Programmer</h3>
         <div class="project_container">
-            <video id="project_showcase_video" autoplay loop muted preload="metadata">
-                <source src="Swordcaster Boss Prototype 2.mp4" type="video/mp4">
+            <video id="project_showcase_video" autoplay loop muted controls preload="metadata">
+                <source src="Fortis.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
             
@@ -156,6 +156,30 @@
                         Playtesting revealed that the boss left too little room for close-quarters combat, causing players to use passive (and boring) long-range play. I reworked the timings to create openings, drawing the player in. This makes the main challenge attack-reading and stamina management in close quarters.
                         <br><br>
                         This contradicted my initial design vision, but it taught me that playtesting early exposes crucial problems in the design, especially related to boring gameplay.
+                    </div>
+                </div> 
+                <div class="lr_container">
+                    <div class="project_block project_block_text" style="width: 1000px;">
+                        <h3>Block or Dodge?</h3>
+                        The player has two ways to deal with attacks: blocking and dodging, which I both wanted to give a different purpose.
+                        <ul>
+                            <li>
+                                Blocking can be held down until the stamina meter runs out, making it an approachable way of dealing with attacks. However, the player gets pushed back with every block, making approaches near impossible purely by blocking all incoming attacks.
+                            </li>
+                            <li>
+                                Dodging is much more timing sensitive, meaning the player needs to learn the attack timings first. By dodging, the player can get close to the boss. Dodging costs a big chunk of stamina, so dodging exclusively is not an option either.
+                            </li>
+                        </ul>
+                        
+                    </div>
+                    <div class="project_block project_block_figure" style="overflow: hidden;">
+                        <figure>
+                            <video controls autoplay loop muted preload="metadata">
+                                <source src="Swordcaster Boss Prototype 2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <figcaption>The prototype is replaced by a keyframe-animated version of the boss model. The keyframes are linearly interpolated. In this stage I'm only making small timing adjustments.</figcaption>
+                        </figure>
                     </div>
                 </div>
                 
