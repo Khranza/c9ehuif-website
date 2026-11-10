@@ -31,9 +31,9 @@
             <div class="project_body">
                 <div class="project_block project_block_text" id="project_info">
                     <div>
-                        <b>Release date:</b><br> t.b.d. (ongoing)
+                        <b>Release date:</b><br> Jun 23, 2026 <a href="#" onClick="window.open('https://jeditor.itch.io/swordcaster', '_blank')">itch.io release</a>
                         <br><br>
-                        <b>Development time:</b><br>3 months part-time, and counting
+                        <b>Development time:</b><br>5 months part-time
                         <br><br>
                         <b>Project type:</b><br>Passion project, team of 2
                     </div>
@@ -41,7 +41,7 @@
                         <h3>Description</h3>
                         An action/combat game with Souls-inspired gameplay, originating from a shared exercise with an animation artist to create an impactful animation-based boss battle. 
                         <br>
-                        So far, I created a tool to speed up animation iteration, a third person player character, a boss moveset and prototype fight, a complete level greybox (L2) and a scalable codebase designed to grow with the game.
+                        I designed and implemented the boss moveset and behavior, created a tool to speed up animation iteration, a third person player character, a complete level greybox (L2) and a scalable codebase.
                     </div>
                 </div>
                 <!-- <div class="project_block project_block_text">
@@ -52,19 +52,11 @@
                 </div> -->
                 
                 <h2>Player Character (3C's)</h2>
-                <div class="lr_container">
-                    <div class="project_block project_block_figure" style="width: 300px;">
-                        <figure>
-                            <img src="3csresearch.png">
-                            <figcaption>Excerpt of the 3C's research document.<figcaption>
-                        </figure>
-                    </div>
-                    <div class="project_block project_block_text">
-                        <h3>Research & Analysis</h3>
-                        I sometimes catch myself wanting to jump straight into the engine. This time I held back and decided to thoroughly analyse Souls-like player characters first: acceleration, turn radius, character feel, camera angles... so much juice!
-                        <br><br>
-                        Using this research document, I was able to quickly build a solid player character base and expand it based on the game's needs.
-                    </div>
+                <div class="project_block project_block_text">
+                    <h3>Research & Analysis</h3>
+                    I sometimes catch myself wanting to jump straight into the engine. This time I held back and decided to thoroughly analyse Souls-like player characters first: acceleration, turn radius, character feel, camera angles... so much juice!
+                    <br><br>
+                    Using this research document, I was able to quickly build a solid player character base and expand it based on the game's needs.
                 </div>
                 <div class="lr_container">
                     <div class="project_block project_block_text">
@@ -109,7 +101,7 @@
                     </div>
                     <div class="ud_container>">
                         <div class="project_block project_block_floating_text" style="width: 400px;">
-                            <h3>Boss Profile/Strategy</h3>
+                            <h3>Moveset</h3>
                             First, I decided <b><u>what the player should do</u></b> to beat the boss. 
                             Since it's the game's only boss, the player has to achieve <br> > "absolute mastery of all combat mechanics".
                             <br><br>I designed a coherrent strategy the boss uses to beat the player, which leads to interesting gameplay:
@@ -127,7 +119,7 @@
                         <h3>Boss Prototype</h3>
                         To test whether this design works, I put together a prototype boss with conditional attacks, created 6 attack animations, and tested it with playtesters.
                         <br><br>
-                        A critical point of feedback was that I focused too much on punishing attack timings, which turned the game into more of a rhythm parrying game than an engaging fight.
+                        An important point of feedback was that I focused too much on punishing attack timings, which turned the game into more of a rhythm parrying game than an engaging fight.
                         <br><br>
                         Using my batch transposer tool (more below) I was able to easily iterate these timings, resulting in a much more dynamic fight, showcased on the right.
                     </div>
@@ -137,7 +129,7 @@
                                 <source src="Swordcaster Boss Prototype Trim.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
-                            <figcaption>The boss has conditional attacks. When close, it performs a shield bash or sweep attack, when far, other attacks are selected.</figcaption>
+                            <figcaption>The boss has conditional attacks. When close, it may perform a sweep attack, versus a lunge when far. (at this point the boss had a shield)</figcaption>
                         </figure>
                     </div>
                 </div>
@@ -153,9 +145,9 @@
                     </div>
                     <div class="project_block project_block_text" style="width: 1000px;">
                         <h3>Chasing Fun</h3>
-                        Playtesting revealed that the boss left too little room for close-quarters combat, causing players to use passive (and boring) long-range play. I reworked the timings to create openings, drawing the player in. This makes the main challenge attack-reading and stamina management in close quarters.
+                        Playtesting revealed that the boss left too little room for close-quarters combat, causing players to use a passive fighting style. I reworked the timings to create openings, drawing the player in. This makes the main challenge attack-reading and stamina management in close quarters.
                         <br><br>
-                        This contradicted my initial design vision, but it taught me that playtesting early exposes crucial problems in the design, especially related to boring gameplay.
+                        This contradicted my initial design vision, but it taught me that playtesting early exposes crucial problems in the on-paper design.
                     </div>
                 </div> 
                 <div class="lr_container">
@@ -180,6 +172,21 @@
                             </video>
                             <figcaption>The prototype is replaced by a keyframe-animated version of the boss model. The keyframes are linearly interpolated. In this stage I'm only making small timing adjustments.</figcaption>
                         </figure>
+                    </div>
+                </div>
+                <div class="lr_container">
+                    <div class="project_block project_block_figure" style="overflow: hidden;">
+                        <figure>
+                            <video controls autoplay loop muted preload="metadata">
+                                <source src="Fortis.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <figcaption>The prototype is replaced by a keyframe-animated version of the boss model. The keyframes are linearly interpolated. In this stage I'm only making small timing adjustments.</figcaption>
+                        </figure>
+                    </div>
+                    <div class="project_block project_block_text" style="width: 1000px;">
+                        <h3>Finalization</h3>
+                        For the final step of the process I implemented dynamic difficulty, introducing new attacks and reducing the time between them at certain health thresholds.
                     </div>
                 </div>
                 
@@ -240,7 +247,7 @@
                         <h3>Technical Placeholders</h3>
                         To make the greybox fully playable, I created placeholders for enemies, items, doors and ladders.
                         <br><br>
-                        Enemy placeholder, though simple, convey:
+                        Although they are simple, these enemy placeholders convey:
                         <ul style="column-count: 2;">
                             <li>Detection range</li>
                             <li>Size/hitbox</li>
