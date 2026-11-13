@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../styles.css" rel="stylesheet">
+    <script defer src="../../scripts.js"></script>
+    <script defer src="../../toc.js"></script>
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+    <title>Nathan Stroomberg</title>
+</head>
+<body>
+    <div class="background-wrapper">
+        <!-- headers -->
+        <header>
+            <a href="../../" class="navlink">Portfolio</a>
+            <a href="../../about/" class="navlink">About me</a>
+            <a href="../../contact/" class="navlink">Contact</a>
+        </header> 
+
+        <div id="kleinlijntje"></div>
+        
+        <h3 class="project_game_title">Stratoforce (in development)</h3>
+        <h3 class="project_game_title_function">Solo Developer & Game Designer</h3>
+        <div class="project_container">
+            <video id="project_showcase_video" autoplay loop muted preload="metadata">
+                <source src="Stratoforce.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <div class="project_body">
+                <div class="project_block project_block_text" id="project_info">
+                    <div>
+                        <b>Release date:</b><br>T.b.d.</a>
+                        <br><br>
+                        <b>Development time:</b><br>Solo, 1 month part-time (and counting)
+                        <br><br>
+                        <b>Project type:</b><br>Passion project
+                    </div>
+                    <div>
+                        <h3>Description</h3>
+                        I've always had a love for aerial combat games, especially those in the Battlefield and Ace Combat series. They contain such different rules and controls from conventional gameplay, and a lot of joy already stems from the "whoa, I'm flying!" factor. I'm currently writing the narrative to the game, while prototyping combat mechanics and interactions.
+                    </div>
+                </div>
+
+                <h2>Tooling</h2>
+                <div class="lr_container">
+                    <div class="project_block project_block_text">
+                        <div>
+                            <h3>Debug Graph Tool</h3>
+                            I wanted a way to visualize the relation between linear velocity and angular velocity. Because this is difficult with plain debug prints, I wrote a custom Godot add-on that plots data in a graph. This immediately helped me identify issues with sudden velocity jumps. 
+                            <br><br>It integrates perfectly into the Godot editor, where it sits docked by default. After positive feedback online, I packaged it and <a href="https://store.godotengine.org/asset/jeditor/debug-graph/" target="blank">published it on the Godot Asset Store!</a>
+                        </div>
+                    </div>
+                    <div class="project_block project_block_figure" style="flex: none; width: 500px;">
+                        <figure class="project_block project_block_figure">
+                            <video autoplay loop muted controls preload="metadata">
+                                <source src="debuggraph.webm" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <figcaption>An undocked Debug Graph in action, plotting the player's velocity against its angular velocity.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+                
+                <h2>Enemy behaviour</h2>
+                <div class="lr_container">
+                    <div class="project_block project_block_text">
+                        <h3>Combat pillars</h3>
+                        I take a few important pillars into account while designing enemy behaviour. They are based on target players' preferences and those of my own.
+                        <ul>
+                            <li><b>Intimacy</b><br>The game focuses on one-on-one combat. The player chooses which target to tackle, and is free to switch between targets. Enemies never gang up on the player, even if there are a lot of them in the level.</li>
+                            <li><b>Same rules</b><br>The player should feel like they are outmaneuvering enemies on similar terms, that is, a similar turn radius, similar speeds, similar physics.</li>
+                            <li><b>Always readable</b><br>The player should always know where all enemies are and which direction they’re heading, through a combination of their visible model, contrails/smoke trails, UI.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lr_container">
+                    <div class="project_block project_block_text">
+                        <h3>Unique pathfinding challenges</h3>
+                        In most games, pathinding simply means getting from point A to point B. But I want to be able to direct airplanes to a position, <i>facing a certain direction</i>. I tried two approaches:
+                    </div>
+                </div>
+
+                <div class = "lr_container">
+                    <div class="project_block project_block_figure" style="overflow: hidden; width: 50%">
+                        <figure>
+                            <img src="sohcahtoa.gif" style="width: 100%; transform: scale(1.006); transform-origin: bottom">
+                            <figcaption>Out of curiosity, I started out by treating it like a math problem. After some geometric maths trial and error, I found that "Dubins" paths are a solution, but only in 2D. 3D would make the logic too complex for me to write manually, but it did give me insight in how this type of pathfinding system could work.
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="project_block project_block_figure" style="overflow: hidden; width: 50%">
+                        <figure>
+                            <img src="airoplan.gif" style="width: 100%; transform: scale(1.006); transform-origin: bottom">
+                            <figcaption>Another approach I tried is using a spline. While more expensive, it's compatible with 3D out of the box, and looks more natural than Dubins paths. It has some downsides, such as constant overshooting thanks to asymptotic convergence. But I'm confident I can overcome those with code, so this is the approach I'll take for now.
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class ="lr_container">
+                    <div class="project_block project_block_text">
+                        <h3>Distance & speed problem</h3>
+                        In Stratoforce, the player has to get quite close to an enemy to take it out. While testing I identified a dilemma:
+                        <ul>
+                            <li>If the player & enemies move slowly, all action is concentrated in a smaller area so there is less waiting and much more to see on-screen, but movement feels sluggish. (Battlefield 1)</li>
+                            <li>If the player & enemies move fast, it makes movement much more visceral, but the player will have a very small window of attack before overshooting the enemy, and they are fighting far away dots most of the time. (Ace Combat)</li>
+                            <li>A mix of the two results in worst of both worlds.</li>
+                        </ul>
+                    </div>
+                    <div class="project_block project_block_figure" style="overflow: hidden;">
+                        <figure>
+                            <img src="approach.gif" style="width: 100%; transform: scale(1.006); transform-origin: bottom">
+                            <figcaption>I tested a system where enemies further away are scaled up, to stay visible. Left: 0% effect, right: 100%. I've chosen to use it at a subtle 20%.  
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="lr_container">
+                    <div class="project_block project_block_figure" style="flex: none; width: 500px;">
+                        <figure class="project_block project_block_figure">
+                            <video autoplay loop muted controls preload="metadata">
+                                <source src="enemyflight (2).webm" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <figcaption>Distance scaling & wind shader effects in action, as well as the first iteration of spline based pathfinding.</figcaption>
+                        </figure>
+                    </div>
+                    <div class="project_block project_block_text">
+                        <div>
+                            <h3>Possible solutions</h3>
+                            Right now I'm in the process of prototyping multiple solutions. So far I've tried:
+                            <ul>
+                                <li>Perspective negation by scaling up distant enemies</li>
+                                <li>Screen space wind VFX to feel faster</li>
+                            </ul>
+                            This is just the beginning, and I'll research more flight games to see how they tackle this problem.
+                            <br><br>
+                            Right now everything is coming together nicely, and I'm on track to perform the first playtests very soon. Exciting!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <footer>
+            <div id="footer_links">
+                <a href="https://www.linkedin.com/in/nathan-stroomberg/"target="_blank">
+                    <span class="kadence-svg-iconset">
+                        <svg class="kadence-svg-icon kadence-linkedin-svg" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28">
+                            <title>Linkedin</title>
+                            <path d="M3.703 22.094h3.609v-10.844h-3.609v10.844zM7.547 7.906c-0.016-1.062-0.781-1.875-2.016-1.875s-2.047 0.812-2.047 1.875c0 1.031 0.781 1.875 2 1.875h0.016c1.266 0 2.047-0.844 2.047-1.875zM16.688 22.094h3.609v-6.219c0-3.328-1.781-4.875-4.156-4.875-1.937 0-2.797 1.078-3.266 1.828h0.031v-1.578h-3.609s0.047 1.016 0 10.844v0h3.609v-6.062c0-0.313 0.016-0.641 0.109-0.875 0.266-0.641 0.859-1.313 1.859-1.313 1.297 0 1.813 0.984 1.813 2.453v5.797zM24 6.5v15c0 2.484-2.016 4.5-4.5 4.5h-15c-2.484 0-4.5-2.016-4.5-4.5v-15c0-2.484 2.016-4.5 4.5-4.5h15c2.484 0 4.5 2.016 4.5 4.5z"></path>
+                        </svg>
+                    </span>
+                    LINKEDIN
+                </a>
+                <a href="mailto:nstroomberg@gmail.com"target="_blank">
+                    <svg class="kadence-svg-icon kadence-email-svg" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                        <title>Email</title>
+                        <path d="M15 2h-14c-0.55 0-1 0.45-1 1v10c0 0.55 0.45 1 1 1h14c0.55 0 1-0.45 1-1v-10c0-0.55-0.45-1-1-1zM5.831 9.773l-3 2.182c-0.1 0.073-0.216 0.108-0.33 0.108-0.174 0-0.345-0.080-0.455-0.232-0.183-0.251-0.127-0.603 0.124-0.786l3-2.182c0.251-0.183 0.603-0.127 0.786 0.124s0.127 0.603-0.124 0.786zM13.955 11.831c-0.11 0.151-0.282 0.232-0.455 0.232-0.115 0-0.23-0.035-0.33-0.108l-3-2.182c-0.251-0.183-0.307-0.534-0.124-0.786s0.535-0.307 0.786-0.124l3 2.182c0.251 0.183 0.307 0.535 0.124 0.786zM13.831 4.955l-5.5 4c-0.099 0.072-0.215 0.108-0.331 0.108s-0.232-0.036-0.331-0.108l-5.5-4c-0.251-0.183-0.307-0.534-0.124-0.786s0.535-0.307 0.786-0.124l5.169 3.759 5.169-3.759c0.251-0.183 0.603-0.127 0.786 0.124s0.127 0.603-0.124 0.786z"></path>
+				    </svg>
+                    EMAIL
+                </a>
+                <a href="https://jeditor.itch.io"target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="22px" height="22px" viewBox="0 0 32 32">
+                    <path d="M4.172 1.787c-1.396 0.828-4.145 3.984-4.172 4.812v1.375c0 1.735 1.625 3.267 3.099 3.267 1.771 0 3.251-1.469 3.251-3.213 0 1.744 1.421 3.213 3.197 3.213 1.771 0 3.151-1.469 3.151-3.213 0 1.744 1.516 3.213 3.287 3.213h0.032c1.776 0 3.291-1.469 3.291-3.213 0 1.744 1.381 3.213 3.152 3.213s3.197-1.469 3.197-3.213c0 1.744 1.475 3.213 3.245 3.213 1.479 0 3.104-1.532 3.104-3.267v-1.375c-0.032-0.828-2.776-3.984-4.177-4.812-4.339-0.156-7.344-0.183-11.823-0.183-4.484 0.005-10.593 0.073-11.828 0.183zM12.677 10.421c-0.183 0.308-0.385 0.568-0.625 0.797v0.005c-0.672 0.651-1.588 1.057-2.599 1.057-1.016 0-1.932-0.407-2.599-1.063-0.245-0.235-0.428-0.489-0.6-0.787-0.167 0.297-0.4 0.552-0.645 0.787-0.672 0.656-1.588 1.063-2.599 1.063 0 0 0 0-0.005 0-0.12 0-0.245-0.036-0.349-0.073-0.14 1.485-0.203 2.901-0.224 3.937v0.005c-0.005 0.527-0.005 0.953-0.011 1.552 0.032 3.115-0.307 10.089 1.376 11.803 2.604 0.604 7.396 0.88 12.197 0.885h0.005c4.807-0.005 9.593-0.281 12.197-0.885 1.683-1.713 1.344-8.688 1.376-11.803-0.005-0.599-0.005-1.025-0.011-1.552v-0.005c-0.021-1.036-0.079-2.452-0.224-3.937-0.099 0.037-0.229 0.073-0.349 0.073 0 0-0.005 0-0.005 0-1.011 0-1.927-0.407-2.599-1.063h0.005c-0.245-0.235-0.479-0.489-0.645-0.787h-0.005c-0.167 0.297-0.355 0.552-0.595 0.787-0.667 0.656-1.583 1.063-2.599 1.063-1.011 0-1.927-0.407-2.599-1.063-0.24-0.229-0.443-0.495-0.615-0.787l-0.011-0.016c-0.172 0.308-0.38 0.573-0.615 0.803-0.672 0.656-1.588 1.063-2.599 1.063 0 0-0.005 0-0.005 0-0.031 0-0.068 0-0.104-0.005-0.036 0.005-0.073 0.005-0.109 0.005 0 0 0 0-0.005 0-1.011 0-1.927-0.407-2.593-1.063-0.24-0.229-0.443-0.495-0.609-0.787l-0.011-0.016zM10.005 13.875c1.057 0.005 1.995 0 3.161 1.271 0.916-0.093 1.875-0.14 2.833-0.14s1.917 0.047 2.833 0.14c1.167-1.271 2.104-1.271 3.161-1.271h0.005c0.5 0 2.5 0 3.891 3.912l1.495 5.369c1.109 3.995-0.355 4.095-2.177 4.095-2.708-0.1-4.208-2.068-4.208-4.037-1.5 0.251-3.251 0.371-5 0.371s-3.5-0.12-4.995-0.371c0 1.969-1.5 3.937-4.208 4.037-1.828-0.005-3.292-0.1-2.183-4.095l1.495-5.369c1.396-3.912 3.396-3.912 3.896-3.912zM16 16.953c-0.005 0-2.849 2.62-3.364 3.547l1.864-0.073v1.625c0 0.079 0.751 0.047 1.5 0.011 0.749 0.036 1.495 0.068 1.495-0.011v-1.625l1.869 0.073c-0.515-0.927-3.364-3.547-3.364-3.547z"/>
+                    </svg>
+                    ITCH.IO
+                </a>
+            </div>
+            <p>© 2026 Nathan Stroomberg</p>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../styles.css" rel="stylesheet">
-    <script defer src="../scripts.js"></script>
-    <script defer src="../toc.js"></script>
-    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link href="../../styles.css" rel="stylesheet">
+    <script defer src="../../scripts.js"></script>
+    <script defer src="../../toc.js"></script>
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
     <title>Nathan Stroomberg</title>
 </head>
 <body>
     <div class="background-wrapper">
         <!-- headers -->
         <header>
-            <a href="../" class="navlink">Portfolio</a>
-            <a href="../about/" class="navlink">About me</a>
-            <a href="../contact/" class="navlink">Contact</a>
+            <a href="../../" class="navlink">Portfolio</a>
+            <a href="../../about/" class="navlink">About me</a>
+            <a href="../../contact/" class="navlink">Contact</a>
         </header> 
         
         <div id="kleinlijntje"></div>
@@ -41,7 +41,9 @@
                         <h3>Description</h3>
                         An action/combat game with Souls-inspired gameplay, originating from a shared exercise with an animation artist to create an impactful animation-based boss battle. 
                         <br>
-                        I designed and implemented the boss moveset and behavior, created a tool to speed up animation iteration, a third person player character, a complete level greybox (L2) and a scalable codebase.
+                        Most notably I designed and implemented the boss moveset and behavior, created a tool to speed up animation iteration, a third person player character. 
+                        <br><br>
+                        Most players don't want to stop playing before beating the boss, which sometimes takes them over half an hour, without getting frustrated. That's how I know the project was a success!
                     </div>
                 </div>
                 <!-- <div class="project_block project_block_text">
@@ -149,14 +151,14 @@
                         <br><br>
                         This contradicted my initial design vision, but it taught me that playtesting early exposes crucial problems in the on-paper design.
                     </div>
-                </div> 
+                </div>
                 <div class="lr_container">
                     <div class="project_block project_block_text" style="width: 1000px;">
                         <h3>Block or Dodge?</h3>
-                        The player has two ways to deal with attacks: blocking and dodging, which I both wanted to give a different purpose.
+                        The player has two ways to deal with attacks, which I wanted to give different purposes.
                         <ul>
                             <li>
-                                Blocking can be held down until the stamina meter runs out, making it an approachable way of dealing with attacks. However, the player gets pushed back with every block, making approaches near impossible purely by blocking all incoming attacks.
+                                Blocking can be held down until the stamina meter runs out, making it an approachable way of dealing with attacks. However, the player gets pushed back with every block, making approaches near impossible purely by blocking all attacks.
                             </li>
                             <li>
                                 Dodging is much more timing sensitive, meaning the player needs to learn the attack timings first. By dodging, the player can get close to the boss. Dodging costs a big chunk of stamina, so dodging exclusively is not an option either.
@@ -177,16 +179,20 @@
                 <div class="lr_container">
                     <div class="project_block project_block_figure" style="overflow: hidden;">
                         <figure>
-                            <video controls autoplay loop muted preload="metadata">
+                            <video autoplay loop muted preload="metadata">
                                 <source src="Fortis.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
-                            <figcaption>The prototype is replaced by a keyframe-animated version of the boss model. The keyframes are linearly interpolated. In this stage I'm only making small timing adjustments.</figcaption>
+                            <figcaption>The final, smooth animations are implemented. Note the addition of game feel enhancing effects such as particles and screen shake.</figcaption>
                         </figure>
                     </div>
-                    <div class="project_block project_block_text" style="width: 1000px;">
-                        <h3>Finalization</h3>
-                        For the final step of the process I implemented dynamic difficulty, introducing new attacks and reducing the time between them at certain health thresholds.
+                    <div class="ud_container">
+                        <div class="project_block project_block_text" style="width: 500px;">
+                            <h3>Finalization</h3>
+                            For the final step of the process I implemented dynamic difficulty, introducing new attacks and reducing the time between them at certain health thresholds. Attacks further into the bossfight bait greedy play, resulting in players often dying <i>just</i> before beating the boss.
+                            <br><br>
+                            Players still feel like it's their own fault, as was my design intention: punishing, but fair!
+                        </div>
                     </div>
                 </div>
                 

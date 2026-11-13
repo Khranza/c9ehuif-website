@@ -242,7 +242,8 @@ b {
 .tag[data-tag="boardgame"]   { --tag-color: #c95b75; } 
 .tag[data-tag="applied"]     { --tag-color: #9384f5; } 
 .tag[data-tag="audience"]    { --tag-color: #e7d164; } 
-.tag[data-tag="puzzles"]      { --tag-color: #8bbb51; } 
+.tag[data-tag="puzzles"]     { --tag-color: #8bbb51; } 
+.tag[data-tag="tooling"]     { --tag-color: #bb85b6; } 
 
 .game_data {
   margin-top: 0.75em;
@@ -505,6 +506,7 @@ figcaption {
 } */
 
 
+
 .project_block li{
     padding-top: 10px;
 }
@@ -564,7 +566,6 @@ figcaption {
     align-items: flex-start;
     font-size: 16px
 }
-
 
 
 
