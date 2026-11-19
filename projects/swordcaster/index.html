@@ -24,7 +24,7 @@
         <h3 class="project_game_title_function">Gameplay Designer & Programmer</h3>
         <div class="project_container">
             <video id="project_showcase_video" autoplay loop muted controls preload="metadata">
-                <source src="Fortis.mp4" type="video/mp4">
+                <source src="Final.webm" type="video/webm">
                 Your browser does not support the video tag.
             </video>
             
@@ -39,9 +39,9 @@
                     </div>
                     <div>
                         <h3>Description</h3>
-                        An action/combat game with Souls-inspired gameplay, originating from a shared exercise with an animation artist to create an impactful animation-based boss battle. 
-                        <br>
-                        Most notably I designed and implemented the boss moveset and behavior, created a tool to speed up animation iteration, a third person player character. 
+                        In this project, I designed and implemented boss moveset and behavior, created a tool to speed up animation iteration, and created a third person player character.
+                        <br><br>
+                        First and foremost I treated the project as a learning exercise on animation based combat, and the result is a very engaging Souls-inspired boss battle. 
                         <br><br>
                         Most players don't want to stop playing before beating the boss, which sometimes takes them over half an hour, without getting frustrated. That's how I know the project was a success!
                     </div>
@@ -55,10 +55,29 @@
                 
                 <h2>Player Character (3C's)</h2>
                 <div class="project_block project_block_text">
-                    <h3>Research & Analysis</h3>
-                    I sometimes catch myself wanting to jump straight into the engine. This time I held back and decided to thoroughly analyse Souls-like player characters first: acceleration, turn radius, character feel, camera angles... so much juice!
-                    <br><br>
-                    Using this research document, I was able to quickly build a solid player character base and expand it based on the game's needs.
+                    <h3>Goals</h3>
+                    I started out by devising goals for the player character. 
+                    The 3C's design should...
+                    <ul>
+                        <li>Require players to commit to every action, instead of allowing for spammy combat and movement</li>
+                        <li>Showcase the fight side-on, the player model should not obscure the boss and the action</li>
+                        <li>Reflect the character's narrative: she is rebellious and has an athletic background</li>
+                        <li>Feel fluid and modern, with smooth animations and responsive controls and with all actions animated</li>
+                    </ul>
+                </div>
+                <div class="lr_container">
+                    <div class="project_block project_block_figure" style="width: 400px;">
+                        <figure>
+                            <img src="3csresearch.png">
+                            <figcaption>A sample of the 3C's research I performed, which you can see more of <a href="#" onClick="window.open('https://games-omnibus.notion.site/3cs-database', '_blank')">here</a>!<figcaption>
+                        </figure>
+                    </div>
+                    <div class="project_block project_block_text">
+                        <h3>Research & Analysis</h3>
+                        I sometimes catch myself wanting to jump straight into the engine. This time I held back and decided to thoroughly analyse Souls-like player characters first: acceleration, turn radius, character feel, camera angles... so much juice!
+                        <br><br>
+                        Using this research document, I was able to quickly build a solid player character base and expand it based on the game's needs.
+                    </div>
                 </div>
                 <div class="lr_container">
                     <div class="project_block project_block_text">
@@ -87,9 +106,9 @@
                     </div>
                     <div class="project_block project_block_text" style="width: 600px;">
                         <h3>Locking down the 3C's</h3>
-                        Knowing how fast the player character moves, how long her attacks take, how quickly she can dodge (among many other metrics) is crucial when designing a boss moveset.
+                        I found that knowing how fast the player character moves, how long her attacks take, how quickly she can dodge (among many other metrics) is crucial when designing a boss moveset.
                         <br><br>
-                        Also note the addition of a flip-dodge, showcasing player character Kris' athletic background. The movement design has to reflect the game's narrative. 
+                        Also note the addition of a flip-dodge, showcasing player character Kris' athletic background. I wanted the movement design to reflect the game's narrative. 
                     </div>
                 </div>
                 
@@ -169,7 +188,7 @@
                     <div class="project_block project_block_figure" style="overflow: hidden;">
                         <figure>
                             <video controls autoplay loop muted preload="metadata">
-                                <source src="Swordcaster Boss Prototype 2.mp4" type="video/mp4">
+                                <source src="Keyframe.webm" type="video/webm">
                                 Your browser does not support the video tag.
                             </video>
                             <figcaption>The prototype is replaced by a keyframe-animated version of the boss model. The keyframes are linearly interpolated. In this stage I'm only making small timing adjustments.</figcaption>
@@ -196,7 +215,7 @@
                     </div>
                 </div>
                 
-                <h2>Animation Pipeline Tool</h2>
+                <h2>Tool Development</h2>
                 <div class="lr_container">
                     <div class="ud_container" style="width: 3000px;">
                         <div class="project_block project_block_figure" style="overflow: hidden;">
@@ -216,8 +235,8 @@
                         </div>
                     </div>
                     <div class="project_block project_block_text">
-                        <h3>Editor Tool</h3>
-                        To allow a designer (me) to quickly iterate upon blockout/keyframe animations inside Godot, I created the "Batch Transposer" tool:
+                        <h3>Animation Pipeline Tool</h3>
+                        I created the "Batch Transposer" to allow me to quickly iterate upon blockout/keyframe animations inside Godot.
                         <br><br>
                         Divide your animation into named sections, assign a length to each section, and bake this data. Then, edit section lengths to scale/transpose the defined animation sections. 
                         <br><br>
@@ -226,6 +245,72 @@
                         This information is bundled into a before/after Excel sheet, and passed back to the animator.
                     </div>
                 </div> 
+
+                
+                <h2>Scalable Code</h2>
+                <div class="lr_container">
+                    <div class="project_block project_block_text"> 
+                        <h3>Layered Finite State Machine</h3>
+                        I wanted to understand AI programming properly, so I looked into how to build the system as scalable as possible. Hitting the limits of a FSM, I designed a hybrid layered state machine and behaviour tree system, similar to Unreal's behaviour tree.
+                        <br><br>
+                        The system I created turned out very flexible, so I ended up using it for the player character as well!
+                    </div>
+                    <div class="project_block project_block_figure" style="width: 1300px;">
+                        <figure>
+                            <img src="state_machine.png">
+                            <figcaption>A state machine, containing state layers, containing states, containing behaviour tree leaves...<figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="lr_container">
+                    <div class="project_block project_block_figure" style="width: 1300px;">
+                        <figure>
+                            <img src="composition_1.png">
+                            <figcaption>The enemy and player scenes, which share 90% of their code, using custom nodes.<figcaption>
+                        </figure>
+                    </div>
+                    <div class="project_block project_block_text"> 
+                        <h3>Composition</h3>
+                        As the sole programmer of Swordcaster, I built the game with scalability in mind. I wrote completely <b><u>decoupled custom nodes</u></b> to build scenes, like the player and the boss, which share 90% of their code.
+                        <br><br>
+                        Coming from Unity, I'm used to working with the composition pattern using UnityEvents. Godot doesn't offer the same out of the box, so I had to design my own solution which I called "Headers".
+                    </div>
+                </div>
+                <div class="lr_container">
+                    <div class="project_block project_block_text"> 
+                        <h3>Custom Tool</h3>
+                        I created a tool that mimics UnityEvents in Godot. Custom nodes that visually represents signals inside the hierarchy, with names that update automatically based on what they're connected to. No more hard wiring the Health and Death components, enter Headers!
+                    </div>
+                    <div class="project_block project_block_figure" style="width: 1300px;">
+                        <figure>
+                            <img src="headers.png">
+                            <figcaption>The yellow parent nodes are HeaderEvents, which call each of their respective Headers when invoked.<figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                
+                <h2>Cutscene</h2>
+                <div class="lr_container">
+                    <div class="project_block project_block_figure" style="overflow: hidden;">
+                        <figure>
+                            <video autoplay loop muted preload="metadata">
+                                <source src="Cutscene.webm" type="video/webm">
+                                Your browser does not support the video tag.
+                            </video>
+                            <figcaption>The introductory cutscene to the bossfight. I directed it to build anticipation and to introduce the characters, both of whom I portrayed using mo-cap.</figcaption>
+                        </figure>
+                    </div>
+                    <div class="project_block project_block_figure" style="overflow: hidden;">
+                        <figure>
+                            <video autoplay loop muted preload="metadata">
+                                <source src="Motioncapture Nathan.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <figcaption>Apart from cutscene acting, I've recorded reference material together with the animation artist. These recordings would not be put in-game directly.</figcaption>
+                        </figure>
+                    </div>
+                </div>
 
                 <h2>Level Design</h2>
                 <div class="lr_container">
@@ -248,6 +333,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="lr_container">
                     <div class="project_block project_block_text"> 
                         <h3>Technical Placeholders</h3>
@@ -284,49 +370,6 @@
                         Some sections had to be redesigned to account for verticality and sightlines, which taught me that a top-down map should primarily convey intent and should not serve as a precise layout.
                         <br><br>
                         From there, in-person playtesting surfaced a range of issues around to spatial readability and encounter pacing. Iterating on those gave me the level you can see on the left! 
-                    </div>
-                </div>
-
-
-                <h2>Scalable Code</h2>
-                <div class="lr_container">
-                    <div class="project_block project_block_text"> 
-                        <h3>Layered Finite State Machine</h3>
-                        I wanted to understand AI programming properly, so I looked into how to build the system as scalable as possible. Hitting the limits of a FSM, I designed a hybrid layered state machine and behaviour tree system, similar to Unreal's behaviour tree.
-                        <br><br>
-                        The system I created turned out very flexible, so I ended up using it for the player character as well!
-                    </div>
-                    <div class="project_block project_block_figure" style="width: 1300px;">
-                        <figure>
-                            <img src="state_machine.png">
-                            <figcaption>A state machine, containing state layers, containing states, containing behaviour tree leaves...<figcaption>
-                        </figure>
-                    </div>
-                </div>
-                <div class="lr_container">
-                    <div class="project_block project_block_figure" style="width: 1300px;">
-                        <figure>
-                            <img src="composition_1.png">
-                            <figcaption>The enemy and player compositions, which share 90% of their code, using custom nodes.<figcaption>
-                        </figure>
-                    </div>
-                    <div class="project_block project_block_text"> 
-                        <h3>Composition</h3>
-                        As the sole programmer of Swordcaster, I built the game with scalability in mind. I wrote completely <b><u>decoupled custom nodes</u></b> to build scenes, like the player and the boss, which share 90% of their code.
-                        <br><br>
-                        Coming from Unity, I'm used to working with the composition pattern using UnityEvents. Godot doesn't offer the same out of the box, so I had to design my own solution which I called "Headers".
-                    </div>
-                </div>
-                <div class="lr_container">
-                    <div class="project_block project_block_text"> 
-                        <h3>Headers Tool</h3>
-                        I created a tool that mimics UnityEvents in Godot. Custom nodes that visually represents signals inside the hierarchy, with names that update automatically based on what they're connected to. No more hard wiring the Health and Death components, enter Headers!
-                    </div>
-                    <div class="project_block project_block_figure" style="width: 1300px;">
-                        <figure>
-                            <img src="headers.png">
-                            <figcaption>The yellow parent nodes are HeaderEvents, which call each of their respective Headers when invoked.<figcaption>
-                        </figure>
                     </div>
                 </div>
             </div>
